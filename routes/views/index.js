@@ -7,6 +7,8 @@ exports = module.exports = function(req, res) {
 	
 	locals.data = {
 		company: {},
+		projectCategories: {},
+		projects: {},
 		skills: {}
 	};
 	
@@ -32,6 +34,33 @@ exports = module.exports = function(req, res) {
 			if (results.length) {
 				locals.data.skills = results;
 			}
+			next(error);
+		});
+	});
+	
+	// Project Categories 
+	view.on('init', function (next) {
+		keystone.list('ProjectCategory').model.find().exec(function (error, results) {
+			if (error || !results.length) {
+				return next(error);
+			}
+			if (results.length) {
+				locals.data.projectCategories = results;
+			}
+			next(error);
+		});
+	});
+
+	// Projects 
+	view.on('init', function (next) {
+		keystone.list('Project').model.find().populate('categories').exec(function (error, results) {
+			if (error || !results.length) {
+				return next(error);
+			}
+			if (results.length) {
+				locals.data.projects = results;
+			}
+			console.log(results)
 			next(error);
 		});
 	});
