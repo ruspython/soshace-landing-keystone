@@ -8,7 +8,7 @@
                         <ul class="inline-menu clearfix portfolio-category" id="portfolio-msnry-sort">
                             <li class="active"><a href="#" data-target="*">All</a>
                             </li>
-							{{#each data.projectCategories}}
+							{{#each projectCategories}}
                                 <li>
 									<a href="#" data-target=".category-{{{key}}}">{{{name}}}</a>
                                 </li>
@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="clearfix protfolio-item" id="protfolio-msnry">
-						{{#each data.projects}}
+						{{#each projects}}
                             <li class="single-port-item {{#each categories}}category-{{{key}}} {{/each}}">
                                 <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="{{{previewImage.url}}}" data-title="{{{title}}}" data-content="{{{description}}}" data-demo-link="{{{demoUrl}}}"> <!-- Portfolio pop-up content-->
                                     <div class="protfolio-image">
@@ -55,8 +55,6 @@
                             </li>
 						{{/each}}
                     </ul>
-                    <!-- portfolio load more button-->
-                    <!--<a id="portfolio-item-loader" href="#" class="btn-floating btn-large waves-effect waves-light brand-bg"><i class="mdi-content-add"></i></a>-->
                 </div>
             </div>
         </div>

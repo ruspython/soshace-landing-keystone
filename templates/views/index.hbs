@@ -6,16 +6,18 @@
     </div>
 </div>
 
-<main id="app" class="main-section">		
-	{{>header}}
-	{{>home}}
-	{{>about}}
-	{{>resume}}
-	{{>portfolio}}
-	{{>team}}
-	{{>funfacts}}
-	{{>testimonial}}
-	{{>blog}}
-	{{>contact}}
-	{{>footer}}
+<main id="app" class="main-section">
+	{{#with data}}
+		{{>header}}
+		{{>home}}
+		{{>about}}
+		{{>resume}}
+		{{>portfolio}}
+		{{>team}}
+		{{>funfacts}}
+		{{>testimonial}}
+		{{>blog}}
+		{{>contact}}
+		{{>footer}}
+	{{/with}}
 </main>
