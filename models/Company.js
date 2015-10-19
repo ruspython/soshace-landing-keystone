@@ -26,7 +26,10 @@ Company.add({
 	backgroundImage: { type: Types.CloudinaryImage },
 	photo: {type: Types.CloudinaryImage},
 	elanceUrl: {type: Types.Url},
-	upworkUrl: {type: Types.Url}
+	upworkUrl: {type: Types.Url},
+	happyClients: {type: Number},
+	projectsCompleted: {type: Number},
+	awardWon: {type: Number}
 });
 
 Company.register();
