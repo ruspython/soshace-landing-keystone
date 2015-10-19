@@ -1,13 +1,14 @@
-<section id="home" class="scroll-section root-sec grey lighten-5 home-wrap">
+{{#with data}}
+<section id="home" class="scroll-section root-sec grey lighten-5 home-wrap" style="background-image: url('{{{title.0.image.url}}}')">
     <div class="sec-overlay">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="home-inner">
                         <div class="center-align home-content">
-                            <h1 class="home-title">HI! I'm <span>John Doe</span></h1>
-                            <h2 class="home-subtitle">UX/UI Designer from Dhaka, Bangladesh</h2>
-                            <a href="#contact" class="hire-me-btn btn waves-effect waves-light btn-large brand-bg white-text regular-text">Hire Me <i class="mdi-content-send left"></i>
+                            <h1 class="home-title">{{{title.0.title}}}</h1>
+                            <h2 class="home-subtitle">{{{title.0.subtitle}}}</h2>
+                            <a href="#contact" class="hire-me-btn btn waves-effect waves-light btn-large brand-bg white-text regular-text">Hire Us <i class="mdi-content-send left"></i>
                             </a>
                         </div>
                     </div>
@@ -27,3 +28,4 @@
         </div>
     </div>
 </section>
+{{/with}}

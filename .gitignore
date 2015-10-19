@@ -32,3 +32,8 @@ node_modules
 
 # Idea files
 .idea
+
+# Other
+
+.editorconfig
+Procfile
