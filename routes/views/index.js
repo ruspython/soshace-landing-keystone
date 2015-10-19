@@ -60,7 +60,19 @@ exports = module.exports = function(req, res) {
 			if (results.length) {
 				locals.data.projects = results;
 			}
-			console.log(results)
+			next(error);
+		});
+	});
+	
+	// Developers 
+	view.on('init', function (next) {
+		keystone.list('Developer').model.find().exec(function (error, results) {
+			if (error || !results.length) {
+				return next(error);
+			}
+			if (results.length) {
+				locals.data.developers = results;
+			}
 			next(error);
 		});
 	});
