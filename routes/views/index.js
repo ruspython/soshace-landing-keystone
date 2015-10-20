@@ -77,5 +77,31 @@ exports = module.exports = function(req, res) {
 		});
 	});
 	
+	// Testimonial
+	view.on('init', function (next) {
+		keystone.list('Testimonial').model.find().exec(function (error, results) {
+			if (error || !results.length) {
+				return next(error);
+			}
+			if (results.length) {
+				locals.data.testimonials = results;
+			}
+			next(error);
+		});
+	});
+
+	// Testimonial
+	view.on('init', function (next) {
+		keystone.list('Post').model.find().exec(function (error, results) {
+			if (error || !results.length) {
+				return next(error);
+			}
+			if (results.length) {
+				locals.data.posts = results;
+			}
+			next(error);
+		});
+	});
+	
 	view.render('index');
 };
