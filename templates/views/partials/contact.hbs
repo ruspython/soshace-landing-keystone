@@ -1,3 +1,6 @@
+{{#if enquirySubmitted}}
+<!--TODO: label on send-->
+{{/if}}
 <section id="contact" class="scroll-section root-sec brand-bg padd-tb-120 contact-wrap">
     <div class="container">
         <div class="row">
@@ -7,13 +10,11 @@
                         <div class="clearfix section-head contact-text">
                             <div class="col-sm-12">
                                 <h2 class="title">Contact</h2>
-                                <p class="regular-text">Collins Street West Victoria 8007 Australia</p>
+                                <p class="regular-text">{{{company.address}}}</p>
                                 <ul class="clearfix contact-info">
-                                    <li><a href="">+880 1234 567890</a>
+                                    <li><a href="">{{{company.phone}}}</a>
                                     </li>
-                                    <li><a href="">support@website.net</a>
-                                    </li>
-                                    <li><a href="">www.website.net</a>
+                                    <li><a href="">{{{company.email}}}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -32,21 +33,22 @@
                             <!-- Contact Form start -->
                             <div class="col-sm-5">
                                 <div class="clearfix card-panel grey lighten-5 cform-wrapper">
-                                    <form action="#" id="contactForm" novalidate>
+                                    <form method="post" action="/">
+                                        <input type="hidden" name="action" value="contact">
                                         <div class="input-field">
-                                            <input id="contact_name" type="text" name="contactName" class="validate input-box">
+                                            <input id="contact_name" type="text" name="name.full" class="validate input-box">
                                             <label for="contact_name" class="input-label">Name</label>
                                         </div>
                                         <div class="input-field">
-                                            <input id="email" type="email" name="contactEmail" class="validate input-box">
+                                            <input id="email" type="email" name="email" class="validate input-box">
                                             <label for="email" class="input-label">Email</label>
                                         </div>
-                                        <div class="input-field">
-                                            <input id="subject" type="text" name="contactSubject" class="validate input-box">
-                                            <label for="subject" class="input-label">Subject</label>
-                                        </div>
+                                        <!--<div class="input-field">-->
+                                            <!--<input id="subject" type="text" name="contactSubject" class="validate input-box">-->
+                                            <!--<label for="subject" class="input-label">Subject</label>-->
+                                        <!--</div>-->
                                         <div class="input-field textarea-input">
-                                            <textarea id="textarea1" name="contactMessage" class="validate materialize-textarea" style="height: 22px;"></textarea>
+                                            <textarea id="textarea1" name="message" class="validate materialize-textarea" style="height: 22px;"></textarea>
                                             <label for="textarea1" class="input-label">Message</label>
                                         </div>
                                         <div class="input-field submit-wrap clearfix">
