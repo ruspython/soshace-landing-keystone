@@ -101,7 +101,6 @@ exports = module.exports = function(req, res) {
 			if (results.length) {
 				locals.data.posts = results;
 			}
-			console.log(results)
 			next(error);
 		});
 	});
