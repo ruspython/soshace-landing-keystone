@@ -1,20 +1,82 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-			<article>
-				<p><a href="/blog">&larr; back to the blog</a></p>
-				<hr>
-				<header>
-					<h1>{{data.post.title}}</h1>
-					<h5>
-						{{{categoryList data.post.categories prefix="Posted in "}}}
-						{{#if author.name.first}}by {{author.name.first}}{{/if}}
-					</h5>
-				</header>
-				<div class="post">
-					{{{data.post.content.extended}}}
-				</div>
-			</article>
-		</div>
-	</div>
-</div>
+{{#with data.post}}
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circle-loader" height="50" width="50">
+                <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+    </div><!--preloader end-->
+
+    <div id="app">
+        <!-- Banner start -->
+        <section id="banner" class="root-sec brand-bg padd-tb-55 single-banner blogpage-banner-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="clearfix blog-banner-text blog-single-banner">
+                        <div class="col-md-12">
+                            <h2 class="title">{{{title}}}</h2>
+                            <ul class="clearfix blog-post-meta">
+                                <li>{{date publishedDate format='MMMM, DD. YYYY'}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./Banner end -->
+
+        <!-- Blog Post Container-->
+        <section id="all-posts" class="root-sec grey lighten-5 blogpage-posts-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="clearfix all-blog-post blog-inner with-sidebar">
+
+                        <!-- post container start-->
+                        <div class="col-sm-8">
+                            <article class="single-post-page">
+                                <div class="thumb-wrap">
+                                    <img src="{{{image.url}}}" alt="">
+                                </div>
+                                <div class="single-post-content">
+									{{{content.extended}}}
+                                </div>
+                            </article>
+                        </div>
+                        <!-- ./post container end-->
+
+                        <!-- Sidebar start-->
+                        <div class="col-sm-4">
+                            <div class="primary-sidebar">
+                                <aside class="single-widget">
+                                    <h2 class="widget-title">RECENT POSTS</h2>
+                                    <ul>
+                                        <li>
+                                            <a href="">The Image Post One</a>
+                                            <span>March 24, 2015</span>
+                                        </li>
+                                        <li>
+                                            <a href="">The Image Post Two</a>
+                                            <span>March 24, 2015</span>
+                                        </li>
+                                        <li>
+                                            <a href="">The Image Post Three</a>
+                                            <span>March 24, 2015</span>
+                                        </li>
+                                        <li>
+                                            <a href="">The Image Post Four</a>
+                                            <span>March 24, 2015</span>
+                                        </li>
+                                        <li>
+                                            <a href="">The Image Post Five</a>
+                                            <span>March 24, 2015</span>
+                                        </li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{{/with}}

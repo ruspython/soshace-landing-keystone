@@ -12,6 +12,7 @@ exports = module.exports = function(req, res) {
 		projects: {},
 		skills: {}
 	};
+	locals.indexSection = true;
 	
 	// Company Info
 	view.on('init', function (next) {
@@ -91,7 +92,7 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Post
+	// Posts
 	view.on('init', function (next) {
 		keystone.list('Post').model.find().exec(function (error, results) {
 			if (error || !results.length) {
@@ -100,6 +101,7 @@ exports = module.exports = function(req, res) {
 			if (results.length) {
 				locals.data.posts = results;
 			}
+			console.log(results)
 			next(error);
 		});
 	});
