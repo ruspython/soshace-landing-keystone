@@ -14,6 +14,19 @@ exports = module.exports = function(req, res) {
 	locals.data = {
 		posts: []
 	};
+
+	// Company Info
+	view.on('init', function (next) {
+		keystone.list('Company').model.find().exec(function (error, results) {
+			if (error || !results.length) {
+				return next(error);
+			}
+			if (results.length) {
+				locals.data.company = results[0];
+			}
+			next(error);
+		});
+	});
 	
 	// Load the posts
 	view.on('init', function(next) {

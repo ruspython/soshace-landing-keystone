@@ -10,7 +10,7 @@
                             </li>
 							{{#each projectCategories}}
                                 <li>
-									<a href="#" data-target=".category-{{{key}}}">{{{name}}}</a>
+									<a href="#" data-target=".{{categorize key}}">{{{name}}}</a>
                                 </li>
 							{{/each}}
                             
@@ -40,7 +40,7 @@
                 <div class="col-sm-12">
                     <ul class="clearfix protfolio-item" id="protfolio-msnry">
 						{{#each projects}}
-                            <li class="single-port-item {{#each categories}}category-{{{key}}} {{/each}}">
+                            <li class="single-port-item {{categoryList categories}}">
                                 <a href="#portfolioModal" class="waves-effect waves-block waves-light modal-trigger" data-image-source="{{{previewImage.url}}}" data-title="{{{title}}}" data-content="{{{description}}}" data-demo-link="{{{demoUrl}}}"> <!-- Portfolio pop-up content-->
                                     <div class="protfolio-image">
                                         <img src="{{{image.url}}}" alt="portfolio"> <!-- portfolio thumbnail-->
