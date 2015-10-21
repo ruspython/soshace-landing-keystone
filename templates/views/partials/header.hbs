@@ -28,11 +28,11 @@
                                         </form>
                                     </div>
                                 </li>
-                                <li>
-                                    <a class="dropdown-button blog-submenu-init" href="#!" data-activates="dropdown1">
-                                        <i class="mdi-navigation-more-vert right"></i>
-                                    </a>
-                                </li>
+                                <!--<li>-->
+                                    <!--<a class="dropdown-button blog-submenu-init" href="#!" data-activates="dropdown1">-->
+                                        <!--<i class="mdi-navigation-more-vert right"></i>-->
+                                    <!--</a>-->
+                                <!--</li>-->
                             </ul>
                             <ul class="inline-menu side-nav" id="mobile-demo">
 
@@ -40,10 +40,10 @@
                                 <li class="mobile-profile">
                                     <div class="profile-inner">
                                         <div class="pp-container">
-                                            <img src="images/person.jpg" alt="">
+                                            <img src="{{{data.company.backgroundImage.url}}}" alt="">
                                         </div>
-                                        <h3>John Doe</h3>
-                                        <h5>Creative UI/UX Expert</h5>
+                                        <h3>{{{data.company.title}}}</h3>
+                                        <h5>{{{data.company.subtitle}}}</h5>
                                     </div>
                                 </li>
                                 <!-- mini profile end-->
@@ -86,6 +86,9 @@
 								{{else}}
                                     <li>
                                         <a href="/"><i class="fa fa-user fa-fw"></i>Home</a>
+                                    </li>
+									<li>
+                                        <a href="/blog"><i class="fa fa-user fa-fw"></i>Blog</a>
                                     </li>
 								{{/if}}
                             </ul>
