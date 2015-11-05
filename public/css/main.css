@@ -1005,9 +1005,11 @@ header.nav.hide-menu {
 }
 
 .protfolio-image {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	padding: 10px;
 }
 
 .protfolio-image img {
