@@ -1885,3 +1885,7 @@ span.num {
 
 
 /* Add your CSS below */
+
+.team-image {
+	height: 250px;
+}
