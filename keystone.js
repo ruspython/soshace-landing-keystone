@@ -16,7 +16,7 @@ keystone.init({
 	'brand': 'Soshace',
 	
 	'less': 'public',
-	'static': 'public',
+	'static': 'dist',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
