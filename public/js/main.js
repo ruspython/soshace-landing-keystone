@@ -556,11 +556,11 @@ $(document).ready(function($){
 		});
 
 		map.addMarker({
-			lat : 23.79473005386213,
-			lng : 90.41430473327637,
+			lat : 59.958166,
+			lng : 30.302187,
 			icon: 'images/marker-icon.png',
 			infoWindow: {
-				content: '<p>BD InfoSys Ltd, Dhaka, Bangladesh</p>'
+				content: '<p>Bolshaya Pushkarskaya, 22</p>'
 			}
 		});
 	}
