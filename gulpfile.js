@@ -75,7 +75,7 @@ gulp.task('build-css', function () {
 			'public/libs/owl-carousel/owl.theme.css',
 			'public/css/main.css',
 			'public/css/responsive.css',
-			'public/css/colors/color8.css'
+			'public/css/colors/color1.css'
 		])
 		.pipe(concat('styles.min.css'))
 		.pipe(minifyCss({keepBreaks: false}))
