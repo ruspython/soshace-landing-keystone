@@ -1,0 +1,33 @@
+//
+//
+// Layout for intro block
+
+.intro {
+  background: green;
+  padding-top: 100px;
+
+  &__inner {
+    @include container();
+    text-align: center;
+  }
+
+  &__logo {
+
+  }
+
+  &__title {
+
+  }
+
+  &__subtitle {
+
+  }
+
+  &__btn-wrap {
+
+  }
+
+  &__btn {
+
+  }
+}

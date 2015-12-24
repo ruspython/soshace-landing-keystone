@@ -1,9 +1,11 @@
 //
 //
-// Styles for main navigation
+// Layout for main header
 
 .main-header {
   background: white;
+  position: fixed;
+  width: 100%;
 
   &::before {
     content: '';
