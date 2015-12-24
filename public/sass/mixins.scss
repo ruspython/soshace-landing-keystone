@@ -1,18 +1,17 @@
 //
 //
-// Контейнер для мобильной версии
+// Container for mobile version
 @mixin container() {
   // width: 280px;
   // padding: 0 20px;
   // margin: 0 auto;
-  width: auto;     // Для резиновой сетки
-  padding: 0 7%;   // Для резиновой сетки
-  
+  width: auto;
+  padding: 0 7%;
 }
 
 //
 //
-// Контейнер для планшетной версии
+// Container for tablet version
 @mixin container--tablet() {
   width: 620px;
   padding: 0 20px;
@@ -21,7 +20,7 @@
 
 //
 //
-// Контейнер для десктопной версии
+// Container for desktop version
 @mixin container--desktop() {
   width: 940px;
   padding: 0 10px;
@@ -36,7 +35,7 @@
 
 //
 //
-// Псевдораспорка для родителя флоат-элементов
+// Clearfix for parent of float elements
 @mixin clearfix() {
     &:before,
     &:after {
@@ -50,7 +49,7 @@
 
 //
 //
-// Временная рамка
+// Just border
 @mixin someborder() {
   border: 1px dotted red;
 }

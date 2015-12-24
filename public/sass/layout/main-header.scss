@@ -1,0 +1,45 @@
+//
+//
+// Styles for main navigation
+
+.main-header {
+  background: white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5px;
+
+    background: url('../images/colorline.png') 100% 100%;
+  }
+
+  &__inner {
+    @include container();
+    @include clearfix();
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: relative;    // Absolute element inside (.main-nav--visible)
+  }
+
+  &__inner--menu-visible {
+    border-bottom: 1px solid #f7f7f7;
+  }
+
+  &__logo-wrap {
+    float: left;
+    width: 50%;
+  }
+
+  &__logo-wrap img{
+    width: 134px;
+    height: 35px;
+  }
+
+  &__toggle-wrap {
+    float: right;
+    max-width: 25%;
+    padding-top: 5px;
+  }
+}

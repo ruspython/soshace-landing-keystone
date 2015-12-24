@@ -1,0 +1,66 @@
+//
+//
+// Блок основной навигации
+
+.main-nav {
+  display: none;
+
+  &--visible {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    top: 93px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    text-align: center;
+
+    font-family: $font-stack;
+    font-size: $font-size + 4px;
+    line-height: $line-height + 20px;
+    font-weight: $weight-light;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: block;
+    padding: 18px 0;
+
+    text-decoration: none;
+    background: white;
+    border-bottom: 1px solid #f7f7f7;
+    color: $blue-color;
+  }
+
+  &__link:hover {
+    color: $orange-color;
+  }
+
+  &__link:active {
+    color: $green-color;
+  }
+
+  &__button {
+    border-bottom: none;
+    background: #fff000;
+    color: black;
+  }
+
+  &__button:hover {
+    text-decoration: underline;
+    color: black;
+  }
+
+  &__button:active {
+    opacity: 0.3;
+  }
+}

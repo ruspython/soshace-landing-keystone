@@ -1,30 +1,26 @@
 //
 //
-// Типографика
-$font-stack:  'Open Sans', sans-serif;
+// Typography
+$font-stack:  'Roboto', sans-serif;
 $font-size:   14px;
-$line-height: 24px;
+$line-height: 22px;
 
-$h1-size:     $font-size + 10px;
-$h2-size:     $font-size + 4px;
+$h1-size:        $font-size + 31px;
+$h1-line-height: $line-height + 26px;
 
-$weight-light:    300;
-$weight-normal:   400;
-$weight-semibold: 600;
-$weight-bold:     700;
-
+$weight-thin:   100;
+$weight-light:  300;
+$weight-medium: 500;
 
 //
 //
-// Цвета
-$navy-color:    #283645;
-$pink-color:    #d22856;
-$bg-pic-header: #2b3b4b;
-
-
+// Colors from logo
+$blue-color:   #4a77da;
+$orange-color: #feba00;
+$green-color:  #70b701;
 
 //
 //
-// Разрешение
+// Viewport size
 $screen_md: 660px;
 $screen_lg: 960px;
