@@ -1,0 +1,30 @@
+//
+//
+// Типографика
+$font-stack:  'Open Sans', sans-serif;
+$font-size:   14px;
+$line-height: 24px;
+
+$h1-size:     $font-size + 10px;
+$h2-size:     $font-size + 4px;
+
+$weight-light:    300;
+$weight-normal:   400;
+$weight-semibold: 600;
+$weight-bold:     700;
+
+
+//
+//
+// Цвета
+$navy-color:    #283645;
+$pink-color:    #d22856;
+$bg-pic-header: #2b3b4b;
+
+
+
+//
+//
+// Разрешение
+$screen_md: 660px;
+$screen_lg: 960px;

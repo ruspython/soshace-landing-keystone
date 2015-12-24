@@ -1,0 +1,55 @@
+//
+//
+// Контейнер для мобильной версии
+@mixin container() {
+  width: 280px;
+  padding: 0 20px;
+  // width: auto;     // Для резиновой сетки
+  // padding: 0 7%;   // Для резиновой сетки
+  margin: 0 auto;
+}
+
+//
+//
+// Контейнер для планшетной версии
+@mixin container--tablet() {
+  width: 620px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+//
+//
+// Контейнер для десктопной версии
+@mixin container--desktop() {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+@mixin container--desktop-post-page() {
+  width: 820px;
+  padding: 0 70px;
+  margin: 0 auto;
+}
+
+//
+//
+// Псевдораспорка для родителя флоат-элементов
+@mixin clearfix() {
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+//
+//
+// Временная рамка
+@mixin someborder() {
+  border: 1px dotted red;
+}

@@ -8,7 +8,10 @@ var gulp = require('gulp'),
 	jshintReporter = require('jshint-stylish'),
 	watch = require('gulp-watch'),
 	shell = require('gulp-shell')
-	;
+	sass = require('gulp-sass'),
+	cmq = require('gulp-combine-mq'),
+	postcss = require('postcss'),
+	autoprefixer = require('autoprefixer');
 
 
 var paths = {
@@ -61,25 +64,38 @@ gulp.task('build-js', function () {
 		.pipe(gulp.dest('./dist/js'))
 });
 
+// gulp.task('build-css', function () {
+// 	gulp
+// 		.src([
+// 			'public/css/normalize.css',
+// 			'public/fonts/font-awesome/css/font-awesome.min.css',
+// 			'public/libs/materialize/css/materialize.min.css',
+// 			'public/css/bootstrap.css',
+// 			'public/css/animate.min.css',
+// 			'public/libs/sweetalert/sweet-alert.css',
+// 			'public/libs/owl-carousel/owl.carousel.css',
+// 			'public/libs/owl-carousel/owl.transitions.css',
+// 			'public/libs/owl-carousel/owl.theme.css',
+// 			'public/css/main.css',
+// 			'public/css/responsive.css',
+// 			'public/css/colors/color1.css'
+// 		])
+// 		.pipe(concat('styles.min.css'))
+// 		.pipe(minifyCss({keepBreaks: false}))
+// 		.pipe(gulp.dest('./dist/css/'))
+// });
+
+//task for SASS to CSS
 gulp.task('build-css', function () {
-	gulp
-		.src([
-			'public/css/normalize.css',
-			'public/fonts/font-awesome/css/font-awesome.min.css',
-			'public/libs/materialize/css/materialize.min.css',
-			'public/css/bootstrap.css',
-			'public/css/animate.min.css',
-			'public/libs/sweetalert/sweet-alert.css',
-			'public/libs/owl-carousel/owl.carousel.css',
-			'public/libs/owl-carousel/owl.transitions.css',
-			'public/libs/owl-carousel/owl.theme.css',
-			'public/css/main.css',
-			'public/css/responsive.css',
-			'public/css/colors/color1.css'
-		])
-		.pipe(concat('styles.min.css'))
-		.pipe(minifyCss({keepBreaks: false}))
-		.pipe(gulp.dest('./dist/css/'))
+	gulp.src('public/sass/style.scss')
+		.pipe(sass())
+		.pipe(cmq())
+		//.pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+		.pipe(rename('style.css'))
+		.pipe(gulp.dest('.dist/css'))
+		.pipe(minifyCss())
+		.pipe(rename('style.min.css'))
+		.pipe(gulp.dest('.dist/css'));
 });
 
 gulp.task('copy:images', function () {
@@ -136,4 +152,3 @@ gulp.task('copy', ['copy:images', 'copy:fonts', 'copy:favicon', 'copy:css', 'cop
 gulp.task('prod', ['build-js', 'build-css', 'copy']);
 gulp.task('dev', ['copy']);
 //gulp.task('default', ['watch', 'runKeystone']);
-
