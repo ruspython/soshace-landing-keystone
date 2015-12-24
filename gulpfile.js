@@ -89,13 +89,14 @@ gulp.task('build-js', function () {
 gulp.task('build-css', function () {
 	gulp.src('public/sass/style.scss')
 		.pipe(sass())
-		.pipe(cmq())
+		//.pipe(cmq())
 		//.pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-		.pipe(rename('style.css'))
-		.pipe(gulp.dest('.dist/css'))
-		.pipe(minifyCss())
-		.pipe(rename('style.min.css'))
-		.pipe(gulp.dest('.dist/css'));
+		.pipe(rename('styles.min.css'))
+		.pipe(gulp.dest('dist/css'))
+		// .pipe(minifyCss())
+		// .pipe(rename('styles.min.css'))
+		// .pipe(gulp.dest('dist/css'));
+		;
 });
 
 gulp.task('copy:images', function () {
@@ -106,13 +107,13 @@ gulp.task('copy:images', function () {
 		.pipe(gulp.dest('dist/images'))
 });
 
-gulp.task('copy:css', function () {
-	gulp
-		.src([
-			'public/css/**/*'
-		])
-		.pipe(gulp.dest('dist/css'))
-});
+// gulp.task('copy:css', function () {
+// 	gulp
+// 		.src([
+// 			'public/css/**/*'
+// 		])
+// 		.pipe(gulp.dest('dist/css'))
+// });
 
 gulp.task('copy:js', function () {
 	gulp
@@ -147,7 +148,7 @@ gulp.task('copy:libs', function () {
 		.pipe(gulp.dest('dist/libs'))
 });
 
-gulp.task('copy', ['copy:images', 'copy:fonts', 'copy:favicon', 'copy:css', 'copy:js', 'copy:libs']);
+gulp.task('copy', ['copy:images', 'copy:fonts', 'copy:favicon', 'copy:js', 'copy:libs']);
 
 gulp.task('prod', ['build-js', 'build-css', 'copy']);
 gulp.task('dev', ['copy']);

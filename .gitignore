@@ -38,3 +38,4 @@ node_modules
 .editorconfig
 Procfile
 dist
+_dist

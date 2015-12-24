@@ -1,4 +1,8 @@
-@import "normalize.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "layout/base.scss";
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+@import 'base';
+
+@import 'layout/main-header';
+@import 'blocks/burger-icon';
+@import 'blocks/main-nav';
