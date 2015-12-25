@@ -39,3 +39,4 @@ node_modules
 Procfile
 dist
 _dist
+_templates
