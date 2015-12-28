@@ -3,5 +3,90 @@
 // Stylef for skills block
 
 .skills {
+  padding-top: 80px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  background: $orange-color;
+  color: white;
 
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: 5;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+
+    width: 0;
+	  height: 0;
+	  border-left: 160px solid transparent;
+	  border-right: 160px solid transparent;
+	  border-top: 40px solid $orange-color;
+  }
+
+  &__inner {
+    @include container();
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 150px;
+
+    font-size: $h1-size - 5px;
+    line-height: $h1-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    margin-bottom: 150px;
+    position: relative;
+    text-align: center;
+  }
+
+  &__item:last-child {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+  }
+
+  &__item::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: -115px;
+    left: 0;
+    right: 0;
+
+    width: 90px;
+    height: 103px;
+
+    background-color: transparent;
+    background-image: url('../images/js.png');
+    background-repeat: no-repeat;
+    background-size: 90px 103px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: $h2-size - 14px; // 18
+    line-height: $h2-line-height - 14px; // 27
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin: 0;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+  }
 }

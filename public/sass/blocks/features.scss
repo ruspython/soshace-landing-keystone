@@ -3,35 +3,59 @@
 // Styles for features block
 
 .features {
-  padding-top: 70px;
+  position: relative;
+  padding-top: 100px;
+  margin-bottom: 20px;
+  text-align: center;
   text-transform: uppercase;
+  background: white;
+  color: black;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: 5;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+
+    width: 0;
+	  height: 0;
+	  border-left: 160px solid transparent;
+	  border-right: 160px solid transparent;
+	  border-top: 40px solid white;
+  }
 
   &__inner {
     @include container();
   }
 
   &__item {
-    //width: 280px;
-    margin-bottom: 80px;
+    margin-bottom: 95px;
     position: relative;
-    text-align: center;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
   }
 
   &__item::before {
     content: '';
     position: absolute;
     margin: auto;
-    top: -55px;
+    top: -60px;
     left: 0;
     right: 0;
+
+    width: 41px;
+    height: 46px;
 
     background-color: transparent;
     background-image: url('../images/fullstack.png');
     background-repeat: no-repeat;
-
-    width: 41px;
-    height: 46px;
-    //background-position: -5px -2285px;
+    background-size: 41px 46px;
   }
 
   &__title {
@@ -42,7 +66,6 @@
     line-height: $h2-line-height - 14px;
     font-family: $font-stack;
     font-weight: $weight-medium;
-    color: black;
   }
 
   &__text {
@@ -52,7 +75,5 @@
     line-height: $line-height;
     font-family: $font-stack;
     font-weight: $weight-thin;
-    color: black;
   }
-
 }
