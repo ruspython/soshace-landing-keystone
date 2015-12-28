@@ -1,0 +1,12 @@
+//
+//
+// Styles for portfolio block
+
+.portfolio {
+
+  &__inner {
+    @include container();
+  }
+}
+
+//.portfolio__slide--active
