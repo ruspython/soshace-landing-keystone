@@ -3,9 +3,124 @@
 // Styles for portfolio block
 
 .portfolio {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
 
   &__inner {
     @include container();
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: $h1-size - 10px;
+    line-height: $h1-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: #2e5fb2;
+  }
+
+  &__slides-wrap {
+    margin-bottom: 30px;
+    height: 300px; // ????
+    position: relative;
+    @include someborder();
+  }
+
+  &__slide {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    //height: 100%;    // ????
+    //overflow: hidden;
+    outline: 1px solid green;
+  }
+
+  &__slide:nth-child(1) {
+    display: block;
+  }
+
+  &__slide-inner {
+    position: relative;
+    outline: 2px solid yellow;
+  }
+
+  &__slide-inner img {
+    // width: 90%;
+    // height: auto;
+  }
+
+  &__project-info {
+    padding: 10px;
+    width: 140px;
+    height: 50px;
+    text-align: left;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background: red;
+    color: white;
+  }
+
+  &__project-name {
+    margin: 0;
+
+    font-size: $font-size;
+    line-height: $line-height - 7px;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+  }
+
+  &__project-description {
+    margin: 0;
+    //overflow: hidden;
+
+    font-size: $font-size - 4px;
+    line-height: $line-height - 10px;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    text-transform: uppercase;
+  }
+
+  &__arrow-wrap {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 50px;
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  &__arrow-wrap--left {
+    left: 20%;
+  }
+
+  &__arrow-wrap--right {
+    right: 20%;
+  }
+
+  &__arrow {
+    fill: #68cfff;
+  }
+
+  &__arrow-wrap:hover .portfolio__arrow {
+    fill: $blue-color;
+  }
+
+  &__arrow-wrap:active .portfolio__arrow {
+    fill: #a7dcf5;
   }
 }
 
