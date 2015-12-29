@@ -6,10 +6,11 @@
   padding-top: 20px;
   padding-bottom: 40px;
   margin-bottom: 30px;
-  background-image: url('../images/bg-contact-mobile@1x.png');
-  background-repeat: no-repeat;
-  background-position: 45% 30%;
-  background-size: 700px auto;
+  background-color: #f7f7f7;
+  //background-image: url('../images/bg-contact-mobile@1x.png');
+  //background-repeat: no-repeat;
+  //background-position: 30% 50%;
+  //background-size: 800px auto;
 
   &__inner {
     @include container();
@@ -35,7 +36,7 @@
     position: relative;
     margin: 0 auto;
     margin-bottom: 10px;
-    width: 200px;
+    width: 60%;
     background: #2fbdff;
 
     font-size: $font-size;
@@ -77,21 +78,16 @@
 	  border-top: 22px solid #2fbdff;
   }
 
-  &__form {
-    width: 70%;
-    margin: 0 auto;
-  }
-
   &__form input[type=text],
   &__form input[type=email],
   &__form textarea {
     display: block;
     padding: 3px 10px;
     margin: 0 auto;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 
     box-sizing: border-box;
-    width: 100%;
+    width: 60%;
     border: none;
 
     font-size: $font-size;
@@ -101,12 +97,8 @@
     color: #404040;
   }
 
-  &__form input[type=email] {
-
-  }
-
   &__form textarea {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     resize: none;
   }
 
