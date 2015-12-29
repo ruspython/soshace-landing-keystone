@@ -26,10 +26,11 @@
   }
 
   &__slides-wrap {
-    margin-bottom: 30px;
-    height: 300px; // ????
     position: relative;
-    @include someborder();
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 80%;
+    height: 230px;
   }
 
   &__slide {
@@ -39,41 +40,52 @@
     top: 0;
     left: 0;
     width: 100%;
-    //height: 100%;    // ????
-    //overflow: hidden;
-    outline: 1px solid green;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
   }
 
-  &__slide:nth-child(1) {
+  &__slide:nth-child(2) {
     display: block;
   }
 
-  &__slide-inner {
-    position: relative;
-    outline: 2px solid yellow;
-  }
-
-  &__slide-inner img {
-    // width: 90%;
-    // height: auto;
+  &__slide img {
+    width: 100%;
+    height: auto;
   }
 
   &__project-info {
     padding: 10px;
-    width: 140px;
+    width: 160px;
     height: 50px;
     text-align: left;
 
     position: absolute;
+    z-index: 6;
     left: 0;
     bottom: 0;
-
+    //overflow: hidden;
     background: red;
     color: white;
   }
 
+  &__project-info::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -40px;
+
+    width: 0;
+	  height: 0;
+	  border-left: 40px solid transparent;
+	  border-right: 40px solid transparent;
+	  border-bottom: 80px solid red;
+  }
+
   &__project-name {
     margin: 0;
+    margin-bottom: 3px;
 
     font-size: $font-size;
     line-height: $line-height - 7px;
@@ -84,13 +96,11 @@
 
   &__project-description {
     margin: 0;
-    //overflow: hidden;
 
-    font-size: $font-size - 4px;
-    line-height: $line-height - 10px;
+    font-size: $font-size - 2px;
+    line-height: $line-height - 8px;
     font-family: $font-stack;
     font-weight: $weight-light;
-    text-transform: uppercase;
   }
 
   &__arrow-wrap {
@@ -123,5 +133,3 @@
     fill: #a7dcf5;
   }
 }
-
-//.portfolio__slide--active
