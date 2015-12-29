@@ -1,70 +1,38 @@
-<section id="team" class="scroll-section root-sec brand-bg padd-tb-120 team-wrap">
-    <div class="container">
-        <div class="row">
-            <div class="clearfix team-inner">
-                <div class="col-sm-12 col-md-10 card-box-wrap">
-                    <div class="row">
-                        <div class="clearfix section-head team-text">
-                            <div class="col-sm-12">
-                                <h2 class="title">our team</h2>
+<section class="team">
+  <div class="team__inner">
 
-                                <p class="regular-text">{{{company.teamDescription}}}</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="overflow-hidden">
-                                <div class="row">
-                                    <div id="teamSlider" class="clearfix card-element-wrapper">
-										{{#each developers}}
-                                            <div class="col-sm-4 single-card-box wow fadeInUpSmall"
-                                                 data-wow-duration=".7s">
-                                                <div class="card">
-                                                    <div class="card-image waves-effect waves-block waves-light team-image">
-                                                        <div class="card-img-wrap">
-                                                            <img class="activator" src="{{{photo.url}}}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-content">
-                                                        <span class="card-title activator brand-text">
-															{{{firstName}}} {{{secondName}}}
-                                                            <i class="mdi-navigation-more-vert right"></i>
-														</span>
+    <h1 class="team__header">Our Team</h1>
 
-                                                        <p>{{{position}}}</p>
-                                                    </div>
-                                                    <div class="card-reveal">
-                                                        <div class="rev-title-wrap">
-                                                            <span class="card-title activator brand-text">
-																{{{firstName}}} {{{secondName}}}
-                                                                <i class="mdi-navigation-close right"></i>
-															</span>
+    <div class="team__arrow-wrap team__arrow-wrap--left">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+        <path class="team__arrow" d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+      </svg>
+    </div>
 
-                                                            <p>{{{position}}}</p>
-                                                        </div>
-                                                        <p class="rev-content">
-															{{{info}}}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-										{{/each}}
-                                        
-                                    </div>
-                                    <!-- #teamSlider end -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-wrapp tmu-ctrl">
-                    <a class="btn-floating waves-effect waves-light btn-large white go go-left"><i
-                            class="mdi-navigation-chevron-left brand-text"></i></a>
-                    <a class="btn-floating waves-effect waves-light btn-large white go go-right"><i
-                            class="mdi-navigation-chevron-right brand-text"></i></a>
-                </div>
-            </div>
+    <div class="team__arrow-wrap team__arrow-wrap--right">
+      <svg class="team__arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+        <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+      </svg>
+    </div>
+
+    <div class="team__members-wrap">
+      {{#each developers}}
+      <div class="team__member">
+
+        <img src="{{{photo.url}}}" width="280" alt="photo">
+        <div class="team__member-info">
+          <h2 class="team__member-name">{{{firstName}}} {{{secondName}}}</h2>
+          <p class="team__member-position">{{{position}}}</p>
+          <i class="team__member-control">...</i>
         </div>
 
+      </div>
+      {{/each}}
     </div>
-    <!-- .container -->
+
+    <p class="team__description">{{{company.teamDescription}}}</p>
+
+    <span class="team__rate">Our hourly rate - 25$</span>
+
+  </div>
 </section>

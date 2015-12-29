@@ -1,0 +1,27 @@
+//
+//
+// Styles for team block
+
+.team {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+
+  &__inner {
+    @include container();
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: $h1-size - 10px;
+    line-height: $h1-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: black;
+  }
+}

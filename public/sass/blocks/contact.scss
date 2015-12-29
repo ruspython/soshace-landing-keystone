@@ -3,7 +3,7 @@
 // Styles for contact form
 
 .contact {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 40px;
   margin-bottom: 30px;
   background-color: #f7f7f7;
@@ -19,6 +19,7 @@
 
   &__header {
     margin: 0;
+    margin-bottom: 10px;
 
     font-size: $h1-size - 10px;
     line-height: $h1-line-height;
@@ -35,7 +36,7 @@
   &__text {
     position: relative;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     width: 60%;
     background: #2fbdff;
 
