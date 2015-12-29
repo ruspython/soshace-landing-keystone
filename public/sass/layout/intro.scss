@@ -86,14 +86,14 @@
     text-decoration: none;
 
     background: #fff000;
-    box-shadow: 0 5px 10px 0 #d6ae00;
+    box-shadow: 0 4px 0 0 #d6ae00;
     color: black;
     outline: none;
     cursor: pointer;
   }
 
   &__btn:hover {
-    box-shadow: 0 5px 5px 0 #d6ae00;
+
   }
 
   &__btn:active {

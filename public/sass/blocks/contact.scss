@@ -3,5 +3,140 @@
 // Styles for contact form
 
 .contact {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+  background-image: url('../images/bg-contact-mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: 45% 30%;
+  background-size: 700px auto;
 
+  &__inner {
+    @include container();
+    text-align: center;
+  }
+
+  &__header {
+    margin: 0;
+
+    font-size: $h1-size - 10px;
+    line-height: $h1-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: #2e5fb2;
+  }
+
+  &__header-addition {
+    display: none;
+  }
+
+  &__text {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 200px;
+    background: #2fbdff;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    color: white;
+  }
+
+  &__text-addition {
+    display: none;
+  }
+
+  &__text::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -10px;
+
+    width: 0;
+	  height: 0;
+	  border-left: 10px solid transparent;
+	  border-right: 10px solid transparent;
+	  border-bottom: 22px solid #2fbdff;
+  }
+
+  &__text::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -10px;
+
+    width: 0;
+	  height: 0;
+	  border-left: 10px solid transparent;
+	  border-right: 10px solid transparent;
+	  border-top: 22px solid #2fbdff;
+  }
+
+  &__form {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  &__form input[type=text],
+  &__form input[type=email],
+  &__form textarea {
+    display: block;
+    padding: 3px 10px;
+    margin: 0 auto;
+    margin-bottom: 7px;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $weight-normal;
+    font-family: $font-stack;
+    color: #404040;
+  }
+
+  &__form input[type=email] {
+
+  }
+
+  &__form textarea {
+    margin-bottom: 10px;
+    resize: none;
+  }
+
+  &__form input[type=submit] {
+    display: block;
+    margin: 0 auto;
+
+    padding: 2px 15px;
+    border-radius: 5px;
+
+    font-size: $font-size - 4px;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background: #e9ab00;
+    box-shadow: 0 3px 0 0 #c49000;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__form input[type=submit]:hover {
+
+  }
+
+  &__form input[type=submit]:active {
+
+  }
 }
