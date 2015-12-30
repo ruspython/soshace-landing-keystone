@@ -3,19 +3,164 @@
 // Styles for testimonial block
 
 .testimonial {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 90px;
+  padding-bottom: 80px;
   background: #eaeced;
+  position: relative;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: 5;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+	  height: 0;
+	  border-left: 160px solid transparent;
+	  border-right: 160px solid transparent;
+	  border-top: 40px solid #eaeced;
+  }
 
   &__inner {
     @include container();
+    position: relative;
+    text-align: center;
   }
 
   &__slides-wrap {
-
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 90%;
+    height: 350px;
   }
 
   &__slide {
+    display: none;
+    padding-top: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    text-align: center;
     background: white;
+    border-radius: 5px;
+    box-shadow:
+      1px 1px 15px 0 grey,
+      -1px -1px 15px 0 grey;
+  }
+
+  &__slide:nth-child(1) {
+    display: block;
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: $h2-size;
+    line-height: $h2-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: #557fc4;
+  }
+
+  &__content {
+
+  }
+
+  &__photo {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  &__photo img {
+    width: 200px;
+  }
+
+  &__photo-title {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+
+    width: 200px;
+    padding: 10px 0;
+    margin: auto;
+    color: white;
+    background: grey;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  &__info {
+
+  }
+
+  &__info-title {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-size: $h2-size - 16px;
+    line-height: $h2-line-height - 20px;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  &__info-text {
+    margin: 0;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    color: black;
+  }
+
+  &__info-pictures {
+
+  }
+
+  &__arrow-wrap {
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: -100px;
+    width: 60px;
+    height: 50px;
+    z-index: 9;
+    cursor: pointer;
+  }
+
+  &__arrow-wrap--left {
+    left: 20%;
+  }
+
+  &__arrow-wrap--right {
+    right: 20%;
+  }
+
+  &__arrow {
+    fill: #2e5fb2;
+  }
+
+  &__arrow-wrap:hover .testimonial__arrow {
+    fill: #548dec;
+  }
+
+  &__arrow-wrap:active .testimonial__arrow {
+    fill: #9cbaee;
   }
 }
