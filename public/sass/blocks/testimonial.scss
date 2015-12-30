@@ -1,0 +1,21 @@
+//
+//
+// Styles for testimonial block
+
+.testimonial {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: #eaeced;
+
+  &__inner {
+    @include container();
+  }
+
+  &__slides-wrap {
+
+  }
+
+  &__slide {
+    background: white;
+  }
+}
