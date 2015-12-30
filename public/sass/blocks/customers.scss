@@ -1,0 +1,43 @@
+//
+//
+// Styles for customers block
+
+.customers {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  position: relative;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: 5;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+
+    width: 0;
+	  height: 0;
+	  border-left: 160px solid transparent;
+	  border-right: 160px solid transparent;
+	  border-top: 40px solid white;
+  }
+
+  &__inner {
+    @include container();
+    text-align: center;
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: $h2-size;
+    line-height: $h2-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: #557fc4;
+  }
+}
