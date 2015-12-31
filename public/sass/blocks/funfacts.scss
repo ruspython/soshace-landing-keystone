@@ -1,0 +1,69 @@
+//
+//
+// Styles for funfacts block
+
+.funfacts {
+  font-size: 0;
+
+  &__left-column {
+    width: 50%;
+    display: inline-block;
+    background: #4ebe03;
+    font-size: $font-size;
+  }
+
+  &__right-column {
+    width: 50%;
+    display: inline-block;
+    background: #4972cf;
+    font-size: $font-size;
+  }
+
+  &__clients {
+
+  }
+
+  &__clients-number {
+
+  }
+
+  &__clients-text {
+
+  }
+
+  &__projects {
+
+  }
+
+  &__projects-number {
+
+  }
+
+  &__projects-text {
+
+  }
+
+  &__awards {
+
+  }
+
+  &__awards-number {
+
+  }
+
+  &__awards-text {
+
+  }
+
+  &__years {
+
+  }
+
+  &__years-number {
+
+  }
+
+  &__years-text {
+
+  }
+}
