@@ -5,65 +5,116 @@
 .funfacts {
   font-size: 0;
 
-  &__left-column {
+  &__left-column,
+  &__right-column {
+    padding-top: 120px;
+    padding-bottom: 50px;
     width: 50%;
     display: inline-block;
     background: #4ebe03;
-    font-size: $font-size;
+    text-align: right;
   }
 
   &__right-column {
-    width: 50%;
-    display: inline-block;
     background: #4972cf;
-    font-size: $font-size;
+    text-align: left;
+  }
+
+  &__left-column::after {
+
+  }
+
+  &__right-column::after {
+    
+  }
+
+  &__clients,
+  &__awards,
+  &__projects,
+  &__years {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   &__clients {
-
-  }
-
-  &__clients-number {
-
-  }
-
-  &__clients-text {
-
-  }
-
-  &__projects {
-
-  }
-
-  &__projects-number {
-
-  }
-
-  &__projects-text {
-
+    padding-right: 30%;
+    margin-bottom: 90px;
   }
 
   &__awards {
-
+    padding-left: 30%;
+    margin-bottom: 90px;
   }
 
-  &__awards-number {
-
-  }
-
-  &__awards-text {
-
-  }
-
-  &__years {
-
-  }
-
+  &__clients-number,
+  &__awards-number,
+  &__projects-number,
   &__years-number {
+    position: relative;
+    margin-bottom: 5px;
 
+    font-size: $h1-size - 15px;
+    line-height: $h1-line-height - 15px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+    color: white;
   }
 
-  &__years-text {
+  &__clients-number::before,
+  &__awards-number::before,
+  &__projects-number::before,
+  &__years-number::before {
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: -60px;
+    left: 0;
+    right: 0;
 
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    width: 42px;
+    height: 48px;
+    background-size: 42px 48px;
+    background-image: url('../images/icon-facts-calendar.png'); // img 60x68
+  }
+
+  &__clients-number::before {
+    width: 70px;
+    height: 44px;
+    background-size: 70px 44px;
+    background-image: url('../images/icon-facts-clients.png'); // img 90x56
+  }
+
+  &__awards-number::before {
+    top: -65px;
+    width: 58px;
+    height: 52px;
+    background-size: 58px 52px;
+    background-image: url('../images/icon-facts-ward.png'); // img 79x71
+  }
+
+  &__projects-number::before {
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
+    background-image: url('../images/icon-facts-projects.png'); // img 74x74
+  }
+
+  &__clients-text,
+  &__awards-text,
+  &__projects-text,
+  &__years-text {
+    margin-bottom: 5px;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    text-transform: uppercase;
+    color: white;
   }
 }
