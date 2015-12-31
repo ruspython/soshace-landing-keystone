@@ -3,5 +3,25 @@
 // Styles for map block
 
 .map {
+  position: relative;
+  height: 300px;
+  z-index: 1;
+  //background: #f3f1ea url('../img/main-map.jpg') no-repeat 50% 70%;
 
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: 5;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 0;
+	  height: 0;
+	  border-left: 160px solid white;
+	  border-right: 160px solid white;
+	  border-top: 40px solid transparent;
+  }
 }

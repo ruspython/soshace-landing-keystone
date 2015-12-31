@@ -3,5 +3,66 @@
 // Styles for main footer
 
 .main-footer {
+  padding: 30px 0;
+  background: white;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $font-stack;
 
+  &__adress-line-1 {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $weight-bold;
+  }
+
+  &__adress-line-2 {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-size: $font-size;
+    line-height: $line-height - 5px;
+    font-weight: $weight-light;
+  }
+
+  &__skype {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $weight-light;
+  }
+
+  &__skype-logo-parent {
+    position: relative;
+  }
+
+  &__skype-logo-parent::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    width: 23px;
+    height: 23px;
+    background-size: 23px 23px;
+    background-image: url('../images/logo-skype.png'); // img 23x23
+  }
+
+  &__links {
+    margin: 0;
+  }
+
+  &__links a {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $weight-light;
+    color: black
+  }
 }
