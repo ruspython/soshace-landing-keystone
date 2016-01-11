@@ -25,7 +25,7 @@
   }
 
   &__right-column::after {
-    
+
   }
 
   &__clients,
@@ -116,5 +116,61 @@
     font-weight: $weight-light;
     text-transform: uppercase;
     color: white;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .funfacts {
+
+    &__left-column,
+    &__right-column {
+      padding-top: 130px;
+      padding-bottom: 60px;
+      font-size: 0;
+    }
+
+    &__clients,
+    &__awards,
+    &__projects,
+    &__years {
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    &__clients {
+      padding-right: 50%;
+      margin-bottom: 30px;
+    }
+
+    &__awards {
+      padding-left: 50%;
+      margin-bottom: 30px;
+    }
+
+    &__projects {
+      padding-right: 18%;
+    }
+
+    &__years {
+      padding-left: 18%;
+    }
+
+    &__clients-number,
+    &__awards-number,
+    &__projects-number,
+    &__years-number {
+      margin-bottom: 5px;
+
+      font-size: $h1-size - 10px;
+      line-height: $h1-line-height - 10px;
+    }
+
+    &__clients-text,
+    &__awards-text,
+    &__projects-text,
+    &__years-text {
+      font-size: $font-size;
+      line-height: $line-height;
+    }
   }
 }
