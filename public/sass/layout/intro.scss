@@ -4,8 +4,8 @@
 
 .intro {
   position: relative;
-  padding-top: 130px;
-  padding-bottom: 55px;
+  padding-top: 140px;
+  padding-bottom: 65px;
   background-color: #6f7d86;
   background-image: url('../images/bg-intro-mobile@1x.jpg');
   background-repeat: no-repeat;
@@ -39,7 +39,8 @@
   }
 
   &__title {
-    margin: 0;
+    width: 280px;
+    margin: 0 auto;
     margin-bottom: 15px;
     position: relative;
     font-family: $font-stack;
@@ -60,7 +61,8 @@
   }
 
   &__subtitle {
-    margin: 0;
+    width: 280px;
+    margin: 0 auto;
     margin-bottom: 25px;
     font-family: $font-stack;
     font-weight: $weight-thin;
@@ -118,4 +120,53 @@
   //   transform-origin: 100% 0%;
   //   transform: rotate(30deg) skewX(-30deg);
   // }
+}
+
+@media (min-width: $screen_md) {
+  .intro {
+    padding-top: 230px;
+    padding-bottom: 200px;
+    background-image: url('../images/bg-intro-tablet@1x.jpg');
+    background-position: 45% 60px;
+    background-size: 1200px auto;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__logo {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    &__logo img {
+      width: 300px;
+      height: 79px;
+    }
+
+    &__title {
+      width: 480px;
+      margin-bottom: 20px;
+      font-size: $h1-size - 10px;
+      line-height: $h1-line-height - 5px;
+    }
+
+    &__subtitle {
+      width: auto;
+      margin: 0;
+      margin-bottom: 30px;
+      font-size: $h1-size - 20px;
+      line-height: $h1-line-height - 15px;
+    }
+
+    &__btn-wrap {
+      margin-bottom: 15px;
+    }
+
+    &__btn {
+      padding: 13px 45px;
+      font-size: $font-size + 3px;
+      box-shadow: 0 5px 0 0 #d6ae00;
+    }
+  }
 }
