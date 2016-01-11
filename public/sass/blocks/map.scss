@@ -25,3 +25,9 @@
 	  border-top: 40px solid transparent;
   }
 }
+
+@media (min-width: $screen_md) {
+  .map {
+    height: 350px;
+  }
+}

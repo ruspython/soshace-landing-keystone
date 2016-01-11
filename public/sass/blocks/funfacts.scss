@@ -32,7 +32,6 @@
   &__awards,
   &__projects,
   &__years {
-    position: relative;
     text-align: center;
     margin-bottom: 10px;
   }
@@ -127,32 +126,58 @@
       padding-top: 130px;
       padding-bottom: 60px;
       font-size: 0;
+      vertical-align: middle;
     }
-
+//-
+    // &__clients,
+    // &__awards,
+    // &__projects,
+    // &__years {
+    //   display: inline-block;
+    //   margin-bottom: 15px;
+    // }
+    //
+    // &__clients {
+    //   padding-right: 0;
+    //   margin-right: 20%;
+    //   margin-bottom: 0;
+    // }
+    //
+    // &__awards {
+    //   padding-left: 0;
+    //   margin-left: 10%;
+    //   margin-right: 20%;
+    //   margin-bottom: 0;
+    // }
+    //
+    // &__projects {
+    //   margin-right: 10%;
+    // }
+//-
     &__clients,
     &__awards,
     &__projects,
     &__years {
-      display: inline-block;
-      margin-bottom: 15px;
+      //text-align: center;
+      //margin-bottom: 10px;
     }
 
     &__clients {
-      padding-right: 50%;
-      margin-bottom: 30px;
+      padding-right: 40%;
+      margin-bottom: 70px;
     }
 
     &__awards {
-      padding-left: 50%;
-      margin-bottom: 30px;
+      padding-left: 40%;
+      margin-bottom: 70px;
     }
 
     &__projects {
-      padding-right: 18%;
+      padding-left: 50%;
     }
 
     &__years {
-      padding-left: 18%;
+      padding-right: 50%;
     }
 
     &__clients-number,

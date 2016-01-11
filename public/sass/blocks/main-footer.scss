@@ -3,7 +3,7 @@
 // Styles for main footer
 
 .main-footer {
-  padding: 30px 0;
+  padding: 40px 0;
   background: white;
   color: black;
   text-transform: uppercase;
@@ -64,5 +64,34 @@
     line-height: $line-height;
     font-weight: $weight-light;
     color: black
+  }
+}
+
+@media (min-width: $screen_md) {
+  .main-footer{
+    padding: 60px 0;
+
+    &__adress-line-1 {
+      margin-bottom: 7px;
+
+      font-size: $font-size + 2px;
+      line-height: $line-height + 8px;
+    }
+
+    &__adress-line-2 {
+      margin-bottom: 10px;
+
+      font-size: $font-size + 2px;
+    }
+
+    &__skype {
+      margin-bottom: 7px;
+
+      font-size: $font-size + 2px;
+    }
+
+    &__links a {
+      font-size: $font-size + 2px;
+    }
   }
 }
