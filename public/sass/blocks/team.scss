@@ -43,27 +43,21 @@
   }
 
   &__members-wrap {
-    position: relative;
+    // position: relative;
     margin: 0 auto;
     margin-bottom: 80px;
     width: 80%;
     height: 320px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__member {
-    display: none;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: inline-block;
     width: 100%;
     height: 100%;
     overflow: hidden;
     text-align: center;
-  }
-
-  &__member:nth-child(1) {
-    display: block;
   }
 
   &__member img {
@@ -79,7 +73,6 @@
     width: 200px;
     margin: 0 auto;
     text-align: left;
-
   }
 
   &__member-name {
@@ -107,6 +100,7 @@
     position: absolute;
     top: -8px;
     right: 8px;
+    color: #7bb9dd;
   }
 
   &__description {
@@ -139,7 +133,7 @@
   &__arrow-wrap {
     display: block;
     position: absolute;
-    bottom: -58px;
+    bottom: 30%;
     width: 60px;
     height: 50px;
     z-index: 9;
@@ -164,5 +158,65 @@
 
   &__arrow-wrap:active .team__arrow {
     fill: #a7dcf5;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .team {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 35px;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__header {
+      margin-bottom: 35px;
+      font-size: $h1-size - 5px;
+    }
+
+    &__members-wrap {
+      margin-bottom: 20px;
+      height: 320px;
+    }
+
+    &__member {
+      width: 45%;
+      margin-right: 5%;
+    }
+
+    &__member img {
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      width: 420px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+      font-size: $font-size + 2px;
+      line-height: $line-height + 3px;
+    }
+
+    &__rate {
+      width: 60%;
+      padding: 10px 15px;
+
+      font-size: $font-size + 10px;
+      line-height: $line-height;
+    }
+
+    &__arrow-wrap {
+      bottom: 55%;
+    }
+
+    &__arrow-wrap--left {
+      left: 1%;
+    }
+
+    &__arrow-wrap--right {
+      right: 3%;
+    }
   }
 }
