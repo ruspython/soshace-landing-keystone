@@ -74,10 +74,6 @@
     color: #557fc4;
   }
 
-  &__content {
-
-  }
-
   &__photo {
     position: relative;
     width: 80%;
@@ -103,10 +99,6 @@
     background: rgba(0, 0, 0, 0.4);
   }
 
-  &__info {
-
-  }
-
   &__info-title {
     margin: 0;
     margin-bottom: 5px;
@@ -130,7 +122,7 @@
   }
 
   &__info-pictures {
-
+    display: none;
   }
 
   &__arrow-wrap {
@@ -162,5 +154,88 @@
 
   &__arrow-wrap:active .testimonial__arrow {
     fill: #9cbaee;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .testimonial {
+    padding-top: 100px;
+    padding-bottom: 90px;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__slides-wrap {
+      margin-bottom: 10px;
+      width: 80%;
+      // height: 350px;
+    }
+
+    &__header {
+      // margin-bottom: 30px;
+
+      font-size: $h2-size + 3px;
+      line-height: $h2-line-height;
+    }
+
+    &__content {
+      @include clearfix();
+    }
+
+    &__photo {
+      float: left;
+      width: 40%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    &__photo img {
+      width: 100%;
+    }
+
+    &__photo-title {
+       width: 100%;
+    }
+
+    &__info {
+      float: left;
+      width: 50%;
+      text-align: left;
+    }
+
+    &__info-title {
+      margin-bottom: 5px;
+
+      font-size: $h2-size - 15px;
+      line-height: $h2-line-height - 10px;
+    }
+
+    &__info-text {
+      margin-bottom: 10px;
+    }
+
+    &__info-pictures {
+      display: block;
+      font-size: 0;
+    }
+
+    &__info-pictures img {
+      display: inline-block;
+      margin-right: 5px;
+      width: 40%;
+    }
+
+    &__arrow-wrap {
+      bottom: 40%;
+    }
+
+    &__arrow-wrap--left {
+      left: 1%;
+    }
+
+    &__arrow-wrap--right {
+      right: 1%;
+    }
   }
 }
