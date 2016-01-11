@@ -64,7 +64,6 @@
     z-index: 6;
     left: 0;
     bottom: 0;
-    //overflow: hidden;
     background: red;
     color: white;
   }
@@ -131,5 +130,62 @@
 
   &__arrow-wrap:active .portfolio__arrow {
     fill: #a7dcf5;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .portfolio {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    margin-bottom: 35px;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__header {
+      margin-bottom: 40px;
+      font-size: $h1-size - 5px;
+    }
+
+    &__slides-wrap {
+      margin-bottom: 0;
+      width: 70%;
+      height: 280px;
+    }
+
+    &__project-info {
+      padding: 13px;
+      width: 180px;
+      height: 90px;
+    }
+
+    &__project-info::after {
+  	  border-bottom: 116px solid red;
+    }
+
+    &__project-name {
+      margin-bottom: 5px;
+
+      font-size: $font-size + 2px;
+      line-height: $line-height - 6px;
+    }
+
+    &__project-description {
+      font-size: $font-size;
+      line-height: $line-height - 6px;
+    }
+
+    &__arrow-wrap {
+      bottom: 40%;
+    }
+
+    &__arrow-wrap--left {
+      left: 4%;
+    }
+
+    &__arrow-wrap--right {
+      right: 4%;
+    }
   }
 }
