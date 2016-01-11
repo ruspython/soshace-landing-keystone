@@ -3,11 +3,25 @@
 // Styles for funfacts block
 
 .funfacts {
+  position: relative;
   font-size: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 65px;
+    background-image: url('../images/triangle-white.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 65px;
+  }
 
   &__left-column,
   &__right-column {
-    padding-top: 120px;
+    padding-top: 140px;
     padding-bottom: 50px;
     width: 50%;
     display: inline-block;
@@ -121,39 +135,19 @@
 @media (min-width: $screen_md) {
   .funfacts {
 
+    &::before {
+      height: 90px;
+      background-size: 100% 90px;
+    }
+
     &__left-column,
     &__right-column {
-      padding-top: 130px;
+      padding-top: 160px;
       padding-bottom: 60px;
       font-size: 0;
       vertical-align: middle;
     }
-//-
-    // &__clients,
-    // &__awards,
-    // &__projects,
-    // &__years {
-    //   display: inline-block;
-    //   margin-bottom: 15px;
-    // }
-    //
-    // &__clients {
-    //   padding-right: 0;
-    //   margin-right: 20%;
-    //   margin-bottom: 0;
-    // }
-    //
-    // &__awards {
-    //   padding-left: 0;
-    //   margin-left: 10%;
-    //   margin-right: 20%;
-    //   margin-bottom: 0;
-    // }
-    //
-    // &__projects {
-    //   margin-right: 10%;
-    // }
-//-
+
     &__clients,
     &__awards,
     &__projects,

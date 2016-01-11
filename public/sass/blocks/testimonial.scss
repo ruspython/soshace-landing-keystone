@@ -3,26 +3,22 @@
 // Styles for testimonial block
 
 .testimonial {
-  padding-top: 90px;
+  padding-top: 100px;
   padding-bottom: 80px;
   background: #eaeced;
   position: relative;
 
-  &::after {
-    content: '';
-
+  &::before {
+    content: "";
     position: absolute;
-    z-index: 5;
-    margin: 0 auto;
-    left: 0;
+    top: -1px;
     right: 0;
-    bottom: -40px;
-
-    width: 0;
-	  height: 0;
-	  border-left: 160px solid transparent;
-	  border-right: 160px solid transparent;
-	  border-top: 40px solid #eaeced;
+    left: 0;
+    z-index: 5;
+    height: 65px;
+    background-image: url('../images/triangle-white.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 65px;
   }
 
   &__inner {
@@ -159,8 +155,13 @@
 
 @media (min-width: $screen_md) {
   .testimonial {
-    padding-top: 100px;
-    padding-bottom: 90px;
+    padding-top: 130px;
+    padding-bottom: 40px;
+
+    &::before {
+      height: 90px;
+      background-size: 100% 90px;
+    }
 
     &__inner {
       @include container--tablet();

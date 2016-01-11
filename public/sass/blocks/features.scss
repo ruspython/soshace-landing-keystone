@@ -11,23 +11,6 @@
   background: white;
   color: black;
 
-  &::after {
-    content: '';
-
-    position: absolute;
-    z-index: 5;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    bottom: -60px;
-
-    width: 0;
-	  height: 0;
-	  border-left: 160px solid transparent;
-	  border-right: 160px solid transparent;
-	  border-top: 40px solid white;
-  }
-
   &__inner {
     @include container();
   }

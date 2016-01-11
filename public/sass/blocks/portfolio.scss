@@ -3,11 +3,24 @@
 // Styles for portfolio block
 
 .portfolio {
-  padding-top: 60px;
+  padding-top: 100px;
   padding-bottom: 50px;
   margin-bottom: 30px;
   position: relative;
   text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 65px;
+    background-image: url('../images/triangle-orange.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 65px;
+  }
 
   &__inner {
     @include container();
@@ -135,9 +148,14 @@
 
 @media (min-width: $screen_md) {
   .portfolio {
-    padding-top: 70px;
+    padding-top: 130px;
     padding-bottom: 60px;
     margin-bottom: 35px;
+
+    &::before {
+      height: 90px;
+      background-size: 100% 90px;
+    }
 
     &__inner {
       @include container--tablet();
