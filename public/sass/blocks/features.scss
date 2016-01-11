@@ -77,3 +77,43 @@
     font-weight: $weight-thin;
   }
 }
+
+@media (min-width: $screen_md) {
+  .features {
+    padding-top: 120px;
+    margin-bottom: 30px;
+
+    &__inner {
+      @include container--tablet();
+      @include clearfix();
+    }
+
+    &__item {
+      float: left;
+      width: 45%;
+      margin-right: 10%;
+      margin-bottom: 100px;
+    }
+
+    &__item:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &__item:nth-last-child(2),
+    &__item:last-child {
+      margin-bottom: 25px;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+
+      font-size: $h2-size - 10px;
+      line-height: $h2-line-height - 10px;
+    }
+
+    &__text {
+      font-size: $font-size + 2px;
+      line-height: $line-height + 3px;
+    }
+  }
+}
