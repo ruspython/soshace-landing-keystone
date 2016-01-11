@@ -13,9 +13,11 @@
 //
 // Container for tablet version
 @mixin container--tablet() {
-  width: 620px;
-  padding: 0 20px;
-  margin: 0 auto;
+  // width: 600px;
+  // padding: 0 20px;
+  // margin: 0 auto;
+  width: auto;
+  padding: 0 3%;
 }
 
 //
@@ -24,12 +26,6 @@
 @mixin container--desktop() {
   width: 940px;
   padding: 0 10px;
-  margin: 0 auto;
-}
-
-@mixin container--desktop-post-page() {
-  width: 820px;
-  padding: 0 70px;
   margin: 0 auto;
 }
 

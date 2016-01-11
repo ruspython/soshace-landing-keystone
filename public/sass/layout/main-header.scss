@@ -46,3 +46,14 @@
     padding-top: 5px;
   }
 }
+
+@media (min-width: $screen_md) {
+  .main-header {
+
+    &__inner {
+      @include container--tablet();
+      padding-top: 35px;
+      padding-bottom: 25px;
+    }
+  }
+}

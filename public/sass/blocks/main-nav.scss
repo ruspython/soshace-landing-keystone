@@ -61,6 +61,15 @@
   }
 
   &__button:active {
-    opacity: 0.3;
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: $screen_md) {
+  .main-nav {
+
+    &--visible {
+      top: 102px;
+    }
   }
 }
