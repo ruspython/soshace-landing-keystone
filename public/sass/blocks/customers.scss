@@ -41,3 +41,20 @@
     color: #557fc4;
   }
 }
+
+@media (min-width: $screen_md) {
+  .customers {
+    padding-top: 90px;
+    padding-bottom: 50px;
+
+    &__inner {
+      @include container--tablet();
+    }
+
+    &__header {
+      margin-bottom: 35px;
+
+      font-size: $h2-size + 3px;
+    }
+  }
+}
