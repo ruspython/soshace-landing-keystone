@@ -10,6 +10,25 @@
   background: $orange-color;
   color: white;
 
+  // &__triangle-down {
+  //   width: 100%;
+  //   padding-bottom: 50%; // = width / 2 for skewX(-30deg)
+  //   position: relative;
+  //   overflow: hidden;
+  // }
+
+  // &__triangle-down::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: white;
+  //   transform-origin: 100% 0%;
+  //   transform: rotate(30deg) skewX(-30deg);
+  // }
+
   &::after {
     content: '';
 
