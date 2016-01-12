@@ -170,3 +170,47 @@
     }
   }
 }
+
+@media (min-width: $screen_lg) {
+  .intro {
+    padding-top: 330px;
+    padding-bottom: 290px;
+    background-image: url('../images/bg-intro-fullsize@1x.jpg');
+    background-position: 50% 0%;
+    background-size: auto 100%;
+
+    &__inner {
+      @include container--desktop();
+    }
+
+    &__logo {
+      margin-bottom: 20px;
+    }
+
+    &__logo img {
+      width: 450px;
+      height: auto;
+    }
+
+    &__title {
+      width: 700px;
+      margin-bottom: 30px;
+      font-size: $h1-size + 10px;
+      line-height: $h1-line-height;
+    }
+
+    &__title::after {
+      bottom: -20px;
+    }
+
+    &__subtitle {
+      font-size: $h1-size - 10px;
+      line-height: $h1-line-height;
+    }
+
+    &__btn {
+      padding: 17px 65px 14px 65px;
+      font-size: $font-size + 6px;
+    }
+  }
+}
