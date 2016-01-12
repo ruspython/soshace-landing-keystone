@@ -135,25 +135,12 @@
 @media (min-width: $screen_md) {
   .funfacts {
 
-    &::before {
-      height: 90px;
-      background-size: 100% 90px;
-    }
-
     &__left-column,
     &__right-column {
       padding-top: 160px;
       padding-bottom: 60px;
       font-size: 0;
       vertical-align: middle;
-    }
-
-    &__clients,
-    &__awards,
-    &__projects,
-    &__years {
-      //text-align: center;
-      //margin-bottom: 10px;
     }
 
     &__clients {
@@ -167,10 +154,12 @@
     }
 
     &__projects {
+      margin-top: -50px;
       padding-left: 50%;
     }
 
     &__years {
+      margin-top: -50px;
       padding-right: 50%;
     }
 
@@ -190,6 +179,43 @@
     &__years-text {
       font-size: $font-size;
       line-height: $line-height;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .funfacts {
+
+    &__clients,
+    &__awards {
+      padding-right: 20%;
+    }
+
+    &__projects,
+    &__years {
+      margin-top: -105px;
+    }
+
+    &__clients-number,
+    &__awards-number,
+    &__projects-number,
+    &__years-number {
+      margin-bottom: 10px;
+      font-size: $h1-size - 5px;
+    }
+
+    &__clients-number::before,
+    &__awards-number::before,
+    &__projects-number::before,
+    &__years-number::before {
+      top: -70px;
+    }
+
+    &__clients-text,
+    &__awards-text,
+    &__projects-text,
+    &__years-text {
+      font-size: $font-size + 4px;
     }
   }
 }
