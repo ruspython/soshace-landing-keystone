@@ -39,27 +39,21 @@
   }
 
   &__slides-wrap {
-    position: relative;
     margin: 0 auto;
     margin-bottom: 30px;
     width: 80%;
     height: 230px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__slide {
-    display: none;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: inline-block;
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
     text-align: center;
-  }
-
-  &__slide:nth-child(2) {
-    display: block;
   }
 
   &__slide img {
@@ -72,6 +66,7 @@
     width: 160px;
     height: 50px;
     text-align: left;
+    white-space: normal;
 
     position: absolute;
     z-index: 6;
@@ -152,11 +147,6 @@
     padding-bottom: 60px;
     margin-bottom: 35px;
 
-    &::before {
-      height: 90px;
-      background-size: 100% 90px;
-    }
-
     &__inner {
       @include container--tablet();
     }
@@ -167,7 +157,7 @@
     }
 
     &__slides-wrap {
-      margin-bottom: 0;
+      margin-bottom: 10px;
       width: 70%;
       height: 280px;
     }
@@ -175,11 +165,11 @@
     &__project-info {
       padding: 13px;
       width: 180px;
-      height: 90px;
+      height: 98px;
     }
 
     &__project-info::after {
-  	  border-bottom: 116px solid red;
+  	  border-bottom: 124px solid red;
     }
 
     &__project-name {
@@ -191,6 +181,62 @@
 
     &__project-description {
       font-size: $font-size;
+      line-height: $line-height - 4px;
+    }
+
+    &__arrow-wrap {
+      bottom: 33%;
+    }
+
+    &__arrow-wrap--left {
+      left: 4%;
+    }
+
+    &__arrow-wrap--right {
+      right: 4%;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .portfolio {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    margin-bottom: 10px;
+
+    &__inner {
+      @include container--desktop();
+    }
+
+    &__header {
+      margin-bottom: 35px;
+      font-size: $h1-size;
+    }
+
+    &__slides-wrap {
+      width: 80%;
+      height: 900px;
+      white-space: normal;
+    }
+
+    &__slide {
+      width: 47%;
+      height: 280px;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+
+    &__project-info {
+      width: 210px;
+      height: 58px;
+    }
+
+    &__project-info::after {
+  	  border-bottom: 116px solid red;
+    }
+
+    &__project-description {
+      font-size: $font-size - 2px;
       line-height: $line-height - 6px;
     }
 
@@ -199,7 +245,7 @@
     }
 
     &__arrow-wrap--left {
-      left: 4%;
+      left: 2%;
     }
 
     &__arrow-wrap--right {
