@@ -7,10 +7,6 @@
   padding-bottom: 60px;
   margin-bottom: 30px;
   background-color: #f7f7f7;
-  //background-image: url('../images/bg-contact-mobile@1x.png');
-  //background-repeat: no-repeat;
-  //background-position: 30% 50%;
-  //background-size: 800px auto;
 
   &__inner {
     @include container();
@@ -139,12 +135,12 @@
 @media (min-width: $screen_md) {
   .contact {
     padding-top: 80px;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     margin-bottom: 35px;
     background-color: white;
-    background-image: url('../images/bg-contact-tablet@1x.png');
+    background-image: url('../images/bg-contact-grey-tablet.png');
     background-repeat: no-repeat;
-    background-position: -150px 35px;
+    background-position: center 2%;
     background-size: 1200px auto;
 
     &__inner {
@@ -188,6 +184,68 @@
       padding: 7px 22px;
       font-size: $font-size;
       box-shadow: 0 5px 0 0 #c49000;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .contact {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    margin-bottom: 30px;
+    background-image: url('../images/bg-contact-fullsize@1x.png');
+    background-repeat: no-repeat;
+    background-position: -10% center;
+    background-size: auto 95%;
+
+    &__inner {
+      @include container--desktop();
+    }
+
+    &__header {
+      margin-bottom: 25px;
+      font-size: $h1-size - 5px;
+    }
+
+    &__text {
+      margin-bottom: 25px;
+      width: 435px;
+    }
+
+    &__form {
+      width: 435px;
+      margin: 0 auto;
+      font-size: 0;
+      vertical-align: top;
+    }
+
+    &__form input[type=text],
+    &__form input[type=email] {
+      display: inline-block;
+      width: 47.5%;
+      padding: 10px 10px 15px 10px;
+      margin-right: 5%;
+      margin-bottom: 20px;
+
+      font-size: $font-size + 2px;
+      line-height: $line-height + 2px;
+    }
+
+    &__form input[type=email] {
+      margin-right: 0;
+    }
+
+    &__form textarea {
+      width: 100%;
+      padding: 10px 10px 15px 10px;
+      margin-bottom: 25px;
+
+      font-size: $font-size + 2px;
+      line-height: $line-height + 2px;
+    }
+
+    &__form input[type=submit] {
+      padding: 13px 30px 10px 30px;
     }
   }
 }
