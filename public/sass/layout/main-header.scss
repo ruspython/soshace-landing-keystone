@@ -62,3 +62,27 @@
     }
   }
 }
+
+@media (min-width: $screen_lg) {
+  .main-header {
+
+    &__inner {
+      @include container--desktop();
+      padding-top: 35px;
+      padding-bottom: 20px;
+    }
+
+    &__logo-wrap {
+      width: 160px;
+    }
+
+    &__logo-wrap img{
+      // width: 154px;
+      // height: 41px;
+    }
+
+    &__toggle-wrap {
+      display: none;
+    }
+  }
+}
