@@ -41,12 +41,7 @@
 @media (min-width: $screen_md) {
   .customers {
     padding-top: 130px;
-    padding-bottom: 50px;
-
-    &::before {
-      height: 90px;
-      background-size: 100% 90px;
-    }
+    padding-bottom: 40px;
 
     &__inner {
       @include container--tablet();
@@ -56,6 +51,16 @@
       margin-bottom: 35px;
 
       font-size: $h2-size + 3px;
+    }
+  }
+}
+
+@media (min-width: $screen_lg) {
+  .customers {
+    padding-top: 145px;
+
+    &__inner {
+      @include container--desktop();
     }
   }
 }
