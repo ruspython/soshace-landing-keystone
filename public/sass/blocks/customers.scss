@@ -14,10 +14,10 @@
     right: 0;
     left: 0;
     z-index: 5;
-    height: 65px;
+    height: 50px;
     background-image: url('../images/triangle-grey.svg');
     background-repeat: no-repeat;
-    background-size: 100% 65px;
+    background-size: 100% 50px;
   }
 
   &__inner {
@@ -58,6 +58,11 @@
 @media (min-width: $screen_lg) {
   .customers {
     padding-top: 145px;
+
+    &::before {
+      height: 65px;
+      background-size: 100% 65px;
+    }
 
     &__inner {
       @include container--desktop();

@@ -13,10 +13,10 @@
     right: 0;
     left: 0;
     z-index: 5;
-    height: 65px;
+    height: 50px;
     background-image: url('../images/triangle-white.svg');
     background-repeat: no-repeat;
-    background-size: 100% 65px;
+    background-size: 100% 50px;
   }
 
   &__left-column,
@@ -32,14 +32,6 @@
   &__right-column {
     background: #4972cf;
     text-align: left;
-  }
-
-  &__left-column::after {
-
-  }
-
-  &__right-column::after {
-
   }
 
   &__clients,
@@ -130,6 +122,38 @@
     text-transform: uppercase;
     color: white;
   }
+
+  &__triangle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    padding-bottom: 10%;
+    z-index: 3;
+    overflow: hidden;
+  }
+
+  &__triangle-part {
+    position: absolute;
+    top: 100%;
+    background: white;
+    width: 50%;
+    padding-bottom: 108px;
+    z-index: 2;
+  }
+
+  &__triangle-part--left {
+    left: 50%;
+    transform-origin: 0 0;
+    transform: rotate(-10deg) skewX(75deg);
+  }
+
+  &__triangle-part--right {
+    right: 50%;
+    transform-origin: 100% 0;
+    transform: rotate(10deg) skewX(-75deg);
+  }
 }
 
 @media (min-width: $screen_md) {
@@ -185,6 +209,11 @@
 
 @media (min-width: $screen_lg) {
   .funfacts {
+
+    &::before {
+      height: 65px;
+      background-size: 100% 65px;
+    }
 
     &__clients,
     &__awards {
