@@ -101,6 +101,12 @@
     height: 100px;
   }
 
+  &__form input[type=text]:hover,
+  &__form input[type=email]:hover,
+  &__form textarea:hover {
+    outline: 2px solid grey;
+  }
+
   &__form input[type=submit] {
     display: block;
     margin: 0 auto;
@@ -124,11 +130,11 @@
   }
 
   &__form input[type=submit]:hover {
-
+    background-image: linear-gradient(to right top, #e9ab00, #ecc65c);
   }
 
   &__form input[type=submit]:active {
-
+    box-shadow: inset 0 3px 3px 0 #c49000;
   }
 }
 
@@ -184,6 +190,10 @@
       padding: 7px 22px;
       font-size: $font-size;
       box-shadow: 0 5px 0 0 #c49000;
+    }
+
+    &__form input[type=submit]:active {
+      box-shadow: inset 0 5px 5px 0 #c49000;
     }
   }
 }
