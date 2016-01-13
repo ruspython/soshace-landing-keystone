@@ -50,3 +50,9 @@
     height: 350px;
   }
 }
+
+@media (min-width: $screen_lg) {
+  .map {
+    height: 550px;
+  }
+}
