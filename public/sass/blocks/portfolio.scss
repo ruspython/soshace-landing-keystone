@@ -54,6 +54,9 @@
     height: 100%;
     overflow: hidden;
     text-align: center;
+    box-shadow:
+      0 2px 5px 0 rgba(0, 0, 0, 0.2),
+      0 2px 5px 0 rgba(0, 0, 0, 0.2);
   }
 
   &__slide img {
@@ -139,6 +142,17 @@
   &__arrow-wrap:active .portfolio__arrow {
     fill: #a7dcf5;
   }
+
+  &__slide:hover &__project-info {
+    height: 138px;
+    background: darken(red, 5%);
+    transition: 0.5s ease-out;
+  }
+
+  &__slide:hover &__project-info::after {
+      border-bottom: 160px solid darken(red, 5%);
+      transition: 0.5s ease-out;
+  }
 }
 
 @media (min-width: $screen_md) {
@@ -194,6 +208,14 @@
 
     &__arrow-wrap--right {
       right: 4%;
+    }
+
+    &__slide:hover &__project-info {
+      height: 166px;
+    }
+
+    &__slide:hover &__project-info::after {
+      border-bottom: 194px solid darken(red, 5%);
     }
   }
 }
@@ -255,6 +277,14 @@
 
     &__arrow-wrap--right {
       right: 4%;
+    }
+
+    &__slide:hover &__project-info {
+      height: 170px;
+    }
+
+    &__slide:hover &__project-info::after {
+        border-bottom: 200px solid darken(red, 5%);
     }
   }
 }
