@@ -184,6 +184,7 @@
 
     &__form textarea {
       margin-bottom: 25px;
+      height: 150px;
     }
 
     &__form input[type=submit] {
@@ -205,20 +206,20 @@
     margin-bottom: 30px;
     background-image: url('../images/bg-contact-fullsize@1x.png');
     background-repeat: no-repeat;
-    background-position: -10% center;
-    background-size: auto 95%;
+    background-position: -5% center;
+    background-size: auto 100%;
 
     &__inner {
       @include container--desktop();
     }
 
     &__header {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       font-size: $h1-size - 5px;
     }
 
     &__text {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       width: 435px;
     }
 
@@ -248,7 +249,7 @@
     &__form textarea {
       width: 100%;
       padding: 10px 10px 15px 10px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
 
       font-size: $font-size + 2px;
       line-height: $line-height + 2px;
@@ -257,5 +258,12 @@
     &__form input[type=submit] {
       padding: 13px 30px 10px 30px;
     }
+  }
+}
+
+@media (min-width: $screen_xl) {
+  .contact {
+    background-position: -30% center;
+    background-size: auto 100%;
   }
 }

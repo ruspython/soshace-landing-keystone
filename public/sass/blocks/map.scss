@@ -4,6 +4,7 @@
 
 .map-wrap {
   position: relative;
+  background: #f1f1f1 url('../images/bg-map-mobile@1x.jpg') no-repeat 50% 50%;
 
   &__triangle {
     position: absolute;
@@ -42,16 +43,23 @@
   position: relative;
   height: 300px;
   z-index: 1;
-  //background: #f3f1ea url('../img/main-map.jpg') no-repeat 50% 70%;
 }
 
 @media (min-width: $screen_md) {
+  .map-wrap {
+    background-image: url('../images/bg-map-tablet@1x.jpg');
+  }
+
   .map {
     height: 350px;
   }
 }
 
 @media (min-width: $screen_lg) {
+  .map-wrap {
+    background-image: url('../images/bg-map-fullsize@1x.jpg');
+  }
+
   .map {
     height: 550px;
   }

@@ -25,13 +25,21 @@
     padding-bottom: 50px;
     width: 50%;
     display: inline-block;
-    background: #4ebe03;
     text-align: right;
+    background: #4ebe03;
+
+    // background: #4ebe03 url('../images/bg-factsleft-mobile@1x.png') no-repeat 50% 50%;
+    // background-size: auto 80%;
   }
 
   &__right-column {
-    background: #4972cf;
     text-align: left;
+    background: #4972cf;
+
+    // background-color: #4972cf;
+    // background-image: url('../images/bg-factsright-mobile@1x.png');
+    // background-size: auto 80%;
+
   }
 
   &__clients,
@@ -165,6 +173,13 @@
       padding-bottom: 60px;
       font-size: 0;
       vertical-align: middle;
+
+      // background-image: url('../images/bg-factsleft-tablet@1x.png');
+      // background-size: 100% auto;
+    }
+
+    &__right-column {
+      // background-image: url('../images/bg-factsright-tablet@1x.png');
     }
 
     &__clients {
@@ -213,6 +228,12 @@
     &::before {
       height: 65px;
       background-size: 100% 65px;
+    }
+
+    &__left-column,
+    &__right-column {
+      padding-top: 190px;
+      padding-bottom: 90px;
     }
 
     &__clients,

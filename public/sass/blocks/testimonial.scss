@@ -6,6 +6,7 @@
   padding-top: 100px;
   padding-bottom: 80px;
   background: #eaeced;
+  // background: #ecedee url('../images/bg-testimonial-mobile@1x.png') no-repeat 50% 50%;
   position: relative;
 
   &::before {
@@ -157,6 +158,7 @@
   .testimonial {
     padding-top: 130px;
     padding-bottom: 40px;
+    // background-image: url('../images/bg-testimonial-tablet@1x.png');
 
     &__inner {
       @include container--tablet();
