@@ -52,7 +52,7 @@ gulp.task('build-js', function () {
 			// 'public/js/jquery.counterup.min.js',
 			// 'public/js/jquery.nicescroll.min.js',
 			// 'public/js/gmaps.js',
-			// 'public/libs/owl-carousel/owl.carousel.min.js',
+			'public/libs/owl-carousel/owl.carousel.min.js',
 			// 'public/libs/materialize/js/materialize.min.js',
 			// 'public/libs/jwplayer/jwplayer.js',
 			// 'public/libs/sweetalert/sweet-alert.min.js',
