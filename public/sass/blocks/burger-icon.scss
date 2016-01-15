@@ -4,24 +4,32 @@
 
 .burger-icon__open {
   display: inline;
+  animation: appear 0.6s;
 }
 
 .burger-icon__open--hidden {
   display: none;
+  // animation: appear 0.6s;
 }
 
 .burger-icon__close--hidden {
   display: none;
+  opacity: 0;
 }
 
 .burger-icon__close {
   display: inline;
+  margin-right: 10px;
+  opacity: 1;
+  animation: reverse-appear 0.6s;
 }
 
 .burger-icon:hover .burger-icon__part {
   fill: $orange-color;
+  transition: fill 0.7s;
 }
 
 .burger-icon:active .burger-icon__part {
   fill: $green-color;
+  transition: fill 0.3s;
 }

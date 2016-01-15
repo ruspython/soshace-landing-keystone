@@ -12,6 +12,8 @@
     left: 50%;
     margin-left: -50%;
     top: 92px;
+
+    animation: bounce 0.6s;
   }
 
   &__list {
@@ -43,10 +45,12 @@
 
   &__link:hover {
     color: $orange-color;
+    transition: color 0.7s;
   }
 
   &__link:active {
     color: $green-color;
+    transition: color 0.3s;
   }
 
   &__btn {

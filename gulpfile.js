@@ -44,20 +44,21 @@ gulp.task('watch', [
 gulp.task('build-js', function () {
 	return gulp
 		.src([
-			'public/js/jquery.easing.1.3.js',
-			'public/js/detectmobilebrowser.js',
-			'public/js/isotope.pkgd.min.js',
-			'public/js/wow.min.js',
-			'public/js/waypoints.js',
-			'public/js/jquery.counterup.min.js',
-			'public/js/jquery.nicescroll.min.js',
-			'public/js/gmaps.js',
-			'public/libs/owl-carousel/owl.carousel.min.js',
-			'public/libs/materialize/js/materialize.min.js',
-			'public/libs/jwplayer/jwplayer.js',
-			'public/libs/sweetalert/sweet-alert.min.js',
-			'public/js/common.js',
-			'public/js/main.js'
+			// 'public/js/jquery.easing.1.3.js',
+			// 'public/js/detectmobilebrowser.js',
+			// 'public/js/isotope.pkgd.min.js',
+			// 'public/js/wow.min.js',
+			// 'public/js/waypoints.js',
+			// 'public/js/jquery.counterup.min.js',
+			// 'public/js/jquery.nicescroll.min.js',
+			// 'public/js/gmaps.js',
+			// 'public/libs/owl-carousel/owl.carousel.min.js',
+			// 'public/libs/materialize/js/materialize.min.js',
+			// 'public/libs/jwplayer/jwplayer.js',
+			// 'public/libs/sweetalert/sweet-alert.min.js',
+			// 'public/js/common.js',
+			// 'public/js/main.js',
+			'public/js/hamburger.js'
 		])
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())
