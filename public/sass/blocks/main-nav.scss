@@ -35,7 +35,7 @@
 
   &__link {
     display: block;
-    padding: 18px 0;
+    padding: 10px 0;
 
     text-decoration: none;
     background: white;
@@ -54,18 +54,46 @@
   }
 
   &__btn {
+    position: relative;
     border-bottom: none;
     background: #fff000;
     color: black;
   }
 
   &__btn:hover {
-    text-decoration: underline;
     color: black;
   }
 
+  &__btn::before,
+  &__btn::after {
+    content: '';
+  	position: absolute;
+  	left: 0;
+  	width: 100%;
+  	height: 5px;
+  	background: rgba(0, 0, 0, 0.16);
+  	opacity: 0;
+  	transition: opacity 0.3s, transform 0.3s;
+  }
+
+  &__btn::before {
+  	top: 0;
+  	transform: translateY(-5px);
+  }
+
+  &__btn::after {
+  	bottom: 0;
+  	transform: translateY(5px);
+  }
+
+  &__btn:hover::before,
+  &__btn:hover::after {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+
   &__btn:active {
-    opacity: 0.9;
+    font-weight: $weight-normal;
   }
 }
 
@@ -88,7 +116,7 @@
     &__item {
       position: relative;
       display: inline-block;
-      margin-right: 16px;
+      margin-right: 25px;
       vertical-align: middle;
 
       font-size: $font-size + 2px;
@@ -164,17 +192,23 @@
 
     &__btn {
       padding: 12px 8px 8px 8px;
-      border-radius: 5px;
-      box-shadow: 0 4px 0 0 #d6ae00;
     }
 
     &__btn:hover {
       text-decoration: none;
-      background-image: linear-gradient(#fff000, #fff88a);
+      box-shadow: 0 2px 3px 0 #d6ae00;
+      transform: scale(1.1);
+      transition: box-shadow 0.2s, transform 0.3s;
+    }
+
+    &__btn::before,
+    &__btn::after {
+      height: 0px;
     }
 
     &__btn:active {
-      box-shadow: inset 0 3px 3px 0 #d6ae00;
+      font-weight: $weight-medium;
+      transition: font-weight 0.3s;
     }
   }
 }
@@ -182,7 +216,7 @@
 @media (min-width: $screen_xl) {
   .main-nav {
     &__item {
-      margin-right: 35px;
+      margin-right: 45px;
     }
   }
 }
