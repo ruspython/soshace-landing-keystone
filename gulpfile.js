@@ -58,6 +58,7 @@ gulp.task('build-js', function () {
 			// 'public/libs/sweetalert/sweet-alert.min.js',
 			// 'public/js/common.js',
 			// 'public/js/main.js',
+			'public/js/sliders.js',
 			'public/js/hamburger.js'
 		])
 		.pipe(concat('scripts.min.js'))
