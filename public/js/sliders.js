@@ -1,25 +1,28 @@
 'use strict';
 
 $(document).ready(function() {
-  var portfolio = $('#portfolioSlider');
-  var portfolioLeft = $('.portfolio__arrow-wrap--left');
-  var portfolioRight = $('.portfolio__arrow-wrap--left');
 
-  portfolio.owlCarousel({
-    slideSpeed : 600,
-		items : 2,
-		itemsTablet : [959, 1],
-    navigation : true
+  var teamSlider = $('.team__members-wrap');
+  teamSlider.slick({
+    slidesToShow: 4,
+    prevArrow: $('.team__arrow-wrap--left'),
+    nextArrow: $('.team__arrow-wrap--right'),
+    //infinite: false,
+    speed: 200,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
-  // var portfolioData = portfolio.data('owlCarousel');
-
-  // Custom Navigation Events
-  portfolioRight.click(function(){
-    portfolio.next();
-  })
-  portfolioLeft.click(function(){
-    portfolio.prev();
-  })
-
-}());
+});
