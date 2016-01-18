@@ -109,13 +109,13 @@
   &__triangle-part--left {
     left: 50%;
     transform-origin: 0 0;
-    transform: rotate(-10deg) skewX(75deg);
+    transform: rotate(-6deg) skewX(84deg);
   }
 
   &__triangle-part--right {
     right: 50%;
     transform-origin: 100% 0;
-    transform: rotate(10deg) skewX(-75deg);
+    transform: rotate(6deg) skewX(-84deg);
   }
 }
 
@@ -169,8 +169,8 @@
 
 @media (min-width: $screen_lg) {
   .intro {
-    padding-top: 330px;
-    padding-bottom: 290px;
+    padding-top: 280px;
+    padding-bottom: 180px;
     background-image: url('../images/bg-intro-fullsize@1x.jpg');
     background-position: 50% 0%;
     background-size: auto 100%;
