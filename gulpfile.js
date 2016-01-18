@@ -60,7 +60,8 @@ gulp.task('build-js', function () {
 			// 'public/js/main.js',
 			'public/js/sliders.js',
 			'public/js/hamburger.js',
-			'public/js/navigation.js'
+			'public/js/navigation.js',
+			'public/js/smoothscroll.js'
 		])
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())
