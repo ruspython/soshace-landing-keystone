@@ -1,6 +1,6 @@
 <section id="testimonial" class="testimonial">
   <div class="testimonial__inner">
-    <div class="testimonial__slides-wrap">
+    <div class="testimonial__slider">
 
       {{#each testimonials}}
       <div class="testimonial__slide">
@@ -9,7 +9,7 @@
 
         <div class="testimonial__content">
           <div class="testimonial__photo">
-            <img src="{{{photo.url}}}" alt="" >
+            <img src="{{{photo.url}}}" alt="Photo">
             <span class="testimonial__photo-title">{{{firstName}}} {{{secondName}}} {{{position}}}</span>
           </div>
 
@@ -17,8 +17,8 @@
             <h3 class="testimonial__info-title">Header for testimonial</h3>
             <p class="testimonial__info-text">{{{text}}}</p>
             <div class="testimonial__info-pictures">
-              <img src="{{{photo.url}}}" alt="">
-              <img src="{{{photo.url}}}" alt="">
+              <img src="{{{photo.url}}}" alt="Project Picture">
+              <img src="{{{photo.url}}}" alt="Project Picture">
             </div>
           </div>
         </div>

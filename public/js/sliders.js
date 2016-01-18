@@ -25,4 +25,28 @@ $(document).ready(function() {
     ]
   });
 
+  var testimonialSlider = $('.testimonial__slider');
+  testimonialSlider.slick({
+    slidesToShow: 1,
+    prevArrow: $('.testimonial__arrow-wrap--left'),
+    nextArrow: $('.testimonial__arrow-wrap--right'),
+    infinite: false,
+    speed: 200,
+    vertical: true
+    // responsive: [
+    //   {
+    //     breakpoint: 960,
+    //     settings: {
+    //       slidesToShow: 2
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 1
+    //     }
+    //   }
+    // ]
+  });
+
 });
