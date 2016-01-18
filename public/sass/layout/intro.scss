@@ -109,13 +109,13 @@
   &__triangle-part--left {
     left: 50%;
     transform-origin: 0 0;
-    transform: rotate(-6deg) skewX(84deg);
+    transform: rotate(-4deg) skewX(86deg);
   }
 
   &__triangle-part--right {
     right: 50%;
     transform-origin: 100% 0;
-    transform: rotate(6deg) skewX(-84deg);
+    transform: rotate(4deg) skewX(-86deg);
   }
 }
 

@@ -67,7 +67,7 @@
 
   &__project-info {
     padding: 10px;
-    width: 160px;
+    width: 100%;
     height: 50px;
     text-align: left;
     white-space: normal;
@@ -76,22 +76,8 @@
     z-index: 6;
     left: 0;
     bottom: 0;
-    background: red;
+    background: rgba(254, 186, 0, 0.8);
     color: white;
-  }
-
-  &__project-info::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: -40px;
-
-    width: 0;
-	  height: 0;
-	  border-left: 40px solid transparent;
-	  border-right: 40px solid transparent;
-	  border-bottom: 80px solid red;
   }
 
   &__project-name {
@@ -146,13 +132,8 @@
 
   &__slide:hover &__project-info {
     height: 138px;
-    background: darken(red, 5%);
+    background: $orange-color;
     transition: 0.5s ease-out;
-  }
-
-  &__slide:hover &__project-info::after {
-      border-bottom: 160px solid darken(red, 5%);
-      transition: 0.5s ease-out;
   }
 }
 
@@ -173,18 +154,14 @@
 
     &__slides-wrap {
       margin-bottom: 10px;
-      width: 70%;
+      width: 60%;
       height: 280px;
     }
 
     &__project-info {
       padding: 13px;
-      width: 180px;
+      width: 70%;
       height: 98px;
-    }
-
-    &__project-info::after {
-  	  border-bottom: 124px solid red;
     }
 
     &__project-name {
@@ -213,10 +190,6 @@
 
     &__slide:hover &__project-info {
       height: 166px;
-    }
-
-    &__slide:hover &__project-info::after {
-      border-bottom: 194px solid darken(red, 5%);
     }
   }
 }
@@ -255,12 +228,8 @@
     }
 
     &__project-info {
-      width: 210px;
+      width: 55%;
       height: 58px;
-    }
-
-    &__project-info::after {
-  	  border-bottom: 116px solid red;
     }
 
     &__project-description {
@@ -282,10 +251,6 @@
 
     &__slide:hover &__project-info {
       height: 170px;
-    }
-
-    &__slide:hover &__project-info::after {
-        border-bottom: 200px solid darken(red, 5%);
     }
   }
 }

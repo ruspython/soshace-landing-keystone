@@ -3,8 +3,8 @@
 // Styles for contact form
 
 .contact {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   margin-bottom: 30px;
   background-color: #f7f7f7;
 
@@ -98,7 +98,7 @@
   &__form textarea {
     margin-bottom: 20px;
     resize: none;
-    height: 100px;
+    height: 120px;
   }
 
   &__form input[type=text]:hover,
@@ -140,14 +140,9 @@
 
 @media (min-width: $screen_md) {
   .contact {
-    padding-top: 80px;
-    padding-bottom: 70px;
+    padding-top: 100px;
+    padding-bottom: 90px;
     margin-bottom: 35px;
-    background-color: white;
-    background-image: url('../images/bg-contact-grey-tablet.png');
-    background-repeat: no-repeat;
-    background-position: center 2%;
-    background-size: 1200px auto;
 
     &__inner {
       @include container--tablet();
@@ -200,13 +195,9 @@
 
 @media (min-width: $screen_lg) {
   .contact {
-    padding-top: 70px;
-    padding-bottom: 90px;
-    margin-bottom: 30px;
-    background-image: url('../images/bg-contact-fullsize@1x.png');
-    background-repeat: no-repeat;
-    background-position: -5% center;
-    background-size: auto 100%;
+    padding-top: 140px;
+    padding-bottom: 120px;
+    margin-bottom: 40px;
 
     &__inner {
       @include container--desktop();
@@ -219,11 +210,11 @@
 
     &__text {
       margin-bottom: 20px;
-      width: 435px;
+      width: 600px;
     }
 
     &__form {
-      width: 435px;
+      width: 600px;
       margin: 0 auto;
       font-size: 0;
       vertical-align: top;
@@ -247,6 +238,7 @@
 
     &__form textarea {
       width: 100%;
+      height: 200px;
       padding: 10px 10px 15px 10px;
       margin-bottom: 20px;
 
