@@ -5,7 +5,7 @@ var Types = keystone.Field.Types;
  * Skill Model
  * ==========
  */
-	
+
 var Skill = new keystone.List('Skill', {
 	map: { name: 'name' },
 	autokey: { path: 'slug', from: 'name', unique: true }
@@ -13,7 +13,8 @@ var Skill = new keystone.List('Skill', {
 
 Skill.add({
 	name: {type: String, required: true},
-	percent: {type: Number}
+	description: {type: String},
+  image: {type: Types.CloudinaryImage}
 });
 
 Skill.register();

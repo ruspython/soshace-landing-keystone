@@ -10,7 +10,7 @@
 
   document.addEventListener('DOMContentLoaded', function() {
 
-    var links = document.querySelectorAll('nav .scroll')
+    var links = document.querySelectorAll('.main-header .scroll')
     var i = links.length
     var root = /firefox|trident/i.test(navigator.userAgent) ? document.documentElement : document.body;
     var easeInOutCubic = function(t, b, c, d) {

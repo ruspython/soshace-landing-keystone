@@ -28,7 +28,7 @@
 
   &__header {
     margin: 0;
-    margin-bottom: 150px;
+    margin-bottom: 70px;
 
     font-size: $h1-size - 5px;
     line-height: $h1-line-height;
@@ -39,30 +39,16 @@
 
   &__item {
     margin-bottom: 150px;
-    position: relative;
     text-align: center;
   }
 
   &__item:last-child {
-    padding-bottom: 30px;
+    padding-bottom: 60px;
     margin-bottom: 0;
   }
 
-  &__item::before {
-    content: '';
-    position: absolute;
-    margin: auto;
-    top: -115px;
-    left: 0;
-    right: 0;
-
-    width: 90px;
-    height: 103px;
-
-    background-color: transparent;
-    background-image: url('../images/js.png');
-    background-repeat: no-repeat;
-    background-size: 90px 103px;
+  &__item img {
+    margin-bottom: 15px;
   }
 
   &__title {
@@ -96,7 +82,7 @@
     }
 
     &__header {
-      margin-bottom: 165px;
+      margin-bottom: 90px;
       font-size: $h1-size;
     }
 
@@ -113,8 +99,8 @@
 
     &__item:nth-last-child(2),
     &__item:last-child {
-      margin-bottom: 25px;
-      padding-bottom: 25px;
+      margin-bottom: 80px;
+      padding-bottom: 0;
     }
 
     &__title {
@@ -125,7 +111,7 @@
 
 @media (min-width: $screen_lg) {
   .skills {
-    padding-top: 140px;
+    padding-top: 150px;
 
     &::before {
       height: 65px;
@@ -137,15 +123,14 @@
     }
 
     &__header {
-      margin-bottom: 200px;
+      margin-bottom: 80px;
       font-size: $h1-size + 15px;
     }
 
     &__item {
-      // float: left;
       width: 20%;
       margin-right: 6%;
-      margin-bottom: 200px;
+      margin-bottom: 180px;
     }
 
     &__item:nth-child(2n) {
@@ -169,13 +154,6 @@
     &__item:nth-child(6),
     &__item:nth-child(7) {
       padding-top: 60px;
-    }
-
-    &__item:nth-child(2)::before,
-    &__item:nth-child(3)::before,
-    &__item:nth-child(6)::before,
-    &__item:nth-child(7)::before {
-      top: -55px;
     }
 
     &__title {
