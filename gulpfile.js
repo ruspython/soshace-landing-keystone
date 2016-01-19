@@ -59,7 +59,6 @@ gulp.task('build-js', function () {
 			// 'public/js/common.js',
 			// 'public/js/main.js',
 			'public/js/sliders.js',
-			'public/js/hamburger.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js'
 		])
