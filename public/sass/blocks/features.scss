@@ -4,8 +4,8 @@
 
 .features {
   position: relative;
-  padding-top: 100px;
-  margin-bottom: 20px;
+  padding-top: 80px;
+  margin-bottom: 50px;
   text-align: center;
   text-transform: uppercase;
   background: white;
@@ -16,29 +16,16 @@
   }
 
   &__item {
-    margin-bottom: 95px;
-    position: relative;
+    margin-bottom: 60px;
   }
 
   &__item:last-child {
     margin-bottom: 0;
   }
 
-  &__item::before {
-    content: '';
-    position: absolute;
-    margin: auto;
-    top: -60px;
-    left: 0;
-    right: 0;
-
-    width: 41px;
-    height: 46px;
-
-    background-color: transparent;
-    background-image: url('../images/fullstack.png');
-    background-repeat: no-repeat;
-    background-size: 41px 46px;
+  &__item img {
+    margin-bottom: 15px;
+    max-width: 50px;
   }
 
   &__title {
@@ -64,7 +51,7 @@
 @media (min-width: $screen_md) {
   .features {
     padding-top: 120px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 
     &__inner {
       @include container--tablet();
@@ -101,8 +88,8 @@
 
 @media (min-width: $screen_lg) {
   .features {
-    padding-top: 180px;
-    margin-bottom: 50px;
+    padding-top: 150px;
+    margin-bottom: 80px;
 
     &__inner {
       @include container--desktop();

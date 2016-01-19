@@ -2,18 +2,19 @@ var keystone = require('keystone');
 var Enquiry = keystone.list('Enquiry');
 
 exports = module.exports = function(req, res) {
-	
+
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
-	
+
 	locals.data = {
 		company: {},
 		projectCategories: {},
 		projects: {},
-		skills: {}
+		skills: {},
+		features: {}
 	};
 	locals.indexSection = true;
-	
+
 	// Company Info
 	view.on('init', function (next) {
 		keystone.list('Company').model.find().exec(function (error, results) {
@@ -27,7 +28,20 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Skills 
+	// Features
+	view.on('init', function (next) {
+		keystone.list('Feature').model.find().exec(function (error, results) {
+			if (error || !results.length) {
+				return next(error);
+			}
+			if (results.length) {
+				locals.data.features = results;
+			}
+			next(error);
+		});
+	});
+
+	// Skills
 	view.on('init', function (next) {
 		keystone.list('Skill').model.find().exec(function (error, results) {
 			if (error || !results.length) {
@@ -39,8 +53,8 @@ exports = module.exports = function(req, res) {
 			next(error);
 		});
 	});
-	
-	// Project Categories 
+
+	// Project Categories
 	view.on('init', function (next) {
 		keystone.list('ProjectCategory').model.find().exec(function (error, results) {
 			if (error || !results.length) {
@@ -53,7 +67,7 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Projects 
+	// Projects
 	view.on('init', function (next) {
 		keystone.list('Project').model.find().populate('categories').exec(function (error, results) {
 			if (error || !results.length) {
@@ -65,8 +79,8 @@ exports = module.exports = function(req, res) {
 			next(error);
 		});
 	});
-	
-	// Developers 
+
+	// Developers
 	view.on('init', function (next) {
 		keystone.list('Developer').model.find().exec(function (error, results) {
 			if (error || !results.length) {
@@ -78,7 +92,7 @@ exports = module.exports = function(req, res) {
 			next(error);
 		});
 	});
-	
+
 	// Testimonial
 	view.on('init', function (next) {
 		keystone.list('Testimonial').model.find().exec(function (error, results) {
@@ -104,7 +118,7 @@ exports = module.exports = function(req, res) {
 			next(error);
 		});
 	});
-	
+
 	// Contact Form
 	locals.section = 'contact';
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
@@ -132,6 +146,6 @@ exports = module.exports = function(req, res) {
 
 	});
 
-	
+
 	view.render('index');
 };
