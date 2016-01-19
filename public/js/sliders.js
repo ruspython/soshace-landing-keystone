@@ -2,6 +2,26 @@
 
 $(document).ready(function() {
 
+  var portfolioSlider = $('.portfolio__slider');
+  portfolioSlider.slick({
+    slidesToShow: 1,
+    prevArrow: $('.portfolio__arrow-wrap--left'),
+    nextArrow: $('.portfolio__arrow-wrap--right'),
+    infinite: false,
+    speed: 200,
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2,
+          rows: 3,
+          slidesPerRow: 2
+        }
+      }
+    ]
+  });
+
   var teamSlider = $('.team__members-wrap');
   teamSlider.slick({
     slidesToShow: 4,
