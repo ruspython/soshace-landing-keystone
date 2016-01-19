@@ -6,7 +6,6 @@
   padding-top: 100px;
   padding-bottom: 80px;
   background: #eaeced;
-  // background: #ecedee url('../images/bg-testimonial-mobile@1x.png') no-repeat 50% 50%;
   position: relative;
 
   &::before {
@@ -29,32 +28,25 @@
   }
 
   &__slider {
-    // position: relative; // ?
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0 auto;
     margin-bottom: 30px;
     width: 90%;
-    //height: 350px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    background: white;
   }
 
   &__slide {
     display: inline-block;
     padding-top: 20px;
-
-    // position: absolute;
-    // top: 0;
-    // left: 0;
+    padding-bottom: 30px;
 
     width: 100%;
     height: 100%;
 
-    //overflow: hidden;
-
     text-align: center;
     background: white;
-    border-radius: 5px;
-    box-shadow:
-      1px 1px 15px 0 grey,
-      -1px -1px 15px 0 grey;
   }
 
   &__header {
@@ -71,22 +63,24 @@
 
   &__photo {
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
   }
 
   &__photo img {
-    width: 200px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   &__photo-title {
     position: absolute;
-    bottom: 5px;
+    bottom: 0;
     left: 0;
     right: 0;
 
-    width: 200px;
+    width: 100%;
     padding: 10px 0;
     margin: auto;
     color: white;
@@ -95,7 +89,8 @@
   }
 
   &__info-title {
-    margin: 0;
+    width: 70%;
+    margin: 0 auto;
     margin-bottom: 5px;
 
     font-size: $h2-size - 16px;
@@ -107,7 +102,9 @@
   }
 
   &__info-text {
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
 
     font-size: $font-size;
     line-height: $line-height;
@@ -132,11 +129,11 @@
   }
 
   &__arrow-wrap--left {
-    left: 20%;
+    right: 30%;
   }
 
   &__arrow-wrap--right {
-    right: 20%;
+    right: 10%;
   }
 
   &__arrow {
@@ -156,7 +153,6 @@
   .testimonial {
     padding-top: 130px;
     padding-bottom: 40px;
-    // background-image: url('../images/bg-testimonial-tablet@1x.png');
 
     &__inner {
       @include container--tablet();
@@ -165,7 +161,6 @@
     &__slider {
       margin-bottom: 10px;
       width: 80%;
-      height: 380px;
     }
 
     &__header {
@@ -185,14 +180,6 @@
       margin-right: 5%;
     }
 
-    &__photo img {
-      width: 100%;
-    }
-
-    &__photo-title {
-       width: 100%;
-    }
-
     &__info {
       float: left;
       width: 50%;
@@ -200,6 +187,7 @@
     }
 
     &__info-title {
+      margin: 0;
       margin-bottom: 5px;
 
       font-size: $h2-size - 15px;
@@ -207,6 +195,7 @@
     }
 
     &__info-text {
+      margin: 0;
       margin-bottom: 20px;
     }
 
@@ -226,6 +215,7 @@
     }
 
     &__arrow-wrap--left {
+      right: auto;
       left: 1%;
     }
 
@@ -251,7 +241,6 @@
 
     &__slider {
       margin-bottom: 20px;
-      height: 420px;
     }
 
     &__info-title {

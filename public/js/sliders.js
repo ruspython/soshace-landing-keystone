@@ -31,22 +31,9 @@ $(document).ready(function() {
     prevArrow: $('.testimonial__arrow-wrap--left'),
     nextArrow: $('.testimonial__arrow-wrap--right'),
     infinite: false,
-    speed: 200,
-    vertical: true
-    // responsive: [
-    //   {
-    //     breakpoint: 960,
-    //     settings: {
-    //       slidesToShow: 2
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 1
-    //     }
-    //   }
-    // ]
+    speed: 500,
+    fade: true,
+    adaptiveHeight: true
   });
 
 });

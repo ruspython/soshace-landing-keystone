@@ -47,7 +47,6 @@
     margin-bottom: 50px;
     width: 80%;
     height: 320px;
-    //overflow: hidden;
     white-space: nowrap;
   }
 
@@ -78,8 +77,8 @@
     margin: 0 auto;
     text-align: left;
     background: white;
-    box-shadow:
-      10px -3px 5px 0 rgba(0, 0, 0, 0.2);
+    //border-top: 1px solid #7b7b7b;
+    //box-shadow: 0px -2px 3px 0 rgba(0, 0, 0, 0.2);
   }
 
   &__member-name {
@@ -158,7 +157,7 @@
   &__arrow-wrap {
     display: block;
     position: absolute;
-    bottom: 30%;
+    bottom: 31%;
     width: 60px;
     height: 50px;
     z-index: 9;
