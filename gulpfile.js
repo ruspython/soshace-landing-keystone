@@ -51,43 +51,22 @@ gulp.task('build-js', function () {
 			// 'public/js/waypoints.js',
 			// 'public/js/jquery.counterup.min.js',
 			// 'public/js/jquery.nicescroll.min.js',
-			// 'public/js/gmaps.js',
 			// 'public/libs/owl-carousel/owl.carousel.min.js',
 			// 'public/libs/materialize/js/materialize.min.js',
 			// 'public/libs/jwplayer/jwplayer.js',
 			// 'public/libs/sweetalert/sweet-alert.min.js',
 			// 'public/js/common.js',
-			// 'public/js/main.js',
-			'public/js/sliders.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js',
-			'public/js/portfoliomodal.js'
+			'public/js/sliders.js',
+			'public/js/portfoliomodal.js',
+			'public/libs/gmaps.js',
+			'public/js/map.js'
 		])
 		.pipe(concat('scripts.min.js'))
 		//.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
 });
-
-// gulp.task('build-css', function () {
-// 	gulp
-// 		.src([
-// 			'public/css/normalize.css',
-// 			'public/fonts/font-awesome/css/font-awesome.min.css',
-// 			'public/libs/materialize/css/materialize.min.css',
-// 			'public/css/bootstrap.css',
-// 			'public/css/animate.min.css',
-// 			'public/libs/sweetalert/sweet-alert.css',
-// 			'public/libs/owl-carousel/owl.carousel.css',
-// 			'public/libs/owl-carousel/owl.transitions.css',
-// 			'public/libs/owl-carousel/owl.theme.css',
-// 			'public/css/main.css',
-// 			'public/css/responsive.css',
-// 			'public/css/colors/color1.css'
-// 		])
-// 		.pipe(concat('styles.min.css'))
-// 		.pipe(minifyCss({keepBreaks: false}))
-// 		.pipe(gulp.dest('./dist/css/'))
-// });
 
 //task for SASS to CSS
 gulp.task('build-css', function () {
@@ -115,14 +94,6 @@ gulp.task('copy:images', function () {
 		])
 		.pipe(gulp.dest('dist/images'))
 });
-
-// gulp.task('copy:css', function () {
-// 	gulp
-// 		.src([
-// 			'public/css/**/*'
-// 		])
-// 		.pipe(gulp.dest('dist/css'))
-// });
 
 gulp.task('copy:js', function () {
 	gulp
