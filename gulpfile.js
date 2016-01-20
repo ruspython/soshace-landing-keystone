@@ -60,10 +60,11 @@ gulp.task('build-js', function () {
 			// 'public/js/main.js',
 			'public/js/sliders.js',
 			'public/js/navigation.js',
-			'public/js/smoothscroll.js'
+			'public/js/smoothscroll.js',
+			'public/js/portfoliomodal.js'
 		])
 		.pipe(concat('scripts.min.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
 });
 

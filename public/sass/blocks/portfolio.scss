@@ -28,7 +28,7 @@
 
   &__header {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     font-size: $h1-size - 10px;
     line-height: $h1-line-height;
@@ -42,6 +42,7 @@
     margin: 0 auto;
     margin-bottom: 30px;
     width: 80%;
+    height: 230px;
     overflow: hidden;
   }
 
@@ -52,7 +53,6 @@
     height: 230px;
     overflow: hidden;
     text-align: center;
-    //box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
   }
 
   &__slide img {
@@ -65,7 +65,6 @@
     width: 80%;
     height: 65px;
     text-align: left;
-    //white-space: normal;
 
     position: absolute;
     z-index: 6;
@@ -131,12 +130,84 @@
     background: $orange-color;
     transition: 0.5s ease-out;
   }
+
+  &__modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    overflow: auto; // ?
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  &__modal-close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  &__modal-content {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+  }
+
+  &__modal-title {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    font-size: $h2-size - 15px;
+    line-height: $h1-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: $orange-color;
+    text-align: left;
+  }
+
+  &__modal-description {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    color: white;
+    text-align: left;
+  }
+
+  &__modal-link {
+    display: block;
+
+    margin-bottom: 10px;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    color: $orange-color;
+  }
+
+  &__modal-img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: $screen_md) {
   .portfolio {
-    padding-top: 130px;
-    padding-bottom: 60px;
+    padding-top: 150px;
+    padding-bottom: 80px;
     margin-bottom: 35px;
 
     &__inner {
@@ -151,6 +222,7 @@
     &__slider {
       margin-bottom: 10px;
       width: 75%;
+      height: 290px;
     }
 
     &__slide {
@@ -160,7 +232,7 @@
     &__project-info {
       padding: 13px;
       width: 70%;
-      height: 98px;
+      height: 100px;
     }
 
     &__project-name {
@@ -188,15 +260,41 @@
     }
 
     &__slide:hover &__project-info {
-      height: 166px;
+      height: 170px;
+    }
+
+    &__modal-close {
+      top: 30px;
+      right: 30px;
+    }
+
+    &__modal-content {
+      top: 100px;
+    }
+
+    &__modal-title {
+      width: 500px;
+      font-size: $h2-size - 10px;
+    }
+
+    &__modal-description {
+      width: 500px;
+      margin-bottom: 20px;
+      font-size: $font-size + 5px;
+      line-height: $line-height + 5px;
+    }
+
+    &__modal-link {
+      margin-bottom: 30px;
+      font-size: $font-size + 5px;
     }
   }
 }
 
 @media (min-width: $screen_lg) {
   .portfolio {
-    padding-top: 150px;
-    padding-bottom: 50px;
+    padding-top: 200px;
+    padding-bottom: 110px;
     margin-bottom: 10px;
 
     &::before {
@@ -215,20 +313,18 @@
 
     &__slider {
       width: 80%;
-      height: 900px;
-      white-space: normal;
+      height: 300px;
     }
 
     &__slide {
       width: 47%;
-      height: 280px;
-      margin-right: 2%;
+      height: 300px;
+      margin-right: 1%;
       margin-bottom: 2%;
     }
 
     &__project-info {
-      width: 55%;
-      height: 58px;
+      height: 120px;
     }
 
     &__project-description {
@@ -241,15 +337,46 @@
     }
 
     &__arrow-wrap--left {
-      left: 2%;
+      left: 1%;
     }
 
     &__arrow-wrap--right {
-      right: 4%;
+      right: 2%;
     }
 
     &__slide:hover &__project-info {
       height: 170px;
+    }
+
+    &__modal-close {
+      top: 40px;
+      right: 40px;
+    }
+
+    &__modal-content {
+      top: 150px;
+    }
+
+    &__modal-title {
+      width: 700px;
+      margin-bottom: 40px;
+      font-size: $h2-size - 5px;
+    }
+
+    &__modal-description {
+      width: 700px;
+      margin-bottom: 30px;
+      font-size: $font-size + 7px;
+      line-height: $line-height + 7px;
+    }
+
+    &__modal-link {
+      margin-bottom: 40px;
+      font-size: $font-size + 10px;
+    }
+
+    &__modal-img {
+      width: 70%;
     }
   }
 }

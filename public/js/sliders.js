@@ -15,8 +15,9 @@ $(document).ready(function() {
         breakpoint: 960,
         settings: {
           slidesToShow: 2,
-          rows: 3,
-          slidesPerRow: 2
+          slidesToScroll: 2
+          // rows: 3,
+          // slidesPerRow: 2
         }
       }
     ]
