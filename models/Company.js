@@ -13,8 +13,9 @@ var Company = new keystone.List('Company', {
 
 Company.add({
 	name: {type: String, required: true},
-	title: { type: String },
-	subtitle: { type: String },
+	title: {type: String},
+	subtitle: {type: String},
+	rate: {type: Number},
 	description: {type: Types.Textarea},
 	skillDescription: {type: Types.Textarea},
 	teamDescription: {type: Types.Textarea},
@@ -23,9 +24,8 @@ Company.add({
 	email: {type: Types.Email},
 	address: {type: String},
 	phone: {type: String},
-	backgroundImage: { type: Types.CloudinaryImage },
+	backgroundImage: {type: Types.CloudinaryImage},
 	photo: {type: Types.CloudinaryImage},
-	elanceUrl: {type: Types.Url},
 	upworkUrl: {type: Types.Url},
 	happyClients: {type: Number},
 	projectsCompleted: {type: Number},
