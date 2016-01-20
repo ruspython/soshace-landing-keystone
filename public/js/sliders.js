@@ -8,7 +8,7 @@ $(document).ready(function() {
     prevArrow: $('.portfolio__arrow-wrap--left'),
     nextArrow: $('.portfolio__arrow-wrap--right'),
     infinite: false,
-    speed: 200,
+    speed: 500,
     mobileFirst: true,
     responsive: [
       {
@@ -29,7 +29,7 @@ $(document).ready(function() {
     prevArrow: $('.team__arrow-wrap--left'),
     nextArrow: $('.team__arrow-wrap--right'),
     //infinite: false,
-    speed: 200,
+    speed: 100,
     responsive: [
       {
         breakpoint: 960,

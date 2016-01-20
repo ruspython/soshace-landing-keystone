@@ -105,11 +105,11 @@
   }
 
   &__arrow-wrap--left {
-    left: 20%;
+    right: 30%;
   }
 
   &__arrow-wrap--right {
-    right: 20%;
+    right: 10%;
   }
 
   &__arrow {
@@ -140,7 +140,7 @@
     right: 0;
     z-index: 11;
     overflow: auto; // ?
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
   }
 
   &__modal-close {
@@ -293,8 +293,8 @@
 
 @media (min-width: $screen_lg) {
   .portfolio {
-    padding-top: 200px;
-    padding-bottom: 110px;
+    padding-top: 250px;
+    padding-bottom: 160px;
     margin-bottom: 10px;
 
     &::before {
@@ -307,7 +307,7 @@
     }
 
     &__header {
-      margin-bottom: 35px;
+      margin-bottom: 70px;
       font-size: $h1-size;
     }
 

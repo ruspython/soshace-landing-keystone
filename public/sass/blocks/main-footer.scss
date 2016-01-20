@@ -141,6 +141,7 @@
   line-height: $line-height + 20px;
   font-weight: $weight-light;
   text-transform: uppercase;
+  animation: moving-down 0.6s;
 }
 
 .flying-btn:hover {

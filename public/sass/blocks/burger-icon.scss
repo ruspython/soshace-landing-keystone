@@ -4,12 +4,11 @@
 
 .burger-icon__open {
   display: inline;
-  animation: appear 0.6s;
+  animation: appear 0.3s;
 }
 
 .burger-icon__open--hidden {
   display: none;
-  // animation: appear 0.6s;
 }
 
 .burger-icon__close--hidden {
@@ -21,7 +20,7 @@
   display: inline;
   margin-right: 10px;
   opacity: 1;
-  animation: reverse-appear 0.6s;
+  animation: reverse-appear 0.3s;
 }
 
 .burger-icon:hover .burger-icon__part {
