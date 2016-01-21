@@ -35,6 +35,7 @@
         // If true -> scrolling up
       } else if (window.scrollY < prevPosition) {
         header.classList.remove('main-header--hidden');
+        closeMobileNavigation();
         hireButton.classList.add('invisible');
       }
       prevPosition = window.scrollY;
