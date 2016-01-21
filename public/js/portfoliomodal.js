@@ -31,7 +31,7 @@
     }
   }
 
-  close.addEventListener('click', function(e){
+  close.addEventListener('tap', function(e){
     modal.classList.add('invisible');
   })
 })();

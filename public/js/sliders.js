@@ -16,8 +16,6 @@ $(document).ready(function() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2
-          // rows: 3,
-          // slidesPerRow: 2
         }
       }
     ]
@@ -25,22 +23,22 @@ $(document).ready(function() {
 
   var teamSlider = $('.team__members-wrap');
   teamSlider.slick({
-    slidesToShow: 4,
+    slidesToShow: 1,
     prevArrow: $('.team__arrow-wrap--left'),
     nextArrow: $('.team__arrow-wrap--right'),
-    //infinite: false,
     speed: 100,
+    mobileFirst: true,
     responsive: [
       {
-        breakpoint: 960,
+        breakpoint: 600,
         settings: {
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 960,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 4
         }
       }
     ]

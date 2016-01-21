@@ -42,7 +42,7 @@
   });
 
   // Click on link open/close mobile navigation
-  link.addEventListener('click', function(event){
+  link.addEventListener('tap', function(event){
     event.preventDefault();
     toggleMobileNavigation();
   });
