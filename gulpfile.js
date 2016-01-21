@@ -55,16 +55,16 @@ gulp.task('build-js', function () {
 			// 'public/libs/materialize/js/materialize.min.js',
 			// 'public/libs/jwplayer/jwplayer.js',
 			// 'public/libs/sweetalert/sweet-alert.min.js',
-			// 'public/js/common.js',
+			'public/libs/slick/slick.min.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js',
-			'public/js/sliders.js',
 			'public/js/portfoliomodal.js',
+			'public/js/sliders.js',
 			'public/libs/gmaps.js',
 			'public/js/map.js'
 		])
 		.pipe(concat('scripts.min.js'))
-		//.pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
 });
 
