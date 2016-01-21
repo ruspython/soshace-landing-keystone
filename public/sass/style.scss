@@ -3,6 +3,9 @@
 @import 'mixins';
 @import 'base';
 
+@import '../libs/slick/slick.scss';
+@import '../libs/slick/slick-theme.scss';
+
 @import 'blocks/main-header';
 @import 'blocks/burger-icon';
 @import 'blocks/main-nav';
@@ -12,16 +15,21 @@
 @import 'blocks/features';
 
 @import 'blocks/skills';
-@import 'blocks/portfolio';
-@import 'blocks/contact';
-@import 'blocks/team';
-@import 'blocks/testimonial';
-@import 'blocks/customers';
-@import 'blocks/funfacts';
-@import 'blocks/map';
-@import 'blocks/main-footer';
 
-@import '../libs/slick/slick.scss';
-@import '../libs/slick/slick-theme.scss';
+@import 'blocks/portfolio';
+
+@import 'blocks/contact';
+
+@import 'blocks/team';
+
+@import 'blocks/testimonial';
+
+@import 'blocks/customers';
+
+@import 'blocks/funfacts';
+
+@import 'blocks/map';
+
+@import 'blocks/main-footer';
 
 @import 'animations';

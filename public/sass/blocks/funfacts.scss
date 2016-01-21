@@ -5,6 +5,7 @@
 .funfacts {
   position: relative;
   font-size: 0;
+  z-index: 5;
 
   &::before {
     content: "";
@@ -12,7 +13,7 @@
     top: -1px;
     right: 0;
     left: 0;
-    z-index: 5;
+    z-index: 6;
     height: 50px;
     background-image: url('../images/triangle-white.svg');
     background-repeat: no-repeat;
@@ -21,25 +22,20 @@
 
   &__left-column,
   &__right-column {
+    // position: relative;
+    // z-index: 5;
+
     padding-top: 140px;
     padding-bottom: 50px;
     width: 50%;
     display: inline-block;
     text-align: right;
     background: #4ebe03;
-
-    // background: #4ebe03 url('../images/bg-factsleft-mobile@1x.png') no-repeat 50% 50%;
-    // background-size: auto 80%;
   }
 
   &__right-column {
     text-align: left;
     background: #4972cf;
-
-    // background-color: #4972cf;
-    // background-image: url('../images/bg-factsright-mobile@1x.png');
-    // background-size: auto 80%;
-
   }
 
   &__clients,
@@ -145,7 +141,7 @@
   &__triangle-part {
     position: absolute;
     top: 100%;
-    background: white;
+    background: #f1f1f1;
     width: 50%;
     padding-bottom: 108px;
     z-index: 2;
@@ -173,13 +169,6 @@
       padding-bottom: 60px;
       font-size: 0;
       vertical-align: middle;
-
-      // background-image: url('../images/bg-factsleft-tablet@1x.png');
-      // background-size: 100% auto;
-    }
-
-    &__right-column {
-      // background-image: url('../images/bg-factsright-tablet@1x.png');
     }
 
     &__clients {

@@ -82,10 +82,9 @@
     cursor: pointer;
   }
 
-  &__btn:hover {
-    box-shadow: 0 2px 3px 0 #d6ae00;
+  &__btn-wrap:hover {
     transform: scale(1.1);
-    transition: box-shadow 0.6s, transform 0.6s;
+    transition: transform 0.6s;
   }
 
   &__btn:active {
