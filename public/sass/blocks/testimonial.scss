@@ -122,18 +122,18 @@
     margin: auto;
     position: absolute;
     bottom: -100px;
-    width: 60px;
-    height: 50px;
+    width: 70px;
+    height: 60px;
     z-index: 9;
     cursor: pointer;
   }
 
   &__arrow-wrap--left {
-    right: 30%;
+    left: 25%;
   }
 
   &__arrow-wrap--right {
-    right: 10%;
+    right: 25%;
   }
 
   &__arrow {

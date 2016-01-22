@@ -58,6 +58,7 @@
     border-bottom: none;
     background: #fff000;
     color: black;
+    font-weight: $weight-normal;
   }
 
   &__btn:hover {
@@ -91,17 +92,13 @@
       opacity: 1;
       transform: translateY(0px);
   }
-
-  &__btn:active {
-    font-weight: $weight-normal;
-  }
 }
 
 @media (min-width: $screen_md) {
   .main-nav {
 
     &--visible {
-      top: 93px;
+      top: 97px;
     }
 
     &__link {
@@ -182,7 +179,7 @@
 
     &__link {
       display: block;
-      padding: 12px 0px 8px 0px;
+      padding: 30px 5px 10px 5px;
 
       border-bottom: none;
       color: black;
@@ -197,6 +194,7 @@
     }
 
     &__btn {
+      margin-top: 16px;
       padding: 12px 8px 8px 8px;
     }
 

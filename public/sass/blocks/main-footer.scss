@@ -37,13 +37,16 @@
     font-weight: $weight-light;
   }
 
-  &__skype-logo-parent {
+  &__skype-link {
     position: relative;
+    color: black;
+    text-decoration: none;
   }
 
-  &__skype-logo-parent::before {
+  &__skype-link::before {
     content: '';
     position: absolute;
+    top: 1px;
     left: -28px;
 
     background-color: transparent;
@@ -60,6 +63,8 @@
   }
 
   &__links a {
+    display: inline-block;
+    margin-right: 10px;
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $weight-light;
@@ -120,43 +125,5 @@
     &__links a {
       font-size: $font-size + 8px;
     }
-  }
-}
-
-// Styles for flying button
-.flying-btn {
-  display: block;
-  padding: 0px 10px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 9;
-
-  background: #fff000;
-  color: black;
-
-  text-decoration: none;
-  font-family: $font-stack;
-  font-size: $font-size + 4px;
-  line-height: $line-height + 20px;
-  font-weight: $weight-light;
-  text-transform: uppercase;
-  animation: moving-down 0.6s;
-}
-
-.flying-btn:hover {
-  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-  transition: box-shadow 0.2s, transform 0.3s;
-}
-
-.invisible {
-  display: none;
-}
-
-@media (min-width: $screen_md) {
-  .flying-btn {
-    right: 30px;
-    bottom: 20px;
   }
 }

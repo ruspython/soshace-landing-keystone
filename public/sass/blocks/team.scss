@@ -30,6 +30,7 @@
     margin-bottom: 50px;
     width: 80%;
     height: 320px;
+    overflow: hidden;
     white-space: nowrap;
   }
 
@@ -38,33 +39,32 @@
     display: inline-block;
     width: 100%;
     height: 100%;
-    padding-bottom: 30px;
     overflow: hidden;
     text-align: center;
   }
 
   &__member img {
-    height: 250px;
-    width: auto;
+    height: auto;
+    width: 100%;
     margin: 0 auto;
-    margin-bottom: 5px;
   }
 
   &__member-info {
     position: absolute;
-    top: 210px;
+    top: 150px;
     width: 100%;
-    padding-top: 20px;
+    //height: 100%;
+    padding-top: 10px;
     padding-left: 5%;
     padding-right: 5%;
     margin: 0 auto;
     text-align: left;
-    background: white;
+    background: rgba(0, 0, 0, 0.4);
   }
 
   &__member-name {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     font-size: $font-size;
     line-height: $line-height - 7px;
@@ -76,13 +76,13 @@
   &__member-position {
     position: relative;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     font-size: $font-size;
     line-height: $line-height - 7px;
     font-family: $font-stack;
     font-weight: $weight-light;
-    color: #7b7b7b;
+    color: #eaeaea;
   }
 
   &__member-position::after {
@@ -103,7 +103,7 @@
     line-height: $line-height - 3px;
     font-family: $font-stack;
     font-weight: $weight-light;
-    color: black;
+    color: white;
     white-space: normal;
     opacity: 0;
   }
@@ -139,18 +139,19 @@
     display: block;
     position: absolute;
     bottom: 31%;
-    width: 60px;
-    height: 50px;
+    width: 70px;
+    height: 60px;
     z-index: 9;
     cursor: pointer;
+    user-select: none;
   }
 
   &__arrow-wrap--left {
-    right: 30%;
+    left: 25%;
   }
 
   &__arrow-wrap--right {
-    right: 10%;
+    right: 25%;
   }
 
   &__arrow {
@@ -167,11 +168,11 @@
 
   &__member:hover &__member-info {
     position: absolute;
-    top: 70px;
+    top: 0;
     padding-top: 40px;
     height: 250px;
     transition: 0.9s;
-    background: white;
+    background: rgba(0, 0, 0, 0.7);
   }
 
   &__member:hover &__member-resume {
@@ -206,7 +207,7 @@
     }
 
     &__member img {
-      margin-bottom: 10px;
+      //margin-bottom: 10px;
     }
 
     &__description {

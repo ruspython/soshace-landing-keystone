@@ -29,8 +29,6 @@
   &__inner {
     @include container();
     @include clearfix();
-    padding-top: 20px;
-    padding-bottom: 10px;
     position: relative;    // Absolute element inside (.main-nav--visible)
   }
 
@@ -40,7 +38,14 @@
 
   &__logo-wrap {
     float: left;
-    width: 50%;
+    width: 40%;
+  }
+
+  &__logo-wrap a {
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
 
   &__logo-wrap img{
@@ -51,7 +56,12 @@
   &__toggle-wrap {
     float: right;
     max-width: 25%;
-    padding-top: 7px;
+  }
+
+  &__toggle-wrap a {
+    display: block;
+    width: 100%;
+    padding: 30px 5px 10px 20px;
   }
 }
 
@@ -60,13 +70,20 @@
 
     &__inner {
       @include container--tablet();
-      padding-top: 30px;
-      padding-bottom: 15px;
     }
 
     &__logo-wrap img{
       width: 154px;
       height: 41px;
+    }
+
+    &__logo-wrap a {
+      padding-top: 30px;
+      padding-bottom: 15px;
+    }
+
+    &__toggle-wrap a {
+      padding: 40px 5px 30px 30px;
     }
   }
 }
@@ -76,12 +93,17 @@
 
     &__inner {
       @include container--desktop();
-      padding-top: 25px;
-      padding-bottom: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    &__logo-wrap a {
+      padding-top: 20px;
+      padding-bottom: 10px;
     }
 
     &__logo-wrap {
-      width: 160px;
+      width: 200px;
     }
 
     &__toggle-wrap {

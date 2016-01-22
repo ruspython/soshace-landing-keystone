@@ -2,6 +2,10 @@
 //
 // Styles for SVG hamburger icon
 
+.burger-icon {
+  user-select: none;
+}
+
 .burger-icon__open {
   display: inline;
   animation: appear 0.3s;

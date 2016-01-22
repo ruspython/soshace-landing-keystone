@@ -27,9 +27,12 @@ Company.add({
 	backgroundImage: {type: Types.CloudinaryImage},
 	photo: {type: Types.CloudinaryImage},
 	upworkUrl: {type: Types.Url},
+	githubUrl: {type: Types.Url},
+	skypeLogin: {type: String},
 	happyClients: {type: Number},
 	projectsCompleted: {type: Number},
-	awardWon: {type: Number}
+	awardWon: {type: Number},
+	years: {type: Number}
 });
 
 Company.register();

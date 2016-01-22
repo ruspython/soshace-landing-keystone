@@ -34,7 +34,7 @@
     padding: 5px 0;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 60%;
+    width: 80%;
     background: #2fbdff;
 
     font-size: $font-size;
@@ -85,8 +85,9 @@
     margin-bottom: 10px;
 
     box-sizing: border-box;
-    width: 60%;
+    width: 80%;
     border: none;
+    border-radius: 0;
 
     font-size: $font-size;
     line-height: $line-height;
@@ -104,14 +105,14 @@
   &__form input[type=text]:hover,
   &__form input[type=email]:hover,
   &__form textarea:hover {
-    outline: 2px solid grey;
+    outline: 2px solid #eaeaea;
   }
 
   &__form input[type=submit] {
     display: block;
     margin: 0 auto;
 
-    padding: 5px 20px;
+    padding: 10px 30px;
 
     font-size: $font-size - 4px;
     line-height: $line-height;
@@ -120,6 +121,7 @@
     text-transform: uppercase;
     text-decoration: none;
 
+    border-radius: 0;
     background: #e9ab00;
     color: white;
     border: none;
@@ -128,7 +130,7 @@
   }
 
   &__form input[type=submit]:hover {
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
     transition: box-shadow 0.3s, transform 0.3s;
   }
@@ -159,7 +161,7 @@
 
     &__text {
       margin-bottom: 15px;
-      width: 410px;
+      width: 420px;
     }
 
     &__text-addition {
@@ -169,7 +171,7 @@
     &__form input[type=text],
     &__form input[type=email],
     &__form textarea {
-      width: 410px;
+      width: 420px;
       padding: 5px 10px;
       margin-bottom: 13px;
 
@@ -210,11 +212,11 @@
 
     &__text {
       margin-bottom: 20px;
-      width: 600px;
+      width: 700px;
     }
 
     &__form {
-      width: 600px;
+      width: 700px;
       margin: 0 auto;
       font-size: 0;
       vertical-align: top;
@@ -238,7 +240,7 @@
 
     &__form textarea {
       width: 100%;
-      height: 200px;
+      height: 250px;
       padding: 10px 10px 15px 10px;
       margin-bottom: 20px;
 
