@@ -46,7 +46,7 @@
   &__skype-link::before {
     content: '';
     position: absolute;
-    top: 1px;
+    top: -3px;
     left: -28px;
 
     background-color: transparent;
@@ -95,6 +95,10 @@
       font-size: $font-size + 2px;
     }
 
+    &__skype-link::before {
+      top: -2px;
+    }
+
     &__links a {
       font-size: $font-size + 2px;
     }
@@ -120,6 +124,10 @@
       margin-bottom: 20px;
 
       font-size: $font-size + 8px;
+    }
+
+    &__skype-link::before {
+      top: 1px;
     }
 
     &__links a {

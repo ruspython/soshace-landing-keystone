@@ -46,6 +46,7 @@ gulp.task('build-js', function () {
 			'public/libs/gmaps.js',
 			'public/libs/slick/slick.min.js',
 			'public/libs/tap.js',
+			'public/js/stopscroll.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js',
 			'public/js/portfoliomodal.js',

@@ -28,10 +28,12 @@
 
       // Show modal
       modal.classList.remove('invisible');
+      disableScroll();
     }
   }
 
   close.addEventListener('tap', function(e){
     modal.classList.add('invisible');
+    enableScroll();
   })
 })();
