@@ -7,18 +7,18 @@
   padding-bottom: 40px;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    right: 0;
-    left: 0;
-    z-index: 5;
-    height: 50px;
-    background-image: url('../images/triangle-grey.svg');
-    background-repeat: no-repeat;
-    background-size: 100% 50px;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -1px;
+  //   right: 0;
+  //   left: 0;
+  //   z-index: 5;
+  //   height: 50px;
+  //   background-image: url('../images/triangle-grey.svg');
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 50px;
+  // }
 
   &__inner {
     @include container();

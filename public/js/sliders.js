@@ -44,15 +44,4 @@ $(document).ready(function() {
     ]
   });
 
-  var testimonialSlider = $('.testimonial__slider');
-  testimonialSlider.slick({
-    slidesToShow: 1,
-    prevArrow: $('.testimonial__arrow-wrap--left'),
-    nextArrow: $('.testimonial__arrow-wrap--right'),
-    infinite: false,
-    speed: 500,
-    fade: true,
-    adaptiveHeight: true
-  });
-
 });
