@@ -11,7 +11,7 @@
   var hireButton = document.querySelector('.flying-btn');
 
   // Link with burger and cross icons
-  var link = document.querySelector('.burger-icon');
+  var burger = document.querySelector('.burger-icon');
   // Visible burger icon
   var open = document.querySelector('.burger-icon__open');
   // Hidden cross icon
@@ -20,6 +20,9 @@
   var wrap = document.querySelector('.main-header__inner');
   // Hidden navigation
   var nav = document.querySelector('.main-nav');
+  // Navigation likns
+  var navLinks = nav.querySelectorAll('a');
+  var body = document.querySelector('body');
 
   // Hide/show navigation by scrolling down/up
   window.addEventListener('scroll', function() {
@@ -28,12 +31,14 @@
 
     scrollTimeout = setTimeout(function() {
       // If true -> scrolling down
-      if (window.scrollY > prevPosition && !(window.scrollY < minPosition)) {
+      // Last condition check if mobile menu is open (then no hiding navigation)
+      if (window.scrollY > prevPosition && !(window.scrollY < minPosition) && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
         header.classList.add('main-header--hidden');
         closeMobileNavigation();
         hireButton.classList.remove('invisible');
-        // If true -> scrolling up
-      } else if (window.scrollY < prevPosition) {
+
+          // If true -> scrolling up
+        } else if (window.scrollY < prevPosition && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
         header.classList.remove('main-header--hidden');
         closeMobileNavigation();
         hireButton.classList.add('invisible');
@@ -43,10 +48,20 @@
   });
 
   // Click on link open/close mobile navigation
-  link.addEventListener('tap', function(event){
+  burger.addEventListener('tap', function(event){
     event.preventDefault();
     toggleMobileNavigation();
   });
+
+  // Looking for click on nav links
+  // and close mobile menu
+  for (var i = 0; i < navLinks.length; i++){
+    navLinks[i].onclick = function(e) {
+      e.preventDefault();
+      closeMobileNavigation();
+    }
+  }
+
 
   /**
    * Open/close mobile navigation
@@ -60,6 +75,8 @@
     wrap.classList.toggle('main-header__inner--menu-visible');
     // Show/hide navigation
     nav.classList.toggle('main-nav--visible');
+    // Enable/disable scrolling through document
+    body.classList.toggle('fixed');
   }
 
   /**
@@ -80,6 +97,10 @@
 
     if (nav.classList.contains('main-nav--visible')) {
       nav.classList.remove('main-nav--visible');
+    }
+
+    if (body.classList.contains('fixed')) {
+      body.classList.remove('fixed');
     }
   }
 

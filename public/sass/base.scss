@@ -19,6 +19,6 @@ video {
 }
 
 .fixed {
-  overflow-y: scroll;
-  //background: black;
+  height: 100%;
+  overflow: hidden;
 }

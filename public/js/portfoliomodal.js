@@ -9,6 +9,7 @@
   var url = document.querySelector('.portfolio__modal-link');
   var img = document.querySelector('.portfolio__modal-img');
   var close = document.querySelector('.portfolio__modal-close');
+  var body = document.querySelector('body');
 
   for (var i = 0; i < projects.length; i++){
     projects[i].onclick = function(e) {
@@ -28,12 +29,13 @@
 
       // Show modal
       modal.classList.remove('invisible');
-      disableScroll();
+      // Stops scrolling for body
+      body.classList.add('fixed');
     }
   }
 
   close.addEventListener('tap', function(e){
     modal.classList.add('invisible');
-    enableScroll();
+    body.classList.remove('fixed');
   })
 })();
