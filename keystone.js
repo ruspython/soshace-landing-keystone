@@ -14,13 +14,13 @@ keystone.init({
 
 	'name': 'Soshace',
 	'brand': 'Soshace',
-	
+
 	'less': 'public',
 	'static': 'dist',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
-	
+
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
@@ -28,13 +28,15 @@ keystone.init({
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs'
 	}).engine,
-	
+
 	'emails': 'templates/emails',
-	
+
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'User'
+	'user model': 'User',
+	'mandrill api key': process.env.MANDRILL_API_KEY,
+	'mandrill username': process.env.MANDRILL_USERNAME
 
 });
 
