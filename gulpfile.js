@@ -51,7 +51,8 @@ gulp.task('build-js', function () {
 			'public/js/smoothscroll.js',
 			'public/js/portfoliomodal.js',
 			'public/js/sliders.js',
-			'public/js/map.js'
+			'public/js/map.js',
+			'public/js/form.js'
 		])
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())

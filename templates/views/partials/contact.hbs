@@ -5,10 +5,17 @@
     <p class="contact__text">Leave your message <span class="contact__text-addition">and our manager will answer you</span></p>
 
     <form class="contact__form" action="/" method="post">
-      <input type="text" name="name" placeholder="Name">
-      <input type="email" name="email" placeholder="E-mail">
-      <textarea name="message" placeholder="Message"></textarea>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <textarea name="message" placeholder="Message" required></textarea>
       <input type="submit" value="Send request">
+
+      <div class="contact__links">
+        <a href="skype:{{{company.skypeLogin}}}">Skype</a>
+        <a href="{{{company.upworkUrl}}}" target="_blank">Upwork</a>
+        <a href="{{{company.githubUrl}}}" target="_blank">GitHub</a>
+      </div>
+
     </form>
 
   </div>
