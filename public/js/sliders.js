@@ -13,7 +13,7 @@ $(document).ready(function() {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 960,
+        breakpoint: 959,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -32,13 +32,13 @@ $(document).ready(function() {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 599,
         settings: {
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 960,
+        breakpoint: 959,
         settings: {
           slidesToShow: 4
         }

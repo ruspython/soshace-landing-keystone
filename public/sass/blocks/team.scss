@@ -27,9 +27,9 @@
 
   &__members-wrap {
     margin: 0 auto;
-    margin-bottom: 50px;
-    width: 80%;
-    height: 320px;
+    margin-bottom: 30px;
+    width: 280px;
+    height: 280px;
     overflow: hidden;
     white-space: nowrap;
   }
@@ -51,10 +51,12 @@
 
   &__member-info {
     position: absolute;
-    top: 150px;
+    bottom: -60%;
+
+    box-sizing: border-box;
     width: 100%;
-    //height: 100%;
-    padding-top: 10px;
+    height: 100%;
+    padding-top: 5%;
     padding-left: 5%;
     padding-right: 5%;
     margin: 0 auto;
@@ -135,10 +137,14 @@
     color: #557fc4;
   }
 
+  &__arrows {
+    @include clearfix();
+    margin-bottom: 10px
+  }
+
   &__arrow-wrap {
     display: block;
-    position: absolute;
-    bottom: 31%;
+    margin-bottom: 10px;
     width: 70px;
     height: 60px;
     z-index: 9;
@@ -147,11 +153,13 @@
   }
 
   &__arrow-wrap--left {
-    left: 25%;
+    float: left;
+    padding-left: 20%;
   }
 
   &__arrow-wrap--right {
-    right: 25%;
+    float: right;
+    padding-right: 20%;
   }
 
   &__arrow {
@@ -168,9 +176,7 @@
 
   &__member:hover &__member-info {
     position: absolute;
-    top: 0;
-    padding-top: 40px;
-    height: 250px;
+    bottom: 0;
     transition: 0.9s;
     background: rgba(0, 0, 0, 0.7);
   }
@@ -197,17 +203,15 @@
     }
 
     &__members-wrap {
-      margin-bottom: 20px;
-      height: 320px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      width: 80%;
+      height: auto;
     }
 
     &__member {
-      width: 45%;
-      margin-right: 2%;
-    }
-
-    &__member img {
-      //margin-bottom: 10px;
+      width: 46%;
+      margin-right: 1%;
     }
 
     &__description {
@@ -227,16 +231,25 @@
       line-height: $line-height;
     }
 
+    &__arrows {
+      margin-bottom: 0;
+    }
+
     &__arrow-wrap {
+      position: absolute;
       bottom: 55%;
     }
 
     &__arrow-wrap--left {
+      float: none;
+      padding-left: 0;
       left: 1%;
     }
 
     &__arrow-wrap--right {
-      right: 3%;
+      float: none;
+      padding-right: 0;
+      right: 5%;
     }
   }
 }
@@ -256,12 +269,16 @@
     }
 
     &__members-wrap {
-      margin-bottom: 40px;
+      margin-bottom: 80px;
     }
 
     &__member {
       width: 23.5%;
-      margin-right: 1.5%;
+      margin-right: 1%;
+    }
+
+    &__arrow-wrap {
+      bottom: 50%;
     }
 
     &__description {
@@ -276,7 +293,11 @@
     }
 
     &__arrow-wrap--left {
-      left: 2%;
+      left: 5%;
+    }
+
+    &__arrow-wrap--right {
+      right: 7%;
     }
   }
 }
