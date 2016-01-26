@@ -29,6 +29,8 @@ keystone.init({
 		extname: '.hbs'
 	}).engine,
 
+	'port': process.env.PORT,
+
 	'emails': 'templates/emails',
 
 	'auto update': true,
