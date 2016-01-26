@@ -36,13 +36,13 @@
     font-family: $font-stack;
     font-weight: $weight-medium;
     text-transform: uppercase;
-    color: black;
+    color: #2e5fb2;
     text-align: center;
   }
 
   &__intro {
-    font-size: 14px;
-    margin: 20px;
+    font-size: $font-size;
+    margin-bottom: 20px;
     color: black;
   }
 
@@ -54,7 +54,7 @@
 
   &__top-rated {
     @include clearfix();
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   &__top-rated-text {
@@ -84,10 +84,6 @@
     display: none;
   }
 
-  &__feedback {
-
-  }
-
   &__feedback-text {
     margin: 0;
     margin-bottom: 15px;
@@ -103,7 +99,7 @@
   &__feedback img {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
@@ -117,32 +113,25 @@
     }
 
     &__header {
-      padding-top: 20px;
       font-size: $h2-size + 3px;
       line-height: $h2-line-height;
     }
 
     &__intro {
-      // font-size: 14px;
-      // margin: 20px;
-      // color: black;
+      font-size: $font-size + 2px;
+      margin-bottom: 30px;
     }
 
     &__description {
-      // display: block;
-      // width: 100%;
       margin-bottom: 30px;
     }
 
     &__top-rated {
-      // @include clearfix();
-      // margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     &__top-rated-text {
-      //float: none;
       padding-top: 0;
-      //padding-left: 35px;
       width: 200px;
       margin-bottom: 15px;
 
@@ -162,8 +151,8 @@
     &__top-rated-tests {
       float: left;
       display: block;
-      width: 52%;
-      margin-right: 3%;
+      width: 50%;
+      margin-right: 4%;
     }
 
     &__feedback {
@@ -174,7 +163,6 @@
       float: left;
       width: 30%;
       margin-right: 3%;
-      // margin-bottom: 15px;
 
       font-size: $font-size + 20px;
     }
@@ -183,9 +171,7 @@
       float: left;
       width: 52%;
       margin-right: 3%;
-      // display: block;
-      // width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
 
     &__feedback img:nth-child(2n) {
@@ -211,16 +197,13 @@
     }
 
     &__header {
-      // padding-top: 20px;
       margin-bottom: 80px;
       font-size: $h2-size + 8px;
-      // line-height: $h2-line-height;
     }
 
     &__intro {
-      // font-size: 14px;
-      // margin: 20px;
-      // color: black;
+      font-size: $font-size + 5px;
+      margin: 40px;
     }
 
     &__upwork-content {
@@ -228,23 +211,17 @@
     }
 
     &__description {
-      // display: block;
       float: left;
       width: 53%;
-      //margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     &__top-rated {
-      // @include clearfix();
-      // margin-bottom: 20px;
       float: right;
       width: 45%;
     }
 
     &__top-rated-text {
-      //float: none;
-      //padding-top: 0;
-
       width: 230px;
       // margin-bottom: 15px;
 
