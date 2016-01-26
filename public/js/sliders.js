@@ -7,15 +7,17 @@ $(document).ready(function() {
     slidesToShow: 1,
     prevArrow: $('.portfolio__arrow-wrap--left'),
     nextArrow: $('.portfolio__arrow-wrap--right'),
+    fade: true,
     infinite: false,
-    speed: 500,
+    speed: 300,
     mobileFirst: true,
     responsive: [
       {
         breakpoint: 960,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 2,
+          fade: false
         }
       }
     ]
