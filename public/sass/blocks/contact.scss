@@ -110,7 +110,7 @@
   &__form input[type=text]:hover,
   &__form input[type=email]:hover,
   &__form textarea:hover {
-    outline: 2px solid #eaeaea;
+    outline: 2px solid grey;
   }
 
   &__form input[type=submit] {
@@ -118,7 +118,7 @@
     margin: 0 auto;
     margin-bottom: 50px;
 
-    padding: 10px 30px;
+    padding: 10px 40px;
 
     font-size: $font-size - 1px;
     line-height: $line-height;
@@ -162,7 +162,7 @@
   &__links a {
     display: inline-block;
     width: 30%;
-    padding: 10px 1.5%;
+    padding: 5px 1.5%;
 
     font-size: $font-size + 3px;
     line-height: $line-height;
@@ -237,13 +237,13 @@
     }
 
     &__form input[type=submit] {
-      padding: 10px 50px;
+      padding: 15px 60px;
       margin-bottom: 80px;
       font-size: $font-size + 4px;
     }
 
     &__links a {
-      padding: 20px 1.5%;
+      padding: 10px 1.5%;
       font-size: $font-size + 5px;
     }
   }
@@ -302,17 +302,16 @@
     }
 
     &__form input[type=submit] {
-      padding: 15px 70px;
+      padding: 20px 120px;
       margin-bottom: 100px;
     }
 
     &__links a {
-      padding: 30px 1.5%;
       font-size: $font-size + 8px;
     }
   }
 }
 
 .notvalid {
-  outline: 1px solid red;
+  outline: 2px solid #ff8f8f;
 }
