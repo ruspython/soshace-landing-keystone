@@ -1,25 +1,33 @@
 var keystone = require('keystone');
-var nodemailer = require('nodemailer');
+var Company = keystone.list('Company');
 
-var transporter = nodemailer.createTransport({
-  direct: true
-});
+var nodemailer = require('nodemailer'),
+    transporter = nodemailer.createTransport({
+        service: process.env.MAIL_SERVICE,
+        auth: {
+          user: process.env.MAIL_NO_REPLY,
+          pass: process.env.MAIL_NO_REPLY_PASSWORD
+      }
+    });
 
-var mailOptions = {
-  from: 'Fred Foo 👥 <foo@blurdybloop.com>', // sender address
-  to: 'bar@blurdybloop.com, baz@blurdybloop.com', // list of receivers
-  subject: 'Hello ✔', // Subject line
-  text: 'Hello world 🐴', // plaintext body
-  html: '<b>Hello world 🐴</b>' // html body
-};
-
+/**
+ * Server-side form validation
+ * @param {Object} body
+ */
 function validateForm(body) {
-
   var name = body.name;
   var email = body.email;
   var message = body.message;
 
-  if (validator.isMail(email)) {
+  var REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var REG_EXP_NAME = /^[A-Za-z0-9 ]{3,20}$/;
+  var REG_EXP_MESSAGE = /^[A-Za-z0-9 ]{3,500}$/;
+
+  var isNameValid = REG_EXP_NAME.test(name);
+  var isEmailValid = REG_EXP_EMAIL.test(email);
+  var isMessageValid = REG_EXP_MESSAGE.test(message);
+
+  if (isNameValid && isEmailValid && isMessageValid) {
     return true;
   } else {
     return false;
@@ -30,10 +38,6 @@ exports = module.exports = function (req, res, next) {
   var sent = true;
   var body = req.body;
 
-  console.log(body.name);
-  console.log(body.email);
-  console.log(body.message);
-
   if (!validateForm(body)) {
     return res.status(403).json({
       sent: false
@@ -41,6 +45,17 @@ exports = module.exports = function (req, res, next) {
   }
 
   //sent = true;
+
+  var mailOptions = {
+    from: process.env.MAIL_NO_REPLY, // sender address
+    to: Company.get.email, // list of receivers
+    subject: 'team.soshace message from' + body.email, // Subject line
+    text: 'Name: ' + body.name + 'Email: ' + body.email + 'Message: ' + body.message // plaintext body
+    //html: '<b>Hello world 🐴</b>' // html body
+  };
+
+  console.log(Company.model.email);
+
 
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
@@ -51,5 +66,5 @@ exports = module.exports = function (req, res, next) {
 
   res.json({
     sent: sent
-  })
+  });
 };
