@@ -8,43 +8,50 @@
   var message = form.querySelector('[name="message"]');
   var submit = form.querySelector('[type="submit"]');
 
+  var REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var REG_EXP_NAME = /^[A-Za-z0-9 ]{3,20}$/;
+  var REG_EXP_MESSAGE = /^[A-Za-z0-9 ]{3,500}$/;
+
+  /**
+   * Cliend-side form validation
+   */
+  function validateForm() {
+    var isNameValid = REG_EXP_NAME.test(name.value);
+    var isEmailValid = REG_EXP_EMAIL.test(email.value);
+    var isMessageValid = REG_EXP_MESSAGE.test(message.value);
+
+    if (isNameValid) {
+      name.removeAttribute('required');
+      name.classList.remove('notvalid');
+    } else {
+      name.setAttribute('required', '');
+      name.classList.add('notvalid');
+    }
+
+    if (isEmailValid) {
+      email.removeAttribute('required');
+      email.classList.remove('notvalid');
+    } else {
+      email.setAttribute('required', '');
+      email.classList.add('notvalid');
+    }
+
+    if (isMessageValid) {
+      message.removeAttribute('required');
+      message.classList.remove('notvalid');
+    } else {
+      message.setAttribute('required', '');
+      message.classList.add('notvalid');
+    }
+
+    if (isNameValid && isEmailValid && isMessageValid) {
+      submit.removeAttribute('disabled');
+    } else {
+      submit.setAttribute('disabled', '');
+    }
+  }
+
   name.onkeyup = validateForm;
   email.onkeyup = validateForm;
   message.onkeyup = validateForm;
-
-  function validateForm() {
-    var isNameEmpty = name.value === '';
-    var isMailEmpty = email.value === '';
-    var isMessageEmpty = message.value === '';
-
-    if (isNameEmpty) {
-      name.setAttribute('required', '');
-      name.classList.add('notvalid');
-      submit.setAttribute('disabled', '');
-    } else {
-      name.removeAttribute('required');
-      name.classList.remove('notvalid');
-      submit.removeAttribute('disabled');
-    }
-
-    if (isMailEmpty) {
-      email.setAttribute('required', '');
-      email.classList.add('notvalid');
-      submit.setAttribute('disabled', '');
-    } else {
-      email.removeAttribute('required');
-      email.classList.remove('notvalid');
-      submit.removeAttribute('disabled');
-    }
-
-    if (isMessageEmpty) {
-      message.setAttribute('required', '');
-      message.classList.add('notvalid');
-      submit.setAttribute('disabled', '');
-    } else {
-      message.removeAttribute('required');
-      message.classList.remove('notvalid');
-      submit.removeAttribute('disabled');
-    }
-  }
 })();

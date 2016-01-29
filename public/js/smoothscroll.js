@@ -10,13 +10,13 @@
 
   document.addEventListener('DOMContentLoaded', function() {
 
-    var links = document.querySelectorAll('.scroll')
-    var i = links.length
+    var links = document.querySelectorAll('.scroll');
+    var i = links.length;
     var root = /firefox|trident/i.test(navigator.userAgent) ? document.documentElement : document.body;
     var easeInOutCubic = function(t, b, c, d) {
-      if ((t/=d/2) < 1) return c/2*t*t*t + b
-      return c/2*((t-=2)*t*t + 2) + b
-    }
+      if ((t/=d/2) < 1) return c/2*t*t*t + b;
+      return c/2*((t-=2)*t*t + 2) + b;
+    };
 
     while (i--)
       links.item(i).addEventListener('tap', function(e) {
@@ -32,10 +32,10 @@
           var progress = easeInOutCubic(elapsed, startPos, scrollEndValue, duration);
           root.scrollTop = progress;
           elapsed < duration && requestAnimationFrame(scroll);
-        }
+        };
         requestAnimationFrame(scroll);
         e.preventDefault();
-      })
+      });
   });
 
 })();

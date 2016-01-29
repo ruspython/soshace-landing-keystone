@@ -43,10 +43,9 @@ gulp.task('watch', [
 gulp.task('build-js', function () {
 	return gulp
 		.src([
-			'public/libs/gmaps.js',
-			'public/libs/slick/slick.min.js',
-			'public/libs/tap.js',
-			'public/js/stopscroll.js',
+			'node_modules/gmaps/gmaps.js',
+			'node_modules/slick-carousel/slick/slick.js',
+			'node_modules/tapjs/dist/tap.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js',
 			'public/js/portfoliomodal.js',
@@ -56,7 +55,7 @@ gulp.task('build-js', function () {
 			'public/js/senddata.js',
 		])
 		.pipe(concat('scripts.min.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'));
 });
 
@@ -120,7 +119,7 @@ gulp.task('copy:libs', function () {
 gulp.task('copy:ajaxgif', function () {
 	gulp
 		.src([
-			'public/libs/slick/ajax-loader.gif'
+			'node_modules/slick-carousel/slick/ajax-loader.gif'
 		])
 		.pipe(gulp.dest('dist/css'))
 });

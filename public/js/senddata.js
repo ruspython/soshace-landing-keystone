@@ -4,35 +4,31 @@
 
 (function() {
 
-  // Если объектов FormData или FileReader нет в браузере,
-  // то отправляем форму как обычно
+  // if old browser -> simple data sending (with reloading)
   if (!('FormData' in window) || !('FileReader' in window)) {
     return;
   }
 
-  // Находим форму
+  // Find form
   var form = document.querySelector('.contact__form');
 
-  // Отлавливаем событие отправки формы
+  // On submit
   form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Получаем все данные формы с помощью
-    // объекта FormData
+    // Collect all data from form
     var data = new FormData(form);
 
-    // Передаем данные в ф-цию (1-ым аргументом),
-    // отправляющую AJAX запрос.
-    // 2-ым аргументом описываем ф-цию, которая вызовется
-    // в тот момент, когда результат с сервера придёт.
-    // И выводим его в консоль
+    // Pass data to function which sends AJAX request
+    // Second parameter (function) will be called when it will have
+    // from server response
     request(data, function(response) {
       console.log(response);
     });
   });
 
   /**
-   * Отправка AJAX запроса
+   * Send AJAX request
    * @param {Array.<Object>} data
    * @param {function} fn
    */
@@ -43,8 +39,8 @@
     xhr.open('post', 'http://localhost:3000/message?_ts=' + time);
 
     xhr.addEventListener('readystatechange', function() {
-      if (xhr.readyState == 4) {
-        // Передаём в функцию ответ сервера
+      if (xhr.readyState === 4) {
+        // Pass to function server response
         fn(xhr.responseText);
       }
     });

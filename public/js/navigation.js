@@ -59,7 +59,7 @@
     navLinks[i].onclick = function(e) {
       e.preventDefault();
       closeMobileNavigation();
-    }
+    };
   }
 
 

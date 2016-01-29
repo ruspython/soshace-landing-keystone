@@ -7,118 +7,118 @@
   // Options for map style
   var mapStyle = [
       {
-          "featureType": "landscape",
-          "stylers": [
+          'featureType': 'landscape',
+          'stylers': [
               {
-                  "saturation": -100
+                  'saturation': -100
               },
               {
-                  "lightness": 50
+                  'lightness': 50
               },
               {
-                  "visibility": "on"
+                  'visibility': 'on'
               }
           ]
       },
       {
-          "featureType": "poi",
-          "stylers": [
+          'featureType': 'poi',
+          'stylers': [
               {
-                  "saturation": -100
+                  'saturation': -100
               },
               {
-                  "lightness": 40
+                  'lightness': 40
               },
               {
-                  "visibility": "simplified"
+                  'visibility': 'simplified'
               }
           ]
       },
       {
-          "featureType": "road.highway",
-          "stylers": [
+          'featureType': 'road.highway',
+          'stylers': [
               {
-                  "saturation": -100
+                  'saturation': -100
               },
               {
-                  "visibility": "simplified"
+                  'visibility': 'simplified'
               }
           ]
       },
       {
-          "featureType": "road.arterial",
-          "stylers": [
+          'featureType': 'road.arterial',
+          'stylers': [
               {
-                  "saturation": -100
+                  'saturation': -100
               },
               {
-                  "lightness": 20
+                  'lightness': 20
               },
               {
-                  "visibility": "on"
+                  'visibility': 'on'
               }
           ]
       },
       {
-          "featureType": "road.local",
-          "stylers": [
+          'featureType': 'road.local',
+          'stylers': [
               {
-                  "saturation": -100
+                  'saturation': -100
               },
               {
-                  "lightness": 30
+                  'lightness': 30
               },
               {
-                  "visibility": "on"
+                  'visibility': 'on'
               }
           ]
       },
       {
-          "featureType": "transit",
-          "stylers": [
+          'featureType': 'transit',
+          'stylers': [
               {
-                  "saturation": -100
+                  'saturation': -100
               },
               {
-                  "visibility": "simplified"
+                  'visibility': 'simplified'
               }
           ]
       },
       {
-          "featureType": "administrative.province",
-          "stylers": [
+          'featureType': 'administrative.province',
+          'stylers': [
               {
-                  "visibility": "off"
+                  'visibility': 'off'
               }
           ]
       },
       {
-          "featureType": "water",
-          "elementType": "labels",
-          "stylers": [
+          'featureType': 'water',
+          'elementType': 'labels',
+          'stylers': [
               {
-                  "visibility": "on"
+                  'visibility': 'on'
               },
               {
-                  "lightness": -0
+                  'lightness': -0
               },
               {
-                  "saturation": -0
+                  'saturation': -0
               }
           ]
       },
       {
-          "featureType": "water",
-          "elementType": "geometry",
-          "stylers": [
+          'featureType': 'water',
+          'elementType': 'geometry',
+          'stylers': [
               {
-                  "hue": "#00baff"
+                  'hue': '#00baff'
               },
               {
-                  "lightness": -10
+                  'lightness': -10
               },
               {
-                  "saturation": -95
+                  'saturation': -95
               }
           ]
       }
@@ -127,7 +127,7 @@
   // Checking viewport width
   // If it less then desktop breakpoint(960px) then map is not draggable
   // var draggableOption;
-  // 
+  //
   // if (document.documentElement.clientWidth < 960) {
   //   draggableOption = false;
   // } else {
