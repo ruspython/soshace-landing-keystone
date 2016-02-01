@@ -5,7 +5,8 @@
 .contact {
   padding-top: 70px;
   padding-bottom: 80px;
-  background-color: #e4e2e2;
+  background: #e4e2e2;
+  background: #ebebeb;
 
   &__inner {
     @include container();
@@ -113,7 +114,7 @@
   &__form input[type=text]:hover,
   &__form input[type=email]:hover,
   &__form textarea:hover {
-    outline: 2px solid grey;
+    background: #f7f7f7;
   }
 
   &__form input[type=submit] {
@@ -132,8 +133,7 @@
 
     border-radius: 0;
     background: #e9ab00;
-    background: #fff000;
-    color: black;
+    color: white;
     border: none;
     outline: none;
     cursor: pointer;
@@ -167,7 +167,7 @@
   &__links a {
     display: inline-block;
     width: 30%;
-    padding: 5px 1.5%;
+    padding: 20px 1.5%;
 
     font-size: $font-size + 3px;
     line-height: $line-height;
@@ -175,22 +175,22 @@
     font-weight: $weight-bold;
     text-transform: uppercase;
     text-decoration: none;
-    background: $blue-color;
-    color: white;
+    color: $blue-color;
   }
 
   &__links a:hover {
     transform: scale(1.1);
     transition: transform 0.5s;
+    text-decoration: underline;
   }
 
   &__links a:nth-child(2) {
-    background: $orange-color;
+    color: $orange-color;
   }
 
   &__links a:last-child {
     margin-right: 0;
-    background: $green-color;
+    color: $green-color;
   }
 
   &__flash-message {
@@ -239,6 +239,7 @@
     &__text {
       margin-bottom: 15px;
       width: 480px;
+      font-size: $font-size + 2px;
     }
 
     &__text-addition {
@@ -276,7 +277,6 @@
     }
 
     &__links a {
-      padding: 10px 1.5%;
       font-size: $font-size + 5px;
     }
   }
@@ -298,7 +298,7 @@
 
     &__text {
       margin-bottom: 20px;
-      width: 800px;
+      width: 780px;
     }
 
     &__form {
