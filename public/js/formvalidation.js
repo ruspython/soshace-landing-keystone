@@ -10,7 +10,7 @@
 
   var REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   var REG_EXP_NAME = /^[A-Za-z0-9 ]{3,20}$/;
-  var REG_EXP_MESSAGE = /^[A-Za-z0-9 ]{3,500}$/;
+  var REG_EXP_MESSAGE = /^(?=.{3,})[a-zA-Z0-9 :;().]+$/;
 
   /**
    * Cliend-side form validation
@@ -21,7 +21,6 @@
     var isMessageValid = REG_EXP_MESSAGE.test(message.value);
 
     if (isNameValid) {
-      name.removeAttribute('required');
       name.classList.remove('notvalid');
     } else {
       name.setAttribute('required', '');
@@ -29,7 +28,6 @@
     }
 
     if (isEmailValid) {
-      email.removeAttribute('required');
       email.classList.remove('notvalid');
     } else {
       email.setAttribute('required', '');
@@ -37,7 +35,6 @@
     }
 
     if (isMessageValid) {
-      message.removeAttribute('required');
       message.classList.remove('notvalid');
     } else {
       message.setAttribute('required', '');

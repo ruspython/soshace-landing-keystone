@@ -8,6 +8,10 @@
       <input type="text" name="name" placeholder="Name" required>
       <input type="email" name="email" placeholder="E-mail" required>
       <textarea name="message" placeholder="Message" required></textarea>
+      <div class="contact__flash-message">
+        <div class="contact__flash-message-success invisible">Message was successfully sent</div>
+        <div  class="contact__flash-message-fail invisible">Some problem with your request. Check your name, email and message for not standart characters.</div>
+      </div>
       <input type="submit" value="Send request">
 
       <div class="contact__links">

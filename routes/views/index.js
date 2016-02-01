@@ -8,10 +8,12 @@ exports = module.exports = function(req, res) {
 
 	locals.data = {
 		company: {},
+		features: {},
+		skills: {},
 		projectCategories: {},
 		projects: {},
-		skills: {},
-		features: {}
+		developers: {},
+		testimonials: {}
 	};
 	locals.indexSection = true;
 
@@ -107,28 +109,28 @@ exports = module.exports = function(req, res) {
 	});
 
 	// Posts
-	view.on('init', function (next) {
-		keystone.list('Post').model.find().exec(function (error, results) {
-			if (error || !results.length) {
-				return next(error);
-			}
-			if (results.length) {
-				locals.data.posts = results;
-			}
-			next(error);
-		});
-	});
+	// view.on('init', function (next) {
+	// 	keystone.list('Post').model.find().exec(function (error, results) {
+	// 		if (error || !results.length) {
+	// 			return next(error);
+	// 		}
+	// 		if (results.length) {
+	// 			locals.data.posts = results;
+	// 		}
+	// 		next(error);
+	// 	});
+	// });
 
 	// Contact Form
-	locals.section = 'contact';
-	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
-	locals.formData = req.body || {};
-	locals.validationErrors = {};
-	locals.enquirySubmitted = false;
+	// locals.section = 'contact';
+	// locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
+	// locals.formData = req.body || {};
+	// locals.validationErrors = {};
+	// locals.enquirySubmitted = false;
 
 	// On POST requests, add the Enquiry item to the database
 	// view.on('post', { action: 'contact' }, function(next) {
-	// 
+	//
 	// 	var newEnquiry = new Enquiry.model(),
 	// 	updater = newEnquiry.getUpdateHandler(req);
 	// 	console.log(req.body);

@@ -17,8 +17,8 @@ exports = module.exports = function(app) {
 
 	// Views
 	app.all('/', routes.views.index);
-	app.get('/post/:post', routes.views.post);
-	app.get('/blog', routes.views.blog);
+	// app.get('/post/:post', routes.views.post);
+	// app.get('/blog', routes.views.blog);
 
 	// API
 	app.post('/message', routes.api.message);

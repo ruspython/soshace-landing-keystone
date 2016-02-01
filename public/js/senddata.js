@@ -11,21 +11,8 @@
 
   // Find form
   var form = document.querySelector('.contact__form');
-
-  // On submit
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Collect all data from form
-    var data = new FormData(form);
-
-    // Pass data to function which sends AJAX request
-    // Second parameter (function) will be called when it will have
-    // from server response
-    request(data, function(response) {
-      console.log(response);
-    });
-  });
+  var success = form.querySelector('.contact__flash-message-success');
+  var fail = form.querySelector('.contact__flash-message-fail');
 
   /**
    * Send AJAX request
@@ -47,4 +34,27 @@
 
     xhr.send(data);
   }
+
+  // On submit
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Collect all data from form
+    var data = new FormData(form);
+
+    // Pass data to function which sends AJAX request
+    // Second parameter (function) will be called when it will get
+    // response from server
+    request(data, function(response) {
+
+      response = JSON.parse(response);
+
+      if (response.sent) {
+        success.classList.remove('invisible');
+        form.reset();
+      } else {
+        fail.classList.remove('invisible');
+      }
+    });
+  });
 })();

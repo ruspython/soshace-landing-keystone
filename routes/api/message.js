@@ -1,6 +1,7 @@
 var keystone = require('keystone');
 var Company = keystone.list('Company');
 
+// Values are taken from the .env file
 var nodemailer = require('nodemailer'),
     transporter = nodemailer.createTransport({
         service: process.env.MAIL_SERVICE,
@@ -34,37 +35,46 @@ function validateForm(body) {
   }
 }
 
-exports = module.exports = function (req, res, next) {
+exports = module.exports = function (req, res) {
   var sent = true;
   var body = req.body;
 
-  if (!validateForm(body)) {
-    return res.status(403).json({
-      sent: false
-    });
-  }
+  // Load recievers emails from 'Company' model
+  return Company.model.findOne().exec().then(function (company) {
+    var recieversEmails = company.emailFirst + ', ' + company.emailSecond;
 
-  //sent = true;
-
-  var mailOptions = {
-    from: process.env.MAIL_NO_REPLY, // sender address
-    to: Company.get.email, // list of receivers
-    subject: 'team.soshace message from' + body.email, // Subject line
-    text: 'Name: ' + body.name + 'Email: ' + body.email + 'Message: ' + body.message // plaintext body
-    //html: '<b>Hello world 🐴</b>' // html body
-  };
-
-  console.log(Company.model.email);
-
-
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error) {
-      return console.log(error);
+    if (!validateForm(body)) {
+      return res.status(403).json({
+        sent: false
+      });
     }
-    console.log('Message sent:' + info.response);
-  });
 
-  res.json({
-    sent: sent
+    var time = (new Date()).toString();
+
+    // Options for nodemailer
+    // Sender address is taken from .env file
+    // Recievers list are taken from model 'Company'
+    var mailOptions = {
+      from: process.env.MAIL_NO_REPLY,                 // sender address
+      to: recieversEmails,                             // list of receivers
+      subject: 'team.soshace.com message from ' + body.name, // Subject line
+      //text: 'Name: ' + body.name + 'Email: ' + body.email + 'Message: ' + body.message, // plaintext body
+      html: 'Name: ' + body.name + '<br>' + 'Email: ' + body.email + '<br>' + 'Was sent at ' + time + '<br>' + 'Message: ' + '<br>' + body.message // html body
+    };
+
+    transporter.sendMail(mailOptions, function(error, info) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log('Message sent:' + info.response);
+    });
+
+    res.json({
+      sent: sent
+    });
+  }, function (error) {
+    res.status(500).json({
+      error: error
+    });
   });
 };
