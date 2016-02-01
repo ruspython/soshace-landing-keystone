@@ -4,10 +4,11 @@
 
 .team {
   position: relative;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 40px;
   margin-bottom: 30px;
   text-align: center;
+  background: #f7f7f7;
 
   &__inner {
     @include container();
@@ -189,7 +190,7 @@
 
 @media (min-width: $screen_md) {
   .team {
-    padding-top: 50px;
+    padding-top: 85px;
     padding-bottom: 50px;
     margin-bottom: 35px;
 
@@ -256,7 +257,7 @@
 
 @media (min-width: $screen_lg) {
   .team {
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 70px;
     margin-bottom: 35px;
 

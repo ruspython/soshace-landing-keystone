@@ -142,7 +142,7 @@
     scrollwheel: false,
     draggable: true,
     zoom: 16,
-    disableDefaultUI: false,
+    disableDefaultUI: true,
     styles: mapStyle
   });
 

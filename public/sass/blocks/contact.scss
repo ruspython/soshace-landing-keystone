@@ -4,9 +4,8 @@
 
 .contact {
   padding-top: 70px;
-  padding-bottom: 70px;
-  margin-bottom: 30px;
-  background-color: #f7f7f7;
+  padding-bottom: 80px;
+  background-color: #e4e2e2;
 
   &__inner {
     @include container();
@@ -34,7 +33,7 @@
     padding: 5px 0;
     margin: 0 auto;
     margin-bottom: 15px;
-    width: 80%;
+    width: 280px;
     background: #2fbdff;
 
     font-size: $font-size;
@@ -77,8 +76,12 @@
   }
 
   &__form {
-    width: 280px;
+    width: 240px;
+    padding: 40px 20px 20px 20px;
     margin: 0 auto;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    background: white;
   }
 
   &__form input[type=text],
@@ -91,7 +94,7 @@
 
     box-sizing: border-box;
     width: 100%;
-    border: none;
+    border: 1px solid #e5e5e5;
     border-radius: 0;
 
     font-size: $font-size;
@@ -116,7 +119,7 @@
   &__form input[type=submit] {
     display: block;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     padding: 10px 40px;
 
@@ -129,7 +132,8 @@
 
     border-radius: 0;
     background: #e9ab00;
-    color: white;
+    background: #fff000;
+    color: black;
     border: none;
     outline: none;
     cursor: pointer;
@@ -155,7 +159,8 @@
   }
 
   &__links {
-    width: 100%;
+    width: 280px;
+    margin: 0 auto;
     font-size: 0;
   }
 
@@ -216,8 +221,7 @@
 @media (min-width: $screen_md) {
   .contact {
     padding-top: 100px;
-    padding-bottom: 90px;
-    margin-bottom: 35px;
+    padding-bottom: 85px;
 
     &__inner {
       @include container--tablet();
@@ -234,7 +238,7 @@
 
     &__text {
       margin-bottom: 15px;
-      width: 420px;
+      width: 480px;
     }
 
     &__text-addition {
@@ -243,6 +247,7 @@
 
     &__form {
       width: 420px;
+      padding: 50px 30px 30px 30px;
     }
 
     &__form input[type=text],
@@ -262,8 +267,12 @@
 
     &__form input[type=submit] {
       padding: 15px 60px;
-      margin-bottom: 80px;
+      margin-bottom: 30px;
       font-size: $font-size + 4px;
+    }
+
+    &__links {
+      width: 420px;
     }
 
     &__links a {
@@ -276,8 +285,7 @@
 @media (min-width: $screen_lg) {
   .contact {
     padding-top: 140px;
-    padding-bottom: 120px;
-    margin-bottom: 40px;
+    padding-bottom: 175px;
 
     &__inner {
       @include container--desktop();
@@ -290,11 +298,12 @@
 
     &__text {
       margin-bottom: 20px;
-      width: 700px;
+      width: 800px;
     }
 
     &__form {
       width: 700px;
+      padding: 50px 50px 50px 30px;
       font-size: 0;
       vertical-align: top;
     }
@@ -327,7 +336,11 @@
 
     &__form input[type=submit] {
       padding: 20px 120px;
-      margin-bottom: 100px;
+      margin-bottom: 40px;
+    }
+
+    &__links {
+      width: 700px;
     }
 
     &__links a {
