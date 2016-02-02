@@ -8,6 +8,9 @@
   var message = form.querySelector('[name="message"]');
   var submit = form.querySelector('[type="submit"]');
 
+  var success = form.querySelector('.contact__flash-message-success');
+  var fail = form.querySelector('.contact__flash-message-fail');
+
   var REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   var REG_EXP_NAME = /^[A-Za-z0-9 ]{3,20}$/;
   var REG_EXP_MESSAGE = /^(?=.{3,})[a-zA-Z0-9 :;(),./@#$№%&*]+$/;

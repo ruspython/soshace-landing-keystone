@@ -196,7 +196,7 @@
   &__flash-message {
     margin-bottom: 20px;
 
-    font-size: $font-size + 3px;
+    font-size: $font-size;
     line-height: $line-height;
     font-family: $font-stack;
     font-weight: $weight-light;
@@ -238,7 +238,7 @@
 
     &__text {
       margin-bottom: 15px;
-      width: 480px;
+      width: 500px;
       font-size: $font-size + 2px;
     }
 
@@ -248,7 +248,7 @@
 
     &__form {
       width: 420px;
-      padding: 50px 30px 30px 30px;
+      padding: 50px 40px 30px 40px;
     }
 
     &__form input[type=text],
@@ -298,12 +298,12 @@
 
     &__text {
       margin-bottom: 20px;
-      width: 780px;
+      width: 800px;
     }
 
     &__form {
       width: 700px;
-      padding: 50px 50px 50px 30px;
+      padding: 50px;
       font-size: 0;
       vertical-align: top;
     }
@@ -314,7 +314,7 @@
       width: 47.5%;
       padding: 10px 10px 15px 10px;
       margin-right: 5%;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
 
       font-size: $font-size + 2px;
       line-height: $line-height + 2px;
@@ -345,6 +345,10 @@
 
     &__links a {
       font-size: $font-size + 8px;
+    }
+
+    &__flash-message {
+      font-size: $font-size + 3px;
     }
   }
 }

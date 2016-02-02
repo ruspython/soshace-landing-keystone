@@ -36,9 +36,7 @@ keystone.init({
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'User',
-	'mandrill api key': process.env.MANDRILL_API_KEY,
-	'mandrill username': process.env.MANDRILL_USERNAME
+	'user model': 'User'
 
 });
 

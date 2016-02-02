@@ -41,7 +41,16 @@ exports = module.exports = function (req, res) {
 
   // Load recievers emails from 'Company' model
   return Company.model.findOne().exec().then(function (company) {
-    var recieversEmails = company.emailFirst + ', ' + company.emailSecond;
+    var recieversList = company.emails;
+        recieversList = recieversList.split(' ');
+
+    var recieversEmails = '';
+
+    for (var i = 0; i < recieversList.length; i++) {
+      recieversEmails += recieversList[i] + ', ';
+    }
+
+    console.log(recieversEmails);
 
     if (!validateForm(body)) {
       return res.status(403).json({
@@ -55,11 +64,10 @@ exports = module.exports = function (req, res) {
     // Sender address is taken from .env file
     // Recievers list are taken from model 'Company'
     var mailOptions = {
-      from: process.env.MAIL_NO_REPLY,                 // sender address
-      to: recieversEmails,                             // list of receivers
+      from: process.env.MAIL_NO_REPLY,                 // Sender address
+      to: recieversEmails,                             // Receivers addresses
       subject: 'team.soshace.com message from ' + body.name, // Subject line
-      //text: 'Name: ' + body.name + 'Email: ' + body.email + 'Message: ' + body.message, // plaintext body
-      html: 'Name: ' + body.name + '<br>' + 'Email: ' + body.email + '<br>' + 'Was sent at ' + time + '<br>' + 'Message: ' + '<br>' + body.message // html body
+      html: '<p>Name: ' + body.name + '</p>' + '<p>' + 'Email: ' + body.email + '</p>' + '<p>' +'Was sent at ' + time + '</p>' + 'Message: ' + '<p>' + body.message + '</p>' // html body
     };
 
     transporter.sendMail(mailOptions, function(error, info) {
