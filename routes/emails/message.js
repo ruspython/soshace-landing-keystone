@@ -28,11 +28,7 @@ function validateForm(body) {
   var isEmailValid = REG_EXP_EMAIL.test(email);
   var isMessageValid = REG_EXP_MESSAGE.test(message);
 
-  if (isNameValid && isEmailValid && isMessageValid) {
-    return true;
-  } else {
-    return false;
-  }
+  return (isNameValid && isEmailValid && isMessageValid);
 }
 
 exports = module.exports = function (req, res) {
@@ -44,13 +40,7 @@ exports = module.exports = function (req, res) {
     var recieversList = company.emails;
         recieversList = recieversList.split(' ');
 
-    var recieversEmails = '';
-
-    for (var i = 0; i < recieversList.length; i++) {
-      recieversEmails += recieversList[i] + ', ';
-    }
-
-    console.log(recieversEmails);
+    var recieversEmails = recieversList.join(', ');
 
     if (!validateForm(body)) {
       return res.status(403).json({
@@ -72,16 +62,19 @@ exports = module.exports = function (req, res) {
 
     transporter.sendMail(mailOptions, function(error, info) {
       if (error) {
-        console.log(error);
+        console.error(error);
         sent = false;
+      } else {
+        console.log('Message sent:' + info.response);
       }
-      console.log('Message sent:' + info.response);
 
       res.json({
         sent: sent
       });
     });
   }, function (error) {
+    console.error(error);
+
     res.status(500).json({
       error: error
     });
