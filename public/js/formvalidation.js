@@ -23,6 +23,14 @@
     var isEmailValid = REG_EXP_EMAIL.test(email.value);
     var isMessageValid = REG_EXP_MESSAGE.test(message.value);
 
+    if (!success.classList.contains('invisible')) {
+      success.classList.add('invisible');
+    }
+
+    if (!fail.classList.contains('invisible')) {
+      fail.classList.add('invisible');
+    }
+
     if (isNameValid) {
       name.classList.remove('notvalid');
     } else {
