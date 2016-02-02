@@ -72,13 +72,14 @@ exports = module.exports = function (req, res) {
 
     transporter.sendMail(mailOptions, function(error, info) {
       if (error) {
-        return console.log(error);
+        console.log(error);
+        sent = false;
       }
       console.log('Message sent:' + info.response);
-    });
 
-    res.json({
-      sent: sent
+      res.json({
+        sent: sent
+      });
     });
   }, function (error) {
     res.status(500).json({

@@ -9,7 +9,7 @@ keystone.pre('render', middleware.flashMessages);
 // Import Route Controllers
 var routes = {
 	views: importRoutes('./views'),
-	api: importRoutes('./api')
+	emails: importRoutes('./emails')
 };
 
 // Setup Route Bindings
@@ -21,7 +21,7 @@ exports = module.exports = function(app) {
 	// app.get('/blog', routes.views.blog);
 
 	// API
-	app.post('/message', routes.api.message);
+	app.post('/message', routes.emails.message);
 
 	//app.post('/contact', routes.views.contact);
 	//app.get('/gallery', routes.views.gallery);

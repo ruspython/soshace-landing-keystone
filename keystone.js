@@ -31,6 +31,8 @@ keystone.init({
 
 	'port': process.env.PORT,
 
+	'host': process.env.HOST,
+
 	'emails': 'templates/emails',
 
 	'auto update': true,
