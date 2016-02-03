@@ -8,7 +8,7 @@
   z-index: 10;
   width: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  animation: moving-top 0.6s;
+  animation: moving-top 0.4s;
 
   &::before {
     content: '';
@@ -21,7 +21,7 @@
   }
 
   &--hidden {
-    animation: moving-top-reverse 0.6s;
+    animation: moving-top-reverse 0.4s;
     transform: translateY(-2500px);
     opacity: 0;
   }

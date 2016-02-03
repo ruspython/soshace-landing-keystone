@@ -8,22 +8,9 @@
   background: white;
   position: relative;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: -1px;
-  //   right: 0;
-  //   left: 0;
-  //   z-index: 5;
-  //   height: 50px;
-  //   background-image: url('../images/triangle-grey.svg');
-  //   background-repeat: no-repeat;
-  //   background-size: 100% 50px;
-  // }
-
   &__inner {
     @include container();
-    //position: relative;
+    padding: 0 3%;
   }
 
   &__header {
@@ -206,11 +193,13 @@
 
     &__intro {
       font-size: $font-size + 5px;
-      margin: 40px;
+      margin-bottom: 40px;
     }
 
     &__upwork-content {
       @include clearfix();
+      max-width: 1500px;
+      margin: 0 auto;
     }
 
     &__description {

@@ -32,7 +32,7 @@
     scrollTimeout = setTimeout(function() {
       // If true -> scrolling down
       // Last condition check if mobile menu is open (then no hiding navigation)
-      if (window.scrollY > prevPosition && !(window.scrollY < minPosition) && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
+      if (window.scrollY > prevPosition && window.scrollY > minPosition && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
         header.classList.add('main-header--hidden');
         closeMobileNavigation();
         hireButton.classList.remove('invisible');
@@ -44,7 +44,7 @@
         hireButton.classList.add('invisible');
       }
       prevPosition = window.scrollY;
-    }, 30);
+    }, 20);
   });
 
   // Click on link open/close mobile navigation
