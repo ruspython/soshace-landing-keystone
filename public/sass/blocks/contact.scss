@@ -89,6 +89,11 @@
   &__form input[type=text],
   &__form input[type=email],
   &__form textarea {
+    // Remove shadows in iOS
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     display: block;
     padding: 8px 10px;
     margin: 0 auto;
@@ -99,7 +104,6 @@
     border: 1px solid #e5e5e5;
     border-radius: 0;
     box-shadow: none;
-    appearance: none;
 
     font-size: $font-size;
     line-height: $line-height;

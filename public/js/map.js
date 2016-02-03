@@ -126,13 +126,13 @@
 
   // Checking viewport width
   // If it less then desktop breakpoint(960px) then map is not draggable
-  // var draggableOption;
-  //
-  // if (document.documentElement.clientWidth < 960) {
-  //   draggableOption = false;
-  // } else {
-  //   draggableOption = true;
-  // }
+  var draggableOption;
+
+  if (document.documentElement.clientWidth < 960) {
+    draggableOption = false;
+  } else {
+    draggableOption = true;
+  }
 
   // Create & activate Gmap
   var map = new GMaps({
@@ -140,9 +140,17 @@
     lat: 59.958166,
     lng: 30.302187,
     scrollwheel: false,
-    draggable: true,
+    draggable: draggableOption,
     zoom: 16,
-    disableDefaultUI: true,
+    zoomControl: true,
+    zoomControlOpt: {
+      style: 'SMALL',
+      position: 'LEFT_CENTER'
+    },
+    panControl : false,
+    streetViewControl : false,
+    mapTypeControl: false,
+    overviewMapControl: false,
     styles: mapStyle
   });
 

@@ -133,17 +133,6 @@
     fill: #a7dcf5;
   }
 
-  &__slide:hover &__project-info {
-    padding-top: 20px;
-    height: 135px;
-    background: $green-color;
-    transition: 0.5s ease-out;
-  }
-
-  &__slide:hover:nth-child(2n) &__project-info {
-    background: $blue-color;
-  }
-
   &__modal {
     display: block;
     position: fixed;
@@ -242,7 +231,7 @@
     &__project-info {
       padding: 13px;
       width: 70%;
-      height: 100px;
+      height: 108px;
     }
 
     &__project-name {
@@ -253,8 +242,8 @@
     }
 
     &__project-description {
-      font-size: $font-size;
-      line-height: $line-height - 4px;
+      font-size: $font-size + 1px;
+      line-height: $line-height - 2px;
     }
 
     &__arrow-wrap {
@@ -269,9 +258,9 @@
       right: 4%;
     }
 
-    &__slide:hover &__project-info {
-      height: 170px;
-    }
+    // &__slide:hover &__project-info {
+    //   height: 170px;
+    // }
 
     &__modal-close {
       top: 30px;
@@ -333,12 +322,12 @@
     }
 
     &__project-info {
-      height: 120px;
+      height: 130px;
     }
 
     &__project-description {
-      font-size: $font-size - 2px;
-      line-height: $line-height - 6px;
+      font-size: $font-size + 2px;
+      line-height: $line-height - 2px;
     }
 
     &__arrow-wrap {
@@ -353,8 +342,19 @@
       right: 2%;
     }
 
+    // &__slide:hover &__project-info {
+    //   height: 170px;
+    // }
+
     &__slide:hover &__project-info {
-      height: 170px;
+      padding-top: 20px;
+      height: 210px;
+      background: $green-color;
+      transition: 0.5s ease-out;
+    }
+
+    &__slide:hover:nth-child(2n) &__project-info {
+      background: $blue-color;
     }
 
     &__modal-close {

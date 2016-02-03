@@ -42,6 +42,7 @@
     height: 100%;
     overflow: hidden;
     text-align: center;
+    cursor: pointer;
   }
 
   &__member img {
@@ -175,14 +176,14 @@
     fill: #a7dcf5;
   }
 
-  &__member:hover &__member-info {
+  &__member-info--open {
     position: absolute;
     bottom: 0;
     transition: 0.9s;
     background: rgba(0, 0, 0, 0.7);
   }
 
-  &__member:hover &__member-resume {
+  &__member &__member-info--open &__member-resume {
     opacity: 1;
     transition: 3s;
   }
@@ -294,11 +295,23 @@
     }
 
     &__arrow-wrap--left {
-      left: 5%;
+      left: 4%;
     }
 
     &__arrow-wrap--right {
-      right: 7%;
+      right: 5%;
+    }
+
+    &__member:hover &__member-info {
+      position: absolute;
+      bottom: 0;
+      transition: 0.9s;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    &__member:hover &__member-resume {
+      opacity: 1;
+      transition: 3s;
     }
   }
 }
