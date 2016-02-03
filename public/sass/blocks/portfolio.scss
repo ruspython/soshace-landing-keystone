@@ -24,6 +24,7 @@
 
   &__inner {
     @include container();
+    padding: 0 3%;
   }
 
   &__header {
@@ -41,7 +42,7 @@
   &__slider {
     margin: 0 auto;
     margin-bottom: 30px;
-    width: 80%;
+    width: 95%;
     height: 240px;
     overflow: hidden;
   }
@@ -169,12 +170,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    text-align: center;
+    padding: 0 5%;
   }
 
   &__modal-title {
-    width: 300px;
-    margin: 0 auto;
     margin-bottom: 15px;
 
     font-size: $h2-size - 15px;
@@ -187,8 +186,6 @@
   }
 
   &__modal-description {
-    width: 300px;
-    margin: 0 auto;
     margin-bottom: 10px;
 
     font-size: $font-size;
@@ -201,8 +198,8 @@
 
   &__modal-link {
     display: block;
-
     margin-bottom: 10px;
+
     font-size: $font-size;
     line-height: $line-height;
     font-family: $font-stack;
@@ -282,16 +279,15 @@
     }
 
     &__modal-content {
-      top: 100px;
+      top: 50px;
     }
 
     &__modal-title {
-      width: 500px;
+      margin: 0;
       font-size: $h2-size - 10px;
     }
 
     &__modal-description {
-      width: 500px;
       margin-bottom: 20px;
       font-size: $font-size + 5px;
       line-height: $line-height + 5px;
@@ -366,18 +362,13 @@
       right: 40px;
     }
 
-    &__modal-content {
-      top: 150px;
-    }
-
     &__modal-title {
-      width: 700px;
       margin-bottom: 40px;
       font-size: $h2-size - 5px;
     }
 
     &__modal-description {
-      width: 700px;
+      width: 90%;
       margin-bottom: 30px;
       font-size: $font-size + 7px;
       line-height: $line-height + 7px;
@@ -386,10 +377,6 @@
     &__modal-link {
       margin-bottom: 40px;
       font-size: $font-size + 10px;
-    }
-
-    &__modal-img {
-      width: 70%;
     }
   }
 }

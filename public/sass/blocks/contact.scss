@@ -10,6 +10,7 @@
 
   &__inner {
     @include container();
+    padding: 0 2%;
     text-align: center;
   }
 
@@ -77,7 +78,7 @@
   }
 
   &__form {
-    width: 240px;
+    width: 270px;
     padding: 40px 20px;
     margin: 0 auto;
     margin-bottom: 40px;
@@ -89,7 +90,7 @@
   &__form input[type=email],
   &__form textarea {
     display: block;
-    padding: 3px 10px;
+    padding: 8px 10px;
     margin: 0 auto;
     margin-bottom: 10px;
 
@@ -98,6 +99,7 @@
     border: 1px solid #e5e5e5;
     border-radius: 0;
     box-shadow: none;
+    appearance: none;
 
     font-size: $font-size;
     line-height: $line-height;

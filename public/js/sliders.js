@@ -7,8 +7,7 @@ $(document).ready(function() {
     slidesToShow: 1,
     prevArrow: $('.portfolio__arrow-wrap--left'),
     nextArrow: $('.portfolio__arrow-wrap--right'),
-    fade: true,
-    infinite: false,
+    infinite: true,
     speed: 300,
     mobileFirst: true,
     responsive: [
@@ -16,8 +15,7 @@ $(document).ready(function() {
         breakpoint: 959,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
-          fade: false
+          slidesToScroll: 2
         }
       }
     ]
