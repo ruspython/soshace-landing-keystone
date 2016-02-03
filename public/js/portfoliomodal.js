@@ -31,11 +31,12 @@
       modal.classList.remove('invisible');
       // Stops scrolling for body
       body.classList.add('fixed');
-    }
+    };
   }
 
   close.addEventListener('tap', function(e){
+    e.preventDefault();
     modal.classList.add('invisible');
     body.classList.remove('fixed');
-  })
+  });
 })();

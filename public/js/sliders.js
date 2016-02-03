@@ -8,7 +8,7 @@ $(document).ready(function() {
     prevArrow: $('.portfolio__arrow-wrap--left'),
     nextArrow: $('.portfolio__arrow-wrap--right'),
     infinite: true,
-    speed: 300,
+    speed: 200,
     mobileFirst: true,
     responsive: [
       {
@@ -51,29 +51,30 @@ $(document).ready(function() {
 
 // Open/close info about member in team slider
 (function() {
+
+  function showInfo() {
+    var info = this.querySelector('.team__member-info');
+
+    if (info.classList.contains('team__member-info--open')) {
+      info.classList.remove('team__member-info--open');
+    } else {
+      info.classList.add('team__member-info--open');
+    }
+  }
+
   // Only for mobile devices
   if (document.documentElement.clientWidth < 960) {
     var teamSlider = document.querySelector('.team__members-wrap');
 
     // Listening click on whole slider because
     // the number of slides is changing dynamically (slick carousel)
-    teamSlider.addEventListener('tap', function(e) {
-      // e.preventDefault();
-      var memberSlides = document.querySelectorAll('.team__member');
+    teamSlider.onclick = function() {
+      var memberSlides = teamSlider.querySelectorAll('.team__member');
 
       for (var i = 0; i < memberSlides.length; i++) {
-        memberSlides[i].onclick = function(e) {
-        // e.preventDefault();
-
-          var info = this.querySelector('.team__member-info');
-
-          if (info.classList.contains('team__member-info--open')) {
-            info.classList.remove('team__member-info--open');
-          } else {
-            info.classList.add('team__member-info--open');
-          }
-        };
+        memberSlides[i].addEventListener('tap', showInfo);
+        console.log(memberSlides.length);
       }
-    });
+    };
   }
 })();
