@@ -1,5 +1,6 @@
 'use strict';
 
+// Activate sliders - jQuery slick carousel
 $(document).ready(function() {
 
   var portfolioSlider = $('.portfolio__slider');
@@ -7,7 +8,6 @@ $(document).ready(function() {
     slidesToShow: 1,
     prevArrow: $('.portfolio__arrow-wrap--left'),
     nextArrow: $('.portfolio__arrow-wrap--right'),
-    infinite: true,
     speed: 200,
     mobileFirst: true,
     responsive: [
@@ -26,22 +26,19 @@ $(document).ready(function() {
     slidesToShow: 1,
     prevArrow: $('.team__arrow-wrap--left'),
     nextArrow: $('.team__arrow-wrap--right'),
-    //infinite: true,
     speed: 100,
     mobileFirst: true,
     responsive: [
       {
         breakpoint: 599,
         settings: {
-          slidesToShow: 2,
-          //infinite: true
+          slidesToShow: 2
         }
       },
       {
         breakpoint: 959,
         settings: {
-          slidesToShow: 4,
-          //infinite: true
+          slidesToShow: 4
         }
       }
     ]
@@ -49,9 +46,11 @@ $(document).ready(function() {
 
 });
 
-// Open/close info about member in team slider
+// Block for open/close info in team slider
 (function() {
-
+  /**
+   * Open/close developer info
+   */
   function showInfo() {
     var info = this.querySelector('.team__member-info');
 
@@ -62,7 +61,7 @@ $(document).ready(function() {
     }
   }
 
-  // Only for mobile devices
+  // Condition only for mobile devices
   if (document.documentElement.clientWidth < 960) {
     var teamSlider = document.querySelector('.team__members-wrap');
 
@@ -73,7 +72,6 @@ $(document).ready(function() {
 
       for (var i = 0; i < memberSlides.length; i++) {
         memberSlides[i].addEventListener('tap', showInfo);
-        console.log(memberSlides.length);
       }
     };
   }
