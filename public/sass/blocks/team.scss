@@ -18,7 +18,7 @@
     margin: 0;
     margin-bottom: 30px;
 
-    font-size: $h1-size - 10px;
+    font-size: $h1-size - 5px;
     line-height: $h1-line-height;
     font-family: $font-stack;
     font-weight: $weight-medium;
@@ -70,7 +70,7 @@
     margin: 0;
     margin-bottom: 5px;
 
-    font-size: $font-size;
+    font-size: $font-size + 1px;
     line-height: $line-height - 7px;
     font-family: $font-stack;
     font-weight: $weight-medium;
@@ -110,6 +110,20 @@
     color: white;
     white-space: normal;
     opacity: 0;
+  }
+
+  &__member-more {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: $font-size;
+    line-height: $line-height - 3px;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    border-bottom: 1px dotted white;
+    color: white;
+    opacity: 1;
   }
 
   &__description {
@@ -187,6 +201,11 @@
     opacity: 1;
     transition: 3s;
   }
+
+  &__member &__member-info--open &__member-more {
+    opacity: 0;
+    transition: 1s;
+  }
 }
 
 @media (min-width: $screen_md) {
@@ -201,7 +220,7 @@
 
     &__header {
       margin-bottom: 35px;
-      font-size: $h1-size - 5px;
+      font-size: $h1-size;
     }
 
     &__members-wrap {
@@ -214,6 +233,21 @@
     &__member {
       width: 46%;
       margin-right: 1%;
+    }
+
+    &__member-name {
+      font-size: $font-size + 2px;
+      line-height: $line-height - 6px;
+    }
+
+    &__member-position {
+      font-size: $font-size + 1px;
+      line-height: $line-height;
+    }
+
+    &__member-resume {
+      font-size: $font-size + 1px;
+      line-height: $line-height;
     }
 
     &__description {
@@ -266,10 +300,6 @@
       @include container--desktop();
     }
 
-    &__header {
-      font-size: $h1-size;
-    }
-
     &__members-wrap {
       margin-bottom: 80px;
     }
@@ -277,6 +307,19 @@
     &__member {
       width: 23.5%;
       margin-right: 1%;
+    }
+
+    &__member-name {
+      font-size: $font-size + 2px;
+      line-height: $line-height - 6px;
+    }
+
+    &__member-position {
+      font-size: $font-size + 2px;
+    }
+
+    &__member-resume {
+      font-size: $font-size + 2px;
     }
 
     &__arrow-wrap {
@@ -312,6 +355,10 @@
     &__member:hover &__member-resume {
       opacity: 1;
       transition: 3s;
+    }
+
+    &__member:hover &__member-more {
+      opacity: 0;
     }
   }
 }

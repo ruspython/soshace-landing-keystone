@@ -8,6 +8,7 @@
   text-align: center;
   background: $orange-color;
   color: white;
+  text-transform: uppercase;
 
   &::before {
     content: "";
@@ -34,7 +35,6 @@
     line-height: $h1-line-height;
     font-family: $font-stack;
     font-weight: $weight-bold;
-    text-transform: uppercase;
   }
 
   &__item {
@@ -55,11 +55,11 @@
     margin: 0;
     margin-bottom: 10px;
 
-    font-size: $h2-size - 14px; // 18
-    line-height: $h2-line-height - 14px; // 27
+    font-size: $h2-size - 12px;
+    line-height: $h2-line-height - 14px;
     font-family: $font-stack;
     font-weight: $weight-medium;
-    text-transform: uppercase;
+
   }
 
   &__text {
@@ -124,7 +124,6 @@
 
     &__header {
       margin-bottom: 80px;
-      font-size: $h1-size + 15px;
     }
 
     &__item {

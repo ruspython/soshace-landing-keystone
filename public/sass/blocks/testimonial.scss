@@ -17,8 +17,8 @@
     margin: 0;
     margin-bottom: 30px;
 
-    font-size: $h2-size;
-    line-height: $h2-line-height;
+    font-size: $h1-size - 5px;
+    line-height: $h1-line-height;
     font-family: $font-stack;
     font-weight: $weight-medium;
     text-transform: uppercase;
@@ -103,8 +103,7 @@
     }
 
     &__header {
-      font-size: $h2-size + 3px;
-      line-height: $h2-line-height;
+      font-size: $h1-size;
     }
 
     &__intro {
@@ -188,7 +187,6 @@
 
     &__header {
       margin-bottom: 80px;
-      font-size: $h2-size + 8px;
     }
 
     &__intro {

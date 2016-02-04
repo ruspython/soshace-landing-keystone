@@ -31,7 +31,7 @@
     margin: 0;
     margin-bottom: 50px;
 
-    font-size: $h1-size - 10px;
+    font-size: $h1-size - 5px;
     line-height: $h1-line-height;
     font-family: $font-stack;
     font-weight: $weight-medium;
@@ -86,7 +86,7 @@
     margin: 0;
     margin-bottom: 3px;
 
-    font-size: $font-size;
+    font-size: $font-size + 1px;
     line-height: $line-height - 7px;
     font-family: $font-stack;
     font-weight: $weight-medium;
@@ -96,10 +96,21 @@
   &__project-description {
     margin: 0;
 
-    font-size: $font-size - 2px;
-    line-height: $line-height - 8px;
+    font-size: $font-size;
+    line-height: $line-height - 3px;
     font-family: $font-stack;
     font-weight: $weight-light;
+  }
+
+  &__project-more {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    font-size: $font-size;
+    line-height: $line-height - 3px;
+    font-family: $font-stack;
+    font-weight: $weight-bold;
+    text-decoration: underline;
   }
 
   &__arrow-wrap {
@@ -215,7 +226,7 @@
 
     &__header {
       margin-bottom: 40px;
-      font-size: $h1-size - 5px;
+      font-size: $h1-size;
     }
 
     &__slider {
@@ -231,7 +242,7 @@
     &__project-info {
       padding: 13px;
       width: 70%;
-      height: 108px;
+      height: 115px;
     }
 
     &__project-name {
@@ -243,7 +254,7 @@
 
     &__project-description {
       font-size: $font-size + 1px;
-      line-height: $line-height - 2px;
+      line-height: $line-height;
     }
 
     &__arrow-wrap {
@@ -306,7 +317,6 @@
 
     &__header {
       margin-bottom: 70px;
-      font-size: $h1-size;
     }
 
     &__slider {

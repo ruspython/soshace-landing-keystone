@@ -18,7 +18,7 @@
     margin: 0;
     margin-bottom: 25px;
 
-    font-size: $h1-size - 10px;
+    font-size: $h1-size - 5px;
     line-height: $h1-line-height;
     font-family: $font-stack;
     font-weight: $weight-medium;
@@ -35,7 +35,7 @@
     padding: 5px 0;
     margin: 0 auto;
     margin-bottom: 25px;
-    width: 280px;
+    width: 95%;
     background: #2fbdff;
 
     font-size: $font-size;
@@ -78,8 +78,8 @@
   }
 
   &__form {
-    width: 270px;
-    padding: 40px 20px;
+    width: 85%;
+    padding: 40px 5%;
     margin: 0 auto;
     margin-bottom: 40px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -166,7 +166,7 @@
   }
 
   &__links {
-    width: 280px;
+    width: 85%;
     margin: 0 auto;
     font-size: 0;
   }
@@ -236,7 +236,7 @@
 
     &__header {
       margin-bottom: 50px;
-      font-size: $h1-size - 8px;
+      font-size: $h1-size;
     }
 
     &__header-addition {
@@ -245,7 +245,7 @@
 
     &__text {
       margin-bottom: 35px;
-      width: 500px;
+      width: 95%;
       font-size: $font-size + 2px;
     }
 
@@ -254,14 +254,14 @@
     }
 
     &__form {
-      width: 420px;
-      padding: 50px 40px;
+      width: 75%;
+      padding: 50px 10%;
     }
 
     &__form input[type=text],
     &__form input[type=email],
     &__form textarea {
-      padding: 5px 10px;
+      padding: 10px 15px;
       margin-bottom: 13px;
 
       font-size: $font-size + 1px;
@@ -279,7 +279,7 @@
     }
 
     &__links {
-      width: 420px;
+      width: 75%;
     }
 
     &__links a {
@@ -299,17 +299,16 @@
 
     &__header {
       margin-bottom: 50px;
-      font-size: $h1-size - 5px;
     }
 
     &__text {
       margin-bottom: 40px;
-      width: 800px;
+      width: 75%;
     }
 
     &__form {
-      width: 700px;
-      padding: 50px;
+      width: 65%;
+      padding: 5%;
       font-size: 0;
       vertical-align: top;
     }
@@ -345,7 +344,7 @@
     }
 
     &__links {
-      width: 700px;
+      width: 65%;
     }
 
     &__links a {

@@ -45,17 +45,18 @@ gulp.task('build-js', function () {
 		.src([
 			'node_modules/gmaps/gmaps.js',
 			'node_modules/slick-carousel/slick/slick.js',
-			'node_modules/tapjs/dist/tap.js',
+			// 'node_modules/tapjs/dist/tap.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js',
-			'public/js/portfoliomodal.js',
 			'public/js/sliders.js',
+			'public/js/portfoliomodal.js',
+			'public/js/memberinfo.js',
 			'public/js/map.js',
 			'public/js/formvalidation.js',
 			'public/js/senddata.js',
 		])
 		.pipe(concat('scripts.min.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'));
 });
 
