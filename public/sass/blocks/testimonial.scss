@@ -31,7 +31,8 @@
   }
 
   &__intro {
-    margin-bottom: 30px;
+    margin: 0;
+    margin-bottom: 20px;
     text-align: center;
     font-size: $font-size;
     color: black;
@@ -113,7 +114,6 @@
 
     &__intro {
       font-size: $font-size + 2px;
-      margin-bottom: 30px;
     }
 
     &__description {
@@ -196,7 +196,7 @@
 
     &__intro {
       font-size: $font-size + 5px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     &__upwork-content {
