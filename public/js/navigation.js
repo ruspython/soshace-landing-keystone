@@ -48,7 +48,7 @@
   });
 
   // Click on link open/close mobile navigation
-  burger.addEventListener('click', function(event){
+  burger.addEventListener('tap', function(event){
     event.preventDefault();
     toggleMobileNavigation();
   });

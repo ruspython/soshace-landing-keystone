@@ -45,7 +45,7 @@ gulp.task('build-js', function () {
 		.src([
 			'node_modules/gmaps/gmaps.js',
 			'node_modules/slick-carousel/slick/slick.js',
-			// 'node_modules/tapjs/dist/tap.js',
+			'node_modules/tapjs/dist/tap.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js',
 			'public/js/sliders.js',

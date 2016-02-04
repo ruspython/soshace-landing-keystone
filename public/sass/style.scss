@@ -1,11 +1,10 @@
 @import 'normalize';
 @import 'variables';
 @import 'mixins';
+@import 'base';
 
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../node_modules/slick-carousel/slick/slick-theme.scss';
-
-@import 'base';
 
 @import 'blocks/main-header';
 @import 'blocks/burger-icon';

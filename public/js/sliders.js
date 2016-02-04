@@ -9,7 +9,7 @@ $(document).ready(function() {
     prevArrow: $('.portfolio__arrow-wrap--left'),
     nextArrow: $('.portfolio__arrow-wrap--right'),
     speed: 200,
-    //infinite: true,
+    infinite: true,
     mobileFirst: true,
     responsive: [
       {

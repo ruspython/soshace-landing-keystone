@@ -19,7 +19,7 @@
     };
 
     while (i--)
-      links.item(i).addEventListener('click', function(e) {
+      links.item(i).addEventListener('tap', function(e) {
         var startTime;
         var startPos = root.scrollTop;
         var endPos = document.getElementById(/[^#]+$/.exec(this.href)[0]).getBoundingClientRect().top;

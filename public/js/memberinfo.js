@@ -22,9 +22,9 @@
        for (var i = 0; i < slides.length; i++) {
          // Condition only for mobile devices
          if (document.documentElement.clientWidth < 960) {
-           slides[i].addEventListener('click', showInfo);
+           slides[i].addEventListener('tap', showInfo);
          } else {
-           slides[i].removeEventListener('click', showInfo);
+           slides[i].removeEventListener('tap', showInfo);
            var infos = document.querySelectorAll('.team__member-info');
            for (var j = 0; j < infos.length; j++) {
              if (infos[j].classList.contains('team__member-info--open')) {
