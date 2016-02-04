@@ -56,7 +56,7 @@ gulp.task('build-js', function () {
 			'public/js/senddata.js',
 		])
 		.pipe(concat('scripts.min.js'))
-		//.pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'));
 });
 

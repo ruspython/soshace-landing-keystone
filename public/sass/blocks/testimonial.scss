@@ -14,8 +14,12 @@
   }
 
   &__header {
+    color: #2e5fb2;
+  }
+
+  &__header h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     font-size: $h1-size - 5px;
     line-height: $h1-line-height;
@@ -27,8 +31,9 @@
   }
 
   &__intro {
+    margin-bottom: 30px;
+    text-align: center;
     font-size: $font-size;
-    margin-bottom: 20px;
     color: black;
   }
 
@@ -102,7 +107,7 @@
       @include container--tablet();
     }
 
-    &__header {
+    &__header h2{
       font-size: $h1-size;
     }
 
@@ -185,8 +190,8 @@
       @include container--desktop();
     }
 
-    &__header {
-      margin-bottom: 80px;
+    &__header h2 {
+      margin-bottom: 30px;
     }
 
     &__intro {
