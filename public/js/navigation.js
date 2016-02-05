@@ -22,7 +22,48 @@
   var nav = document.querySelector('.main-nav');
   // Navigation likns
   var navLinks = nav.querySelectorAll('a');
-  var body = document.querySelector('.main-header');
+  var body = document.querySelector('body');
+
+  /**
+   * Open/close mobile navigation
+   */
+  function toggleMobileNavigation() {
+    // Show/hide burger icon
+    open.classList.toggle('burger-icon__open--hidden');
+    // Show/hide cross icon
+    close.classList.toggle('burger-icon__close');
+    // Change/return style of top header block
+    wrap.classList.toggle('main-header__inner--menu-visible');
+    // Show/hide navigation
+    nav.classList.toggle('main-nav--visible');
+    //Enable/disable scrolling through document
+    body.classList.toggle('fixed');
+  }
+
+  /**
+   * Close mobile navigation
+   */
+  function closeMobileNavigation() {
+    if (open.classList.contains('burger-icon__open--hidden')) {
+      open.classList.remove('burger-icon__open--hidden');
+    }
+
+    if (close.classList.contains('burger-icon__close')) {
+      close.classList.remove('burger-icon__close');
+    }
+
+    if (wrap.classList.contains('main-header__inner--menu-visible')) {
+      wrap.classList.remove('main-header__inner--menu-visible');
+    }
+
+    if (nav.classList.contains('main-nav--visible')) {
+      nav.classList.remove('main-nav--visible');
+    }
+
+    if (body.classList.contains('fixed')) {
+      body.classList.remove('fixed');
+    }
+  }
 
   // Hide/show navigation by scrolling down/up
   window.addEventListener('scroll', function() {
@@ -61,47 +102,4 @@
       closeMobileNavigation();
     };
   }
-
-
-  /**
-   * Open/close mobile navigation
-   */
-  function toggleMobileNavigation() {
-    // Show/hide burger icon
-    open.classList.toggle('burger-icon__open--hidden');
-    // Show/hide cross icon
-    close.classList.toggle('burger-icon__close');
-    // Change/return style of top header block
-    wrap.classList.toggle('main-header__inner--menu-visible');
-    // Show/hide navigation
-    nav.classList.toggle('main-nav--visible');
-    //Enable/disable scrolling through document
-    body.classList.toggle('relative');
-  }
-
-  /**
-   * Close mobile navigation
-   */
-  function closeMobileNavigation() {
-    if (open.classList.contains('burger-icon__open--hidden')) {
-      open.classList.remove('burger-icon__open--hidden');
-    }
-
-    if (close.classList.contains('burger-icon__close')) {
-      close.classList.remove('burger-icon__close');
-    }
-
-    if (wrap.classList.contains('main-header__inner--menu-visible')) {
-      wrap.classList.remove('main-header__inner--menu-visible');
-    }
-
-    if (nav.classList.contains('main-nav--visible')) {
-      nav.classList.remove('main-nav--visible');
-    }
-
-    if (body.classList.contains('relative')) {
-      body.classList.remove('relative');
-    }
-  }
-
 })();
