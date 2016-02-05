@@ -43,6 +43,7 @@
   position: relative;
   height: 350px;
   z-index: 3;
+  transition: height 0.3s ease;
 }
 
 @media (min-width: $screen_md) {
@@ -52,6 +53,7 @@
 
   .map {
     height: 350px;
+    transition: height 0.3s ease;
   }
 }
 
@@ -62,5 +64,6 @@
 
   .map {
     height: 550px;
+    transition: height 0.3s ease;
   }
 }

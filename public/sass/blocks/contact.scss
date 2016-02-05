@@ -7,6 +7,7 @@
   padding-bottom: 80px;
   background: #e4e2e2;
   background: #ebebeb;
+  transition: padding 0.3s ease;
 
   &__inner {
     @include container();
@@ -24,6 +25,7 @@
     font-weight: $weight-medium;
     text-transform: uppercase;
     color: #2e5fb2;
+    transition: margin 0.3s ease, font-size 0.3s ease;
   }
 
   &__header-addition {
@@ -43,6 +45,7 @@
     font-family: $font-stack;
     font-weight: $weight-light;
     color: white;
+    transition: width 0.3s ease, margin 0.3s ease;
   }
 
   &__text-addition {
@@ -84,6 +87,7 @@
     margin-bottom: 40px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     background: white;
+    transition: width 0.3s ease, padding 0.3s ease;
   }
 
   &__form input[type=text],
@@ -229,6 +233,7 @@
   .contact {
     padding-top: 100px;
     padding-bottom: 85px;
+    transition: padding 0.3s ease;
 
     &__inner {
       @include container--tablet();
@@ -237,6 +242,7 @@
     &__header {
       margin-bottom: 50px;
       font-size: $h1-size;
+      transition: margin 0.3s ease, font-size 0.3s ease;
     }
 
     &__header-addition {
@@ -247,6 +253,7 @@
       margin-bottom: 35px;
       width: 95%;
       font-size: $font-size + 2px;
+      transition: width 0.3s ease, margin 0.3s ease;
     }
 
     &__text-addition {
@@ -256,6 +263,7 @@
     &__form {
       width: 75%;
       padding: 50px 10%;
+      transition: width 0.3s ease, padding 0.3s ease;
     }
 
     &__form input[type=text],
@@ -292,6 +300,7 @@
   .contact {
     padding-top: 140px;
     padding-bottom: 175px;
+    transition: padding 0.3s ease;
 
     &__inner {
       @include container--desktop();
@@ -299,11 +308,13 @@
 
     &__header {
       margin-bottom: 50px;
+      transition: margin 0.3s ease;
     }
 
     &__text {
       margin-bottom: 40px;
       width: 75%;
+      transition: width 0.3s ease, margin 0.3s ease;
     }
 
     &__form {
@@ -311,6 +322,7 @@
       padding: 5%;
       font-size: 0;
       vertical-align: top;
+      transition: width 0.3s ease, padding 0.3s ease;
     }
 
     &__form input[type=text],

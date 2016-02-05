@@ -22,6 +22,7 @@
      for (var i = 0; i < slides.length; i++) {
        // Condition only for mobile devices
        if (document.documentElement.clientWidth < 960) {
+         slides[i].removeEventListener('tap', showInfo);
          slides[i].addEventListener('tap', showInfo);
        } else {
          slides[i].removeEventListener('tap', showInfo);

@@ -5,7 +5,7 @@
 .main-header {
   background: white;
   position: fixed;
-  z-index: 12;
+  z-index: 99;
   width: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
   animation: moving-top 0.4s;
@@ -30,6 +30,7 @@
     @include container();
     @include clearfix();
     position: relative;    // Absolute element inside (.main-nav--visible)
+    transition: padding 0.3s ease;
   }
 
   &__inner--menu-visible {
@@ -39,6 +40,7 @@
   &__logo-wrap {
     float: left;
     width: 40%;
+    transition: all 0.3s ease;
   }
 
   &__logo-wrap a {
@@ -51,6 +53,7 @@
   &__logo-wrap img{
     width: 134px;
     height: 35px;
+    transition: width 0.3s ease, height 0.3s ease;
   }
 
   &__toggle-wrap {
@@ -70,11 +73,13 @@
 
     &__inner {
       @include container--tablet();
+      transition: padding 0.3s ease;
     }
 
     &__logo-wrap img{
       width: 154px;
       height: 41px;
+      transition: width 0.3s ease, height 0.3s ease;
     }
 
     &__logo-wrap a {
@@ -95,6 +100,7 @@
       @include container--desktop();
       padding-top: 5px;
       padding-bottom: 5px;
+      transition: padding 0.3s ease;
     }
 
     &__logo-wrap a {

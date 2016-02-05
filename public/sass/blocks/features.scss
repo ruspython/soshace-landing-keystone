@@ -10,6 +10,7 @@
   text-transform: uppercase;
   background: white;
   color: black;
+  transition: padding 0.3s ease, margin 0.3s ease;
 
   &__inner {
     @include container();
@@ -36,6 +37,7 @@
     line-height: $h2-line-height - 14px;
     font-family: $font-stack;
     font-weight: $weight-medium;
+    transition: font-size 0.3s ease;
   }
 
   &__text {
@@ -45,6 +47,7 @@
     line-height: $line-height;
     font-family: $font-stack;
     font-weight: $weight-thin;
+    transition: font-size 0.3s ease;
   }
 }
 
@@ -52,6 +55,7 @@
   .features {
     padding-top: 120px;
     margin-bottom: 60px;
+    transition: padding 0.3s ease, margin 0.3s ease;
 
     &__inner {
       @include container--tablet();
@@ -77,11 +81,13 @@
     &__title {
       font-size: $h2-size - 10px;
       line-height: $h2-line-height - 10px;
+      transition: font-size 0.3s ease;
     }
 
     &__text {
       font-size: $font-size + 2px;
       line-height: $line-height + 3px;
+      transition: font-size 0.3s ease;
     }
   }
 }
@@ -90,6 +96,7 @@
   .features {
     padding-top: 150px;
     margin-bottom: 80px;
+    transition: padding 0.3s ease, margin 0.3s ease;
 
     &__inner {
       @include container--desktop();
@@ -115,11 +122,13 @@
     &__title {
       font-size: $h2-size - 7px;
       line-height: $h2-line-height;
+      transition: font-size 0.3s ease;
     }
 
     &__text {
       font-size: $font-size + 4px;
       line-height: $line-height + 6px;
+      transition: font-size 0.3s ease;
     }
   }
 }

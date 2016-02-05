@@ -7,6 +7,7 @@
   padding-bottom: 30px;
   background: white;
   position: relative;
+  transition: padding 0.3s ease;
 
   &__inner {
     @include container();
@@ -28,6 +29,7 @@
     text-transform: uppercase;
     color: #2e5fb2;
     text-align: center;
+    transition: font-size 0.3s ease;
   }
 
   &__intro {
@@ -36,6 +38,7 @@
     text-align: center;
     font-size: $font-size;
     color: black;
+    transition: font-size 0.3s ease;
   }
 
   &__description {
@@ -61,6 +64,7 @@
     font-weight: $weight-medium;
     text-transform: uppercase;
     color: #00bef7;
+    transition: font-size 0.3s ease, width 0.3s ease;
   }
 
   &__top-rated-hidden {
@@ -70,6 +74,7 @@
   &__top-rated-staff {
     float: right;
     width: 70%;
+    transition: width 0.3s ease;
   }
 
   &__top-rated-tests {
@@ -86,12 +91,14 @@
     font-weight: $weight-medium;
     text-transform: uppercase;
     color: #31a200;
+    transition: font-size 0.3s ease, width 0.3s ease;
   }
 
   &__feedback img {
     display: block;
     width: 100%;
     margin-bottom: 15px;
+    transition: margin 0.3s ease, width 0.3s ease;
   }
 
   & img {
@@ -103,6 +110,7 @@
   .testimonial {
     padding-top: 70px;
     padding-bottom: 40px;
+    transition: padding 0.3s ease;
 
     &__inner {
       @include container--tablet();
@@ -110,14 +118,17 @@
 
     &__header h2{
       font-size: $h1-size;
+      transition: font-size 0.3s ease;
     }
 
     &__intro {
       font-size: $font-size + 2px;
+      transition: font-size 0.3s ease;
     }
 
     &__description {
       margin-bottom: 30px;
+      transition: width 0.3 ease;
     }
 
     &__top-rated {
@@ -131,6 +142,7 @@
 
       font-size: $font-size + 15px;
       line-height: $line-height + 15px;
+      transition: font-size 0.3s ease, width 0.3s ease;
     }
 
     &__top-rated-hidden {
@@ -140,6 +152,7 @@
     &__top-rated-staff {
       float: right;
       width: 45%;
+      transition: width 0.3s ease;
     }
 
     &__top-rated-tests {
@@ -159,6 +172,7 @@
       margin-right: 3%;
 
       font-size: $font-size + 20px;
+      transition: font-size 0.3s ease, width 0.3s ease;
     }
 
     &__feedback img {
@@ -166,6 +180,7 @@
       width: 52%;
       margin-right: 3%;
       margin-bottom: 30px;
+      transition: margin 0.3s ease, width 0.3s ease;
     }
 
     &__feedback img:nth-child(2n) {
@@ -180,6 +195,7 @@
   .testimonial {
     padding-top: 100px;
     padding-bottom: 50px;
+    transition: padding 0.3s ease;
 
     &::before {
       height: 65px;
@@ -197,6 +213,7 @@
     &__intro {
       font-size: $font-size + 5px;
       margin-bottom: 30px;
+      transition: font-size 0.3s ease;
     }
 
     &__upwork-content {
@@ -218,38 +235,26 @@
 
     &__top-rated-text {
       width: 230px;
-      // margin-bottom: 15px;
 
       font-size: $font-size + 15px;
       line-height: $line-height + 15px;
+      transition: font-size 0.3s ease, width 0.3s ease;
     }
 
     &__feedback {
-      // @include clearfix();
       float: left;
       width: 100%;
     }
 
-    &__feedback-text {
-      // float: left;
-      // width: 30%;
-      // margin-right: 3%;
-      // margin-bottom: 15px;
-      //
-      // font-size: $font-size + 20px;
-    }
-
     &__feedback img {
-      // float: left;
       width: 53%;
       margin-right: 2%;
       margin-bottom: 1%;
+      transition: margin 0.3s ease, width 0.3s ease;
     }
 
     &__feedback img:nth-child(2n) {
       float: right;
-      // width: 45%;
-      // margin-right: 0;
     }
 
   }

@@ -9,6 +9,7 @@
   margin-bottom: 30px;
   text-align: center;
   background: #f7f7f7;
+  transition: padding 0.3s ease, margin 0.3s ease;
 
   &__inner {
     @include container();
@@ -24,13 +25,14 @@
     font-weight: $weight-medium;
     text-transform: uppercase;
     color: black;
+    transition: font-size 0.3s ease, margin 0.3s ease;
   }
 
   &__members-wrap {
     margin: 0 auto;
     margin-bottom: 30px;
     width: 280px;
-    height: 280px;
+    //height: 280px;
     overflow: hidden;
     white-space: nowrap;
   }
@@ -43,6 +45,7 @@
     overflow: hidden;
     text-align: center;
     cursor: pointer;
+    //transition: width 0.3s ease, margin 0.3s ease;
   }
 
   &__member img {
@@ -64,6 +67,7 @@
     margin: 0 auto;
     text-align: left;
     background: rgba(0, 0, 0, 0.4);
+    transition: 0.9s;
   }
 
   &__member-name {
@@ -213,6 +217,7 @@
     padding-top: 85px;
     padding-bottom: 50px;
     margin-bottom: 35px;
+    transition: padding 0.3s ease, margin 0.3s ease;
 
     &__inner {
       @include container--tablet();
@@ -221,18 +226,20 @@
     &__header {
       margin-bottom: 35px;
       font-size: $h1-size;
+      transition: font-size 0.3s ease, margin 0.3s ease;
     }
 
     &__members-wrap {
       margin: 0 auto;
       margin-bottom: 50px;
       width: 80%;
-      height: auto;
+      //height: auto;
     }
 
     &__member {
       width: 46%;
       margin-right: 1%;
+      //transition: width 0.3s ease, margin 0.3s ease;
     }
 
     &__member-name {
@@ -295,18 +302,20 @@
     padding-top: 120px;
     padding-bottom: 70px;
     margin-bottom: 35px;
+    transition: padding 0.3s ease, margin 0.3s ease;
 
     &__inner {
       @include container--desktop();
     }
 
-    &__members-wrap {
-      margin-bottom: 80px;
-    }
+    // &__members-wrap {
+    //   margin-bottom: 80px;
+    // }
 
     &__member {
       width: 23.5%;
       margin-right: 1%;
+      //transition: width 0.3s ease, margin 0.3s ease;
     }
 
     &__member-name {

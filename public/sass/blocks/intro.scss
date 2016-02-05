@@ -11,6 +11,7 @@
   background-position: center 47px;
   background-size: 700px auto;
   overflow: hidden;
+  transition: padding 0.3s ease;
 
   &::before {
     content: '';
@@ -48,6 +49,7 @@
     line-height: $h1-line-height - 10px;
     text-transform: uppercase;
     color: white;
+    transition: width 0.3s ease, margin 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
   }
 
   &__title::after {
@@ -69,6 +71,7 @@
     line-height: $h1-line-height - 20px;
     text-transform: uppercase;
     color: #fff000;
+    transition: width 0.3s ease, margin 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
   }
 
   &__btn-wrap {
@@ -93,6 +96,7 @@
     color: black;
     outline: none;
     cursor: pointer;
+    transition: padding 0.3s ease, font-size 0.3s ease;
   }
 
   &__btn-wrap:hover {
@@ -140,10 +144,11 @@
 @media (min-width: $screen_md) {
   .intro {
     padding-top: 230px;
-    padding-bottom: 200px;
+    padding-bottom: 180px;
     background-image: url('../images/bg-intro-tablet@1x.jpg');
     background-position: 45% 60px;
     background-size: 1200px auto;
+    transition: padding 0.3s ease;
 
     &__inner {
       @include container--tablet();
@@ -157,6 +162,7 @@
     &__logo img {
       width: 300px;
       height: 79px;
+      transition: width 0.3s ease, height 0.3s ease;
     }
 
     &__title {
@@ -164,6 +170,7 @@
       margin-bottom: 20px;
       font-size: $h1-size - 10px;
       line-height: $h1-line-height - 5px;
+      transition: width 0.3s ease, margin 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
     }
 
     &__subtitle {
@@ -172,6 +179,7 @@
       margin-bottom: 30px;
       font-size: $h1-size - 20px;
       line-height: $h1-line-height - 15px;
+      transition: width 0.3s ease, margin 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
     }
 
     &__btn-wrap {
@@ -181,6 +189,7 @@
     &__btn {
       padding: 13px 45px;
       font-size: $font-size + 3px;
+      transition: padding 0.3s ease, font-size 0.3s ease;
     }
   }
 }
@@ -188,7 +197,6 @@
 @media (min-width: $screen_lg) {
   .intro {
     padding-top: 280px;
-    padding-bottom: 180px;
     background-color: rgba(0, 0, 0, 0.7);
     background-image: url('../images/bg-intro-fullsize@1x.jpg'), linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     background-position: 50% 0%;
@@ -223,6 +231,7 @@
     &__logo img {
       width: 450px;
       height: auto;
+      transition: width 0.3s ease, height 0.3s ease;
     }
 
     &__title {
@@ -230,6 +239,7 @@
       margin-bottom: 30px;
       font-size: $h1-size + 10px;
       line-height: $h1-line-height;
+      transition: width 0.3s ease, margin 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
     }
 
     &__title::after {
@@ -240,11 +250,13 @@
       margin-bottom: 40px;
       font-size: $h1-size - 10px;
       line-height: $h1-line-height;
+      transition: width 0.3s ease, margin 0.3s ease, font-size 0.3s ease, line-height 0.3s ease;
     }
 
     &__btn {
       padding: 17px 65px 14px 65px;
       font-size: $font-size + 6px;
+      transition: padding 0.3s ease, font-size 0.3s ease;
     }
   }
 }

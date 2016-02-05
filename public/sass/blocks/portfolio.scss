@@ -8,6 +8,7 @@
   margin-bottom: 30px;
   position: relative;
   text-align: center;
+  transition: padding 0.3s ease, margin 0.3s ease;
 
   &::before {
     content: "";
@@ -16,10 +17,11 @@
     right: 0;
     left: 0;
     z-index: 5;
-    height: 50px;
+    height: 30px;
     background-image: url('../images/triangle-orange.svg');
     background-repeat: no-repeat;
-    background-size: 100% 50px;
+    background-size: 100% 30px;
+    transition: height 0.3s ease, background-size 0.3s ease;
   }
 
   &__inner {
@@ -37,6 +39,7 @@
     font-weight: $weight-medium;
     text-transform: uppercase;
     color: #2e5fb2;
+    transition: font-size 0.3s ease, margin 0.3s ease;
   }
 
   &__slider {
@@ -45,6 +48,7 @@
     width: 95%;
     height: 240px;
     overflow: hidden;
+    transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
   }
 
   &__slide {
@@ -54,6 +58,7 @@
     height: 240px;
     overflow: hidden;
     text-align: center;
+    transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
   }
 
   &__slide img {
@@ -73,6 +78,7 @@
     bottom: 0;
     background: rgba(112, 183, 1, 0.8);
     color: white;
+    transition: 0.5s ease-out;
   }
 
   &__slide:nth-child(2n) &__project-info {
@@ -151,7 +157,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 13;
+    z-index: 100;
     overflow: auto;
     background: rgba(0, 0, 0, 0.9);
   }
@@ -219,6 +225,8 @@
     padding-top: 150px;
     padding-bottom: 80px;
     margin-bottom: 35px;
+    transition: padding 0.3s ease, margin 0.3s ease;
+
 
     &__inner {
       @include container--tablet();
@@ -227,16 +235,19 @@
     &__header {
       margin-bottom: 40px;
       font-size: $h1-size;
+      transition: font-size 0.3s ease, margin 0.3s ease;
     }
 
     &__slider {
       margin-bottom: 10px;
       width: 75%;
       height: 290px;
+      transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
     }
 
     &__slide {
       height: 290px;
+      transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
     }
 
     &__project-info {
@@ -268,10 +279,6 @@
     &__arrow-wrap--right {
       right: 4%;
     }
-
-    // &__slide:hover &__project-info {
-    //   height: 170px;
-    // }
 
     &__modal-close {
       top: 30px;
@@ -305,23 +312,22 @@
     padding-top: 225px;
     padding-bottom: 140px;
     margin-bottom: 10px;
+    transition: padding 0.3s ease, margin 0.3s ease;
 
     &::before {
       height: 65px;
       background-size: 100% 65px;
+      transition: height 0.3s ease, background-size 0.3s ease;
     }
 
     &__inner {
       @include container--desktop();
     }
 
-    &__header {
-      margin-bottom: 70px;
-    }
-
     &__slider {
       width: 80%;
       height: 350px;
+      transition: width 0.3s ease, height 0.3s ease;
     }
 
     &__slide {
@@ -329,6 +335,7 @@
       height: 350px;
       margin-right: 1%;
       margin-bottom: 2%;
+      transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
     }
 
     &__project-info {
