@@ -22,7 +22,7 @@
   var nav = document.querySelector('.main-nav');
   // Navigation likns
   var navLinks = nav.querySelectorAll('a');
-  var body = document.querySelector('body');
+  var body = document.querySelector('.main-header');
 
   // Hide/show navigation by scrolling down/up
   window.addEventListener('scroll', function() {
@@ -75,8 +75,8 @@
     wrap.classList.toggle('main-header__inner--menu-visible');
     // Show/hide navigation
     nav.classList.toggle('main-nav--visible');
-    // Enable/disable scrolling through document
-    body.classList.toggle('fixed');
+    //Enable/disable scrolling through document
+    body.classList.toggle('relative');
   }
 
   /**
@@ -99,8 +99,8 @@
       nav.classList.remove('main-nav--visible');
     }
 
-    if (body.classList.contains('fixed')) {
-      body.classList.remove('fixed');
+    if (body.classList.contains('relative')) {
+      body.classList.remove('relative');
     }
   }
 

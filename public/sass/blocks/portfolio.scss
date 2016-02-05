@@ -48,7 +48,7 @@
     width: 95%;
     height: 240px;
     overflow: hidden;
-    transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
+    transition: margin 0.3s ease, height 0.3s ease;
   }
 
   &__slide {
@@ -242,7 +242,7 @@
       margin-bottom: 10px;
       width: 75%;
       height: 290px;
-      transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
+      transition: margin 0.3s ease, height 0.3s ease;
     }
 
     &__slide {
@@ -327,7 +327,7 @@
     &__slider {
       width: 80%;
       height: 350px;
-      transition: width 0.3s ease, height 0.3s ease;
+      transition: height 0.3s ease;
     }
 
     &__slide {

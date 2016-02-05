@@ -8,7 +8,7 @@ $(document).ready(function() {
     slidesToShow: 1,
     prevArrow: $('.portfolio__arrow-wrap--left'),
     nextArrow: $('.portfolio__arrow-wrap--right'),
-    speed: 200,
+    speed: 100,
     infinite: true,
     mobileFirst: true,
     responsive: [

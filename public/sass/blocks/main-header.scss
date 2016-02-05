@@ -33,9 +33,9 @@
     transition: padding 0.3s ease;
   }
 
-  &__inner--menu-visible {
-    border-bottom: 1px solid #f7f7f7;
-  }
+  // &__inner--menu-visible {
+  //   border-bottom: 1px solid #f7f7f7;
+  // }
 
   &__logo-wrap {
     float: left;
@@ -82,14 +82,14 @@
       transition: width 0.3s ease, height 0.3s ease;
     }
 
-    &__logo-wrap a {
-      padding-top: 30px;
-      padding-bottom: 15px;
-    }
-
-    &__toggle-wrap a {
-      padding: 40px 5px 30px 30px;
-    }
+    // &__logo-wrap a {
+    //   padding-top: 30px;
+    //   padding-bottom: 15px;
+    // }
+    //
+    // &__toggle-wrap a {
+    //   padding: 40px 5px 30px 30px;
+    // }
   }
 }
 
@@ -103,10 +103,10 @@
       transition: padding 0.3s ease;
     }
 
-    &__logo-wrap a {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
+    // &__logo-wrap a {
+    //   padding-top: 20px;
+    //   padding-bottom: 10px;
+    // }
 
     &__logo-wrap {
       width: 200px;
