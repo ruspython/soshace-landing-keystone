@@ -58,7 +58,7 @@
     height: 240px;
     overflow: hidden;
     text-align: center;
-    transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
+    transition: margin 0.3s ease, height 0.3s ease;
   }
 
   &__slide img {
@@ -76,13 +76,14 @@
     z-index: 6;
     left: 0;
     bottom: 0;
-    background: rgba(112, 183, 1, 0.8);
+    background: rgba(112, 183, 1, 0.9);
     color: white;
     transition: 0.5s ease-out;
+    transition: width 0.3s ease, padding 0.3s ease, height 0.3s ease;
   }
 
   &__slide:nth-child(2n) &__project-info {
-    background: rgba(74, 119, 218, 0.8);
+    background: rgba(74, 119, 218, 0.9);
   }
   // blue rgba(74, 119, 218, 0.8)
   // orange rgba(254, 186, 0, 0.8)
@@ -172,7 +173,7 @@
 
   &__modal-content {
     position: absolute;
-    top: 30px;
+    top: 15px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -180,10 +181,11 @@
   }
 
   &__modal-title {
-    margin-bottom: 15px;
+    margin: 0;
+    margin-bottom: 10px;
 
     font-size: $h2-size - 15px;
-    line-height: $h1-line-height;
+    line-height: $h1-line-height - 28;
     font-family: $font-stack;
     font-weight: $weight-medium;
     text-transform: uppercase;
@@ -192,6 +194,7 @@
   }
 
   &__modal-description {
+    margin: 0;
     margin-bottom: 10px;
 
     font-size: $font-size;
@@ -211,6 +214,10 @@
     font-family: $font-stack;
     font-weight: $weight-light;
     color: $orange-color;
+  }
+
+  &__modal-link:hover {
+    color: red;
   }
 
   &__modal-img {
@@ -247,13 +254,14 @@
 
     &__slide {
       height: 290px;
-      transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
+      transition: margin 0.3s ease, height 0.3s ease;
     }
 
     &__project-info {
       padding: 13px;
       width: 70%;
       height: 115px;
+      transition: width 0.3s ease, padding 0.3s ease, height 0.3s ease;
     }
 
     &__project-name {
@@ -273,11 +281,11 @@
     }
 
     &__arrow-wrap--left {
-      left: 4%;
+      left: 1%;
     }
 
     &__arrow-wrap--right {
-      right: 4%;
+      right: 3%;
     }
 
     &__modal-close {
@@ -286,11 +294,11 @@
     }
 
     &__modal-content {
-      top: 50px;
+      top: 25px;
     }
 
     &__modal-title {
-      margin: 0;
+      margin-bottom: 20px;
       font-size: $h2-size - 10px;
     }
 
@@ -335,11 +343,17 @@
       height: 350px;
       margin-right: 1%;
       margin-bottom: 2%;
-      transition: width 0.3s ease, margin 0.3s ease, height 0.3s ease;
+      transition: margin 0.3s ease, height 0.3s ease;
     }
 
     &__project-info {
       height: 130px;
+      transition: width 0.3s ease, padding 0.3s ease, height 0.3s ease;
+      background: rgba(112, 183, 1, 0.8);
+    }
+
+    &__slide:nth-child(2n) &__project-info {
+      background: rgba(74, 119, 218, 0.8);
     }
 
     &__project-description {
@@ -359,10 +373,6 @@
       right: 2%;
     }
 
-    // &__slide:hover &__project-info {
-    //   height: 170px;
-    // }
-
     &__slide:hover &__project-info {
       padding-top: 20px;
       height: 210px;
@@ -374,13 +384,16 @@
       background: $blue-color;
     }
 
+    &__modal-content {
+      top: 40px;
+    }
+
     &__modal-close {
       top: 40px;
       right: 40px;
     }
 
     &__modal-title {
-      margin-bottom: 40px;
       font-size: $h2-size - 5px;
     }
 

@@ -6,9 +6,11 @@
   var header = document.querySelector('.main-header');
   // Variable for previous vertical window position
   var prevPosition = window.scrollY;
-  var minPosition = 600;
+  var MIN_POSITION = 600;
   var scrollTimeout;
   var hireButton = document.querySelector('.flying-btn');
+
+  var DESKTOP_VIEWPORT = 960;
 
   // Link with burger and cross icons
   var burger = document.querySelector('.burger-icon');
@@ -20,7 +22,7 @@
   var wrap = document.querySelector('.main-header__inner');
   // Hidden navigation
   var nav = document.querySelector('.main-nav');
-  // Navigation likns
+  // Navigation links
   var navLinks = nav.querySelectorAll('a');
   var body = document.querySelector('body');
 
@@ -65,6 +67,15 @@
     }
   }
 
+  /**
+   * Close mobile nav if desktop
+   */
+   function closeMobileNavigationIfDesktop() {
+     if (document.documentElement.clientWidth > DESKTOP_VIEWPORT) {
+       closeMobileNavigation();
+     }
+   }
+
   // Hide/show navigation by scrolling down/up
   window.addEventListener('scroll', function() {
 
@@ -73,7 +84,7 @@
     scrollTimeout = setTimeout(function() {
       // If true -> scrolling down
       // Last condition check if mobile menu is open (then no hiding navigation)
-      if (window.scrollY > prevPosition && window.scrollY > minPosition && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
+      if (window.scrollY > prevPosition && window.scrollY > MIN_POSITION && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
         header.classList.add('main-header--hidden');
         closeMobileNavigation();
         hireButton.classList.remove('invisible');
@@ -89,14 +100,18 @@
   });
 
   // Click on link open/close mobile navigation
-  burger.addEventListener('tap', function(event){
+  burger.addEventListener('tap', function(event) {
     event.preventDefault();
     toggleMobileNavigation();
   });
 
+  // Looking for transition from tablet viewport to desktop viewport
+  // Close mobile menu
+  window.addEventListener('resize', closeMobileNavigationIfDesktop);
+
   // Looking for click on nav links
   // and close mobile menu
-  for (var i = 0; i < navLinks.length; i++){
+  for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].onclick = function(e) {
       e.preventDefault();
       closeMobileNavigation();

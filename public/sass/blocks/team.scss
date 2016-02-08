@@ -285,7 +285,7 @@
 
     &__arrow-wrap {
       position: absolute;
-      bottom: 55%;
+      bottom: 50%;
     }
 
     &__arrow-wrap--left {
@@ -315,7 +315,7 @@
 
     &__members-wrap {
       margin-bottom: 80px;
-      transition: margin 0.3s ease;
+      transition: margin 0.3s ease, width 0.3s ease;
     }
 
     &__member {
@@ -335,10 +335,6 @@
 
     &__member-resume {
       font-size: $font-size + 2px;
-    }
-
-    &__arrow-wrap {
-      bottom: 50%;
     }
 
     &__description {
