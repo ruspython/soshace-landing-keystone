@@ -22,7 +22,7 @@ function validateForm(body) {
 
   var REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   var REG_EXP_NAME = /^[A-Za-z0-9 ]{3,20}$/;
-  var REG_EXP_MESSAGE = /^(?=.{3,})[a-zA-Z0-9 :;(),./@#$№%&*]+$/;
+  var REG_EXP_MESSAGE = /^(?=.{3,})[a-zA-Z0-9 :;(),./@#$№%&*?!]+$/;
 
   var isNameValid = REG_EXP_NAME.test(name);
   var isEmailValid = REG_EXP_EMAIL.test(email);

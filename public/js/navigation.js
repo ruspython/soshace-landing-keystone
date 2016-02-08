@@ -96,7 +96,7 @@
         hireButton.classList.add('invisible');
       }
       prevPosition = window.scrollY;
-    }, 20);
+    }, 40);
   });
 
   // Click on link open/close mobile navigation
