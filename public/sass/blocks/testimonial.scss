@@ -3,8 +3,8 @@
 // Styles for testimonial block
 
 .testimonial {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background: white;
   position: relative;
   transition: padding 0.3s ease;
@@ -108,8 +108,8 @@
 
 @media (min-width: $screen_md) {
   .testimonial {
-    padding-top: 70px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     transition: padding 0.3s ease;
 
     &__inner {
@@ -193,8 +193,8 @@
 
 @media (min-width: $screen_lg) {
   .testimonial {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 110px;
+    padding-bottom: 110px;
     transition: padding 0.3s ease;
 
     &::before {

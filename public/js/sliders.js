@@ -32,7 +32,7 @@ $(document).ready(function() {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 599,
+        breakpoint: 567,
         settings: {
           slidesToShow: 2
         }

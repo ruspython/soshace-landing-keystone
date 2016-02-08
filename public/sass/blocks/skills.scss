@@ -46,7 +46,7 @@
   }
 
   &__item:last-child {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     margin-bottom: 0;
   }
 
@@ -69,7 +69,7 @@
   &__text {
     margin: 0;
 
-    font-size: $font-size + 2px;
+    font-size: $font-size;
     line-height: $line-height;
     font-family: $font-stack;
     font-weight: $weight-light;
@@ -106,12 +106,21 @@
 
     &__item:nth-last-child(2),
     &__item:last-child {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
       padding-bottom: 0;
     }
 
     &__title {
-      font-size: $h2-size - 14px;
+      font-size: $h2-size - 10px;
+      line-height: $h2-line-height - 10px;
+      transition: font-size 0.3s ease;
+    }
+
+    &__text {
+      margin: 0;
+
+      font-size: $font-size + 2px;
+      line-height: $line-height + 3px;
       transition: font-size 0.3s ease;
     }
   }
@@ -119,7 +128,7 @@
 
 @media (min-width: $screen_lg) {
   .skills {
-    padding-top: 150px;
+    padding-top: 140px;
     transition: padding 0.3s ease;
 
     &::before {
@@ -155,8 +164,8 @@
     &__item:nth-last-child(3),
     &__item:nth-last-child(2),
     &__item:last-child {
-      margin-bottom: 50px;
-      padding-bottom: 50px;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
     }
 
     &__item:nth-child(2),
@@ -167,7 +176,14 @@
     }
 
     &__title {
-      font-size: $h2-size - 14px;
+      font-size: $h2-size - 7px;
+      line-height: $h2-line-height;
+      transition: font-size 0.3s ease;
+    }
+
+    &__text {
+      font-size: $font-size + 4px;
+      line-height: $line-height + 6px;
       transition: font-size 0.3s ease;
     }
   }
