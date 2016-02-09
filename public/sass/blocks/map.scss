@@ -67,3 +67,9 @@
     transition: height 0.3s ease;
   }
 }
+
+@media (min-width: $screen_xl) {
+  .map-wrap__triangle {
+    bottom: -1px;
+  }
+}

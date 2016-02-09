@@ -84,6 +84,14 @@ gulp.task('copy:images', function () {
 		.pipe(gulp.dest('dist/images'))
 });
 
+gulp.task('copy:video', function () {
+	gulp
+		.src([
+			'public/video/**/*'
+		])
+		.pipe(gulp.dest('dist/video'))
+});
+
 gulp.task('copy:js', function () {
 	gulp
 		.src([
@@ -125,7 +133,7 @@ gulp.task('copy:ajaxgif', function () {
 		.pipe(gulp.dest('dist/css'))
 });
 
-gulp.task('copy', ['copy:images', 'copy:favicon', 'copy:ajaxgif']);
+gulp.task('copy', ['copy:images', 'copy:favicon', 'copy:ajaxgif', 'copy:video']);
 
 gulp.task('prod', ['build-js', 'build-css', 'copy']);
 gulp.task('dev', ['copy']);
