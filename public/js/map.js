@@ -159,7 +159,7 @@
     lng: 30.321820,
     icon: 'images/marker-icon.png',
     infoWindow: {
-      content: '<p>Bolshaya Pushkarskaya, 22</p>'
+      content: '<p>Bolshaya Monetnaya, 16</p>'
     }
   });
 
