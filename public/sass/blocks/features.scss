@@ -26,7 +26,6 @@
 
   &__item img {
     margin-bottom: 15px;
-    max-width: 50px;
   }
 
   &__title {
@@ -73,9 +72,14 @@
       margin-right: 0;
     }
 
-    &__item:nth-last-child(2),
+    // &__item:nth-last-child(2),
+    // &__item:last-child {
+    //   margin-bottom: 40px;
+    // }
+
     &__item:last-child {
-      margin-bottom: 40px;
+      margin-left: 25%;
+      margin-right: 0;
     }
 
     &__title {
@@ -111,8 +115,9 @@
       margin-right: 5%;
     }
 
-    &__item:nth-child(3n) {
+    &__item:last-child {
       margin-right: 0;
+      margin-left: 0;
     }
 
     &__item:nth-last-child(3) {

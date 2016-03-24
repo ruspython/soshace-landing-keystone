@@ -137,8 +137,8 @@
   // Create & activate Gmap
   var map = new GMaps({
     div: '#map',
-    lat: 59.958166,
-    lng: 30.302187,
+    lat: 59.962556,
+    lng: 30.321820,
     scrollwheel: false,
     draggable: draggableOption,
     zoom: 16,
@@ -155,8 +155,8 @@
   });
 
   map.addMarker({
-    lat: 59.958166,
-    lng: 30.302187,
+    lat: 59.962556,
+    lng: 30.321820,
     icon: 'images/marker-icon.png',
     infoWindow: {
       content: '<p>Bolshaya Pushkarskaya, 22</p>'
