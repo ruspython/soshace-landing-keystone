@@ -109,10 +109,10 @@ module.exports = function () {
 	//		prefix = _.isString(options.hash.prefix) ? options.hash.prefix : '',
 	//		suffix = _.isString(options.hash.suffix) ? options.hash.suffix : '',
 	//		output = '';
-	//	
+	//
 	//	function createTagList(tags) {
 	//		var tagNames = _.pluck(tags, 'name');
-	//		
+	//
 	//		if (autolink) {
 	//			return _.map(tags, function(tag) {
 	//				return linkTemplate({
@@ -123,7 +123,7 @@ module.exports = function () {
 	//		}
 	//		return _.escape(tagNames.join(separator));
 	//	}
-	//	
+	//
 	//	if (categories && categories.length) {
 	//		output = prefix + createTagList(categories) + suffix;
 	//	}
@@ -176,13 +176,13 @@ module.exports = function () {
 	};
 
 	// Used to generate the link for the admin edit post button
-	_helpers.adminEditableUrl = function (user, options) {
-		var rtn = keystone.app.locals.editable(user, {
-			'list': 'Post',
-			'id': options
-		});
-		return rtn;
-	};
+	// _helpers.adminEditableUrl = function (user, options) {
+	// 	var rtn = keystone.app.locals.editable(user, {
+	// 		'list': 'Post',
+	// 		'id': options
+	// 	});
+	// 	return rtn;
+	// };
 
 	// ### CloudinaryUrl Helper
 	// Direct support of the cloudinary.url method from Handlebars (see
@@ -224,20 +224,20 @@ module.exports = function () {
 	// the routes by keynames to reduce the maintenance of changing urls
 
 	// Direct url link to a specific post
-	_helpers.postUrl = function (postSlug, options) {
-		return ('/post/' + postSlug);
-	};
+	// _helpers.postUrl = function (postSlug, options) {
+	// 	return ('/post/' + postSlug);
+	// };
 
 	// might be a ghost helper
 	// used for pagination urls on blog
-	_helpers.pageUrl = function (pageNumber, options) {
-		return '/blog?page=' + pageNumber;
-	};
+	// _helpers.pageUrl = function (pageNumber, options) {
+	// 	return '/blog?page=' + pageNumber;
+	// };
 
 	// create the category url for a blog-category page
-	_helpers.categoryUrl = function (categorySlug, options) {
-		return ('/blog/' + categorySlug);
-	};
+	// _helpers.categoryUrl = function (categorySlug, options) {
+	// 	return ('/blog/' + categorySlug);
+	// };
 
 	// ### Pagination Helpers
 	// These are helpers used in rendering a pagination system for content
@@ -346,7 +346,7 @@ module.exports = function () {
 
 	//  ### underscoreMethod call + format helper
 	//	Calls to the passed in underscore method of the object (Keystone Model)
-	//	and returns the result of format() 
+	//	and returns the result of format()
 	//
 	//  @obj: The Keystone Model on which to call the underscore method
 	//	@undescoremethod: string - name of underscore method to call
