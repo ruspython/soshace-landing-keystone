@@ -27,11 +27,6 @@
   animation: reverse-appear 0.3s;
 }
 
-.burger-icon:hover .burger-icon__part {
-  fill: $orange-color;
-  transition: fill 0.7s;
-}
-
 .burger-icon:active .burger-icon__part {
   fill: $green-color;
   transition: fill 0.3s;
