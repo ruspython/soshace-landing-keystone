@@ -3,25 +3,29 @@
 (function() {
 
   var form = document.querySelector('.contact__form');
-  var name = form.querySelector('[name="name"]');
-  var email = form.querySelector('[name="email"]');
-  var message = form.querySelector('[name="message"]');
-  var submit = form.querySelector('[type="submit"]');
-
-  var success = form.querySelector('.contact__flash-message-success');
-  var fail = form.querySelector('.contact__flash-message-fail');
-
-  var REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  var REG_EXP_NAME = /^[A-Za-z0-9 ]{3,20}$/;
-  var REG_EXP_MESSAGE = /^(?=.{3,})[a-zA-Z0-9 :;(),./@#$№%&*?!]+$/;
+  var name = form.querySelector('[name="name"]'),
+      email = form.querySelector('[name="email"]'),
+      message = form.querySelector('[name="message"]'),
+      submit = form.querySelector('[type="submit"]'),
+      success = form.querySelector('.contact__flash-message-success'),
+      fail = form.querySelector('.contact__flash-message-fail'),
+      REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   /**
-   * Cliend-side form validation
+   * Client-side form validation
    */
   function validateForm() {
-    var isNameValid = REG_EXP_NAME.test(name.value);
-    var isEmailValid = REG_EXP_EMAIL.test(email.value);
-    var isMessageValid = REG_EXP_MESSAGE.test(message.value);
+    var isEmailValid = REG_EXP_EMAIL.test(email.value),
+        isNameValid = false,
+        isMessageValid = false;
+
+    if (name.value.length > 2) {
+      isNameValid = true;
+    }
+
+    if (message.value.length > 5) {
+      isMessageValid = true;
+    }
 
     if (!success.classList.contains('invisible')) {
       success.classList.add('invisible');

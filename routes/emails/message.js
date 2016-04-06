@@ -16,17 +16,22 @@ var nodemailer = require('nodemailer'),
  * @param {Object} body
  */
 function validateForm(body) {
-  var name = body.name;
-  var email = body.email;
-  var message = body.message;
+  var name = body.name,
+      email = body.email,
+      message = body.message,
+      REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-  var REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  var REG_EXP_NAME = /^[A-Za-z0-9 ]{3,20}$/;
-  var REG_EXP_MESSAGE = /^(?=.{3,})[a-zA-Z0-9 :;(),./@#$№%&*?!]+$/;
+  var isEmailValid = REG_EXP_EMAIL.test(email),
+      isNameValid = false,
+      isMessageValid = false;
 
-  var isNameValid = REG_EXP_NAME.test(name);
-  var isEmailValid = REG_EXP_EMAIL.test(email);
-  var isMessageValid = REG_EXP_MESSAGE.test(message);
+  if (name.length > 2) {
+    isNameValid = true;
+  }
+
+  if (message.length > 5) {
+    isMessageValid = true;
+  }
 
   return (isNameValid && isEmailValid && isMessageValid);
 }
