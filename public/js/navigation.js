@@ -1,30 +1,21 @@
-'use strict';
-
 (function() {
 
   // Header with navigation
-  var header = document.querySelector('.main-header');
-  // Variable for previous vertical window position
-  var prevPosition = window.scrollY;
-  var MIN_POSITION = 600;
-  var scrollTimeout;
-  var hireButton = document.querySelector('.flying-btn');
+  var header = document.querySelector('.main-header'),
+      hireButton = document.querySelector('.flying-btn'),
+      burger = document.querySelector('.burger-icon'),
+      open = document.querySelector('.burger-icon__open'),
+      close = document.querySelector('.burger-icon__close--hidden'),
+      wrap = document.querySelector('.main-header__inner'),
+      nav = document.querySelector('.main-nav'),
+      body = document.querySelector('body'),
+      // var for previous vertical window position
+      prevPosition = window.scrollY,
+      // var for detecting scrolling
+      didScroll;
 
-  var DESKTOP_VIEWPORT = 960;
-
-  // Link with burger and cross icons
-  var burger = document.querySelector('.burger-icon');
-  // Visible burger icon
-  var open = document.querySelector('.burger-icon__open');
-  // Hidden cross icon
-  var close = document.querySelector('.burger-icon__close--hidden');
-  // Top header block
-  var wrap = document.querySelector('.main-header__inner');
-  // Hidden navigation
-  var nav = document.querySelector('.main-nav');
   // Navigation links
   var navLinks = nav.querySelectorAll('a');
-  var body = document.querySelector('body');
 
   /**
    * Open/close mobile navigation
@@ -71,33 +62,43 @@
    * Close mobile nav if desktop
    */
    function closeMobileNavigationIfDesktop() {
+     var DESKTOP_VIEWPORT = 960;
      if (document.documentElement.clientWidth > DESKTOP_VIEWPORT) {
        closeMobileNavigation();
      }
    }
 
+   /**
+    * Hide nav when scrolling down & show 'hire' btn
+    * Show nav when scrolling up & hide 'hire' btn
+    */
+   function scrollChanges() {
+     var MIN_POSITION = 600;
+
+     // Last condition check if mobile menu is open (then no hiding navigation)
+     if (window.scrollY > prevPosition && window.scrollY > MIN_POSITION && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
+       // Scrolling down
+       header.classList.add('main-header--hidden');
+       hireButton.classList.remove('flying-btn--hidden');
+     } else if (window.scrollY < prevPosition && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
+       // Scrolling up
+       header.classList.remove('main-header--hidden');
+       hireButton.classList.add('flying-btn--hidden');
+     }
+     prevPosition = window.scrollY;
+   }
+
   // Hide/show navigation by scrolling down/up
   window.addEventListener('scroll', function() {
-
-    clearTimeout(scrollTimeout);
-
-    scrollTimeout = setTimeout(function() {
-      // If true -> scrolling down
-      // Last condition check if mobile menu is open (then no hiding navigation)
-      if (window.scrollY > prevPosition && window.scrollY > MIN_POSITION && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
-        header.classList.add('main-header--hidden');
-        closeMobileNavigation();
-        hireButton.classList.remove('invisible');
-
-          // If true -> scrolling up
-        } else if (window.scrollY < prevPosition && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
-        header.classList.remove('main-header--hidden');
-        closeMobileNavigation();
-        hireButton.classList.add('invisible');
-      }
-      prevPosition = window.scrollY;
-    }, 40);
+    didScroll = true;
   });
+
+  setInterval(function() {
+    if (didScroll) {
+      scrollChanges();
+      didScroll = false;
+    }
+  }, 250);
 
   // Click on link open/close mobile navigation
   burger.addEventListener('tap', function(event) {

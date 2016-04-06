@@ -5,10 +5,12 @@
 .main-header {
   background: white;
   position: fixed;
+  top: 0;
   z-index: 99;
   width: 100%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  animation: moving-top 0.4s;
+  //animation: moving-top 0.4s;
+  transition: top 0.2s ease-in-out;
 
   &::before {
     content: '';
@@ -21,9 +23,10 @@
   }
 
   &--hidden {
-    animation: moving-top-reverse 0.4s;
-    transform: translateY(-2500px);
-    opacity: 0;
+    // animation: moving-top-reverse 0.4s;
+    // transform: translateY(-2500px);
+    // opacity: 0;
+    top: -90px;
   }
 
   &__inner {
