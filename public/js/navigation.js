@@ -60,6 +60,10 @@
     if (body.classList.contains('fixed')) {
       body.classList.remove('fixed');
     }
+
+    if (main.classList.contains('soft-invisible')) {
+      main.classList.remove('soft-invisible');
+    }
   }
 
   /**
