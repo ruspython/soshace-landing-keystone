@@ -29,14 +29,9 @@
 @media (min-width: $screen_md) {
   .flying-btn {
     right: 30px;
-    //bottom: 40px;
   }
 }
 
 .flying-btn--hidden {
   bottom: -50px;
-}
-
-.invisible {
-  display: none;
 }

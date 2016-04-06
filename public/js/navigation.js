@@ -9,10 +9,12 @@
       wrap = document.querySelector('.main-header__inner'),
       nav = document.querySelector('.main-nav'),
       body = document.querySelector('body'),
+      main = document.querySelector('main'),
       // var for previous vertical window position
       prevPosition = window.scrollY,
       // var for detecting scrolling
-      didScroll;
+      didScroll,
+      windowPosition;
 
   // Navigation links
   var navLinks = nav.querySelectorAll('a');
@@ -31,6 +33,8 @@
     nav.classList.toggle('main-nav--visible');
     //Enable/disable scrolling through document
     body.classList.toggle('fixed');
+    // Hide main because of scroling window to top because of .fixed body class
+    main.classList.toggle('soft-invisible');
   }
 
   /**
@@ -103,7 +107,14 @@
   // Click on link open/close mobile navigation
   burger.addEventListener('tap', function(event) {
     event.preventDefault();
+
+    if (!body.classList.contains('fixed')) {
+      windowPosition = window.scrollY;
+    }
+
     toggleMobileNavigation();
+
+    window.scrollBy(0, windowPosition);
   });
 
   // Looking for transition from tablet viewport to desktop viewport

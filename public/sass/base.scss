@@ -12,13 +12,3 @@ body {
 .main-section {
   overflow: hidden;
 }
-
-// For video tag in IE8 (not supported)
-video {
-  display: block;
-}
-
-.fixed {
-  height: 100%;
-  overflow: hidden;
-}
