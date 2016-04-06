@@ -16,11 +16,13 @@
 
   &__header {
     color: #2e5fb2;
+    text-decoration: none;
   }
 
   &__header h2 {
     margin: 0;
     margin-bottom: 20px;
+    position: relative;
 
     font-size: $h1-size - 5px;
     line-height: $h1-line-height;
@@ -32,11 +34,28 @@
     transition: font-size 0.3s ease;
   }
 
+  &__header h2::after{
+    content: '';
+    position: absolute;
+    width: 35%;
+    bottom: 0;
+    left: 50%;
+    margin-left: -17.5%;
+    transition: border-bottom 0.2s ease;
+    border-bottom: 2px solid blue;
+  }
+
+  &__header:hover h2::after {
+    border-bottom: 4px solid #5bbc2e;
+  }
+
   &__intro {
     margin: 0;
     margin-bottom: 20px;
     text-align: center;
     font-size: $font-size;
+    font-style: italic;
+    font-weight: $weight-light;
     color: black;
     transition: font-size 0.3s ease;
   }

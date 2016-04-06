@@ -310,7 +310,7 @@
     }
 
     &__members-wrap {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
       transition: margin 0.3s ease, width 0.3s ease;
     }
 
@@ -330,11 +330,12 @@
     }
 
     &__member-resume {
-      font-size: $font-size + 2px;
+      font-size: $font-size - 2px;
     }
 
     &__description {
       width: 640px;
+      margin-bottom: 60px;
     }
 
     &__rate {
