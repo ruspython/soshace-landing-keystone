@@ -16,7 +16,6 @@
 
   &__header {
     color: #2e5fb2;
-    text-decoration: none;
   }
 
   &__header h2 {
@@ -34,19 +33,13 @@
     transition: font-size 0.3s ease;
   }
 
-  &__header h2::after{
-    content: '';
-    position: absolute;
-    width: 35%;
-    bottom: 0;
-    left: 50%;
-    margin-left: -17.5%;
-    transition: border-bottom 0.2s ease;
-    border-bottom: 2px solid blue;
+  &__header-upwork {
+    color: #2e5fb2;
+    transition: color 0.3s ease;
   }
 
-  &__header:hover h2::after {
-    border-bottom: 4px solid #5bbc2e;
+  &__header:hover &__header-upwork {
+    color: #5bbc2e;
   }
 
   &__intro {
@@ -233,7 +226,7 @@
     }
 
     &__header h2 {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
 
     &__intro {
