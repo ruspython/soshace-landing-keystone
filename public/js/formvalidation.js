@@ -1,69 +1,72 @@
 'use strict';
 
-(function() {
+(function () {
 
-  var form = document.querySelector('.contact__form');
-  var name = form.querySelector('[name="name"]'),
-      email = form.querySelector('[name="email"]'),
-      message = form.querySelector('[name="message"]'),
-      submit = form.querySelector('[type="submit"]'),
-      success = form.querySelector('.contact__flash-message-success'),
-      fail = form.querySelector('.contact__flash-message-fail'),
-      REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var form = document.querySelector('.contact__form');
+    var name = form.querySelector('[name="name"]'),
+        email = form.querySelector('[name="email"]'),
+        message = form.querySelector('[name="message"]'),
+        submit = form.querySelector('[type="submit"]'),
+        success = form.querySelector('.contact__flash-message-success'),
+        fail = form.querySelector('.contact__flash-message-fail'),
+        validators = {
+            name: false,
+            email: false,
+            message: false
+        },
+        REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        NAME_REGEX = /.{2,}/,
+        MESSAGE_REGEX = /.{2,}/;
 
-  /**
-   * Client-side form validation
-   */
-  function validateForm() {
-    var isEmailValid = REG_EXP_EMAIL.test(email.value),
-        isNameValid = false,
-        isMessageValid = false;
+    /**
+     * Client-side form validation
+     */
 
-    if (name.value.length > 2) {
-      isNameValid = true;
+    function canSubmit() {
+        for (var val in validators) {
+            if (!validators[val]) return false;
+        }
+        return true;
     }
 
-    if (message.value.length > 5) {
-      isMessageValid = true;
+    function validateField(opt) {
+        var field = opt.field,
+            rule = opt.rule,
+            successCb = opt.success,
+            errorCb = opt.error,
+            isValid = rule.test(field.value);
+
+        validators[field.name] = isValid;
+
+        if (isValid) {
+            field.classList.remove('notvalid');
+            successCb && successCb();
+        } else {
+            field.classList.add('notvalid');
+            errorCb && errorCb();
+        }
+
+        if (canSubmit()) {
+            submit.removeAttribute('disabled');
+        } else {
+            submit.setAttribute('disabled', '');
+        }
     }
 
-    if (!success.classList.contains('invisible')) {
-      success.classList.add('invisible');
-    }
 
-    if (!fail.classList.contains('invisible')) {
-      fail.classList.add('invisible');
-    }
+    name.oninput = validateField.bind(this, {
+        field: name,
+        rule: NAME_REGEX
+    });
 
-    if (isNameValid) {
-      name.classList.remove('notvalid');
-    } else {
-      name.setAttribute('required', '');
-      name.classList.add('notvalid');
-    }
+    email.oninput = validateField.bind(this, {
+        field: email,
+        rule: REG_EXP_EMAIL
+    });
 
-    if (isEmailValid) {
-      email.classList.remove('notvalid');
-    } else {
-      email.setAttribute('required', '');
-      email.classList.add('notvalid');
-    }
+    message.oninput = validateField.bind(this, {
+        field: message,
+        rule: MESSAGE_REGEX
+    });
 
-    if (isMessageValid) {
-      message.classList.remove('notvalid');
-    } else {
-      message.setAttribute('required', '');
-      message.classList.add('notvalid');
-    }
-
-    if (isNameValid && isEmailValid && isMessageValid) {
-      submit.removeAttribute('disabled');
-    } else {
-      submit.setAttribute('disabled', '');
-    }
-  }
-
-  name.onkeyup = validateForm;
-  email.onkeyup = validateForm;
-  message.onkeyup = validateForm;
 })();
