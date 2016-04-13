@@ -9,7 +9,7 @@
     window.onscroll = function () {
         if ((scrollY + HEADER_HEIGHT) < innerHeight) {
             var change = (scrollY / innerHeight);
-            video.style.transform = 'translate3d(-960px, ' + (-540 + scrollY / 1.5) + 'px, 0)';
+            video.style.transform = 'translate3d(-960px, ' + (-540 + scrollY / 4) + 'px, 0)';
         }
     }
 
