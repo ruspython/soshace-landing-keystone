@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
 	jshintReporter = require('jshint-stylish'),
 	watch = require('gulp-watch'),
-	shell = require('gulp-shell')
+	shell = require('gulp-shell'),
 	sass = require('gulp-sass'),
 	cmq = require('gulp-combine-mq'),
 	postcss = require('postcss'),
@@ -53,6 +53,7 @@ gulp.task('build-js', function () {
 			'public/js/memberinfo.js',
 			'public/js/map.js',
 			'public/js/formvalidation.js',
+			'public/js/parallax.js',
 			'public/js/senddata.js',
 		])
 		.pipe(concat('scripts.min.js'))
