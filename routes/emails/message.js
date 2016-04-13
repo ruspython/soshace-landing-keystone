@@ -3,7 +3,7 @@ var Company = keystone.list('Company');
 
 // Values are taken from the .env file
 var nodemailer = require('nodemailer');
-//var hbs = require('nodemailer-express-handlebars');
+var hbs = require('nodemailer-express-handlebars');
 var transporter = nodemailer.createTransport({
     service: process.env.MAIL_SERVICE,
     auth: {
@@ -92,14 +92,17 @@ exports = module.exports = function (req, res) {
           from: process.env.SUPPORT_EMAIL,
           to: body.email,
           subject: 'Soshace support',
-          html: [
-              '<p>Hello ' + body.name + ',</p>',
-              '<p>We have got a message from you</p>',
-              '<p>Our manager will contact you as soon as possible</p>',
-              '<p>Best,</p>',
-              '<p>Soshace support</p>'
-          ].join('')
+          template: 'support-autoreply',
+          context: {
+              name: body.name
+          }
       };
+
+      supportTransporter.use('compile', hbs({
+          viewEngine: 'express-handlebars',
+          viewPath: 'templates/emails/',
+          extName: '.hbs'
+      }));
 
       supportTransporter.sendMail(autoreplyMailOptions, function(error, mail) {
           if (error) {
