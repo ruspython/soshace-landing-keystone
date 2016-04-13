@@ -21,7 +21,8 @@ Company.add({
 	teamDescription: {type: Types.Textarea},
 	testimonialDescription: {type: Types.Textarea},
 	blogDescription: {type: Types.Textarea},
-	emails: {type: String},
+	emails: {type: String}, // Emails to send contact messages on
+	supportEmail: {type: String}, // Support email
 	address: {type: String},
 	phone: {type: String},
 	backgroundImage: {type: Types.CloudinaryImage},
