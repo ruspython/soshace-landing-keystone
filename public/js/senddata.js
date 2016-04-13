@@ -23,7 +23,7 @@
     var xhr = new XMLHttpRequest();
     var time = (new Date()).getTime();
 
-    xhr.open('post', 'http://team.soshace.com/message?_ts=' + time);
+    xhr.open('post', 'http://192.168.33.9:3000/message?_ts=' + time);
 
     xhr.addEventListener('readystatechange', function() {
       if (xhr.readyState === 4) {

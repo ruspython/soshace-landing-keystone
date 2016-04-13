@@ -2,14 +2,23 @@ var keystone = require('keystone');
 var Company = keystone.list('Company');
 
 // Values are taken from the .env file
-var nodemailer = require('nodemailer'),
-    transporter = nodemailer.createTransport({
-        service: process.env.MAIL_SERVICE,
-        auth: {
-          user: process.env.MAIL_NO_REPLY,
-          pass: process.env.MAIL_NO_REPLY_PASSWORD
-      }
-    });
+var nodemailer = require('nodemailer');
+//var hbs = require('nodemailer-express-handlebars');
+var transporter = nodemailer.createTransport({
+    service: process.env.MAIL_SERVICE,
+    auth: {
+        user: process.env.MAIL_NO_REPLY,
+        pass: process.env.MAIL_NO_REPLY_PASSWORD
+    }
+});
+
+var supportTransporter = nodemailer.createTransport({
+    service: process.env.MAIL_SERVICE,
+    auth: {
+        user: process.env.SUPPORT_EMAIL,
+        pass: process.env.SUPPORT_EMAIL_PASSWORD
+    }
+});
 
 /**
  * Server-side form validation
@@ -77,6 +86,30 @@ exports = module.exports = function (req, res) {
         sent: sent
       });
     });
+
+      // Answering with autoreply email
+      var autoreplyMailOptions = {
+          from: process.env.SUPPORT_EMAIL,
+          to: body.email,
+          subject: 'Soshace support',
+          html: [
+              '<p>Hello ' + body.name + ',</p>',
+              '<p>We have got a message from you</p>',
+              '<p>Our manager will contact you as soon as possible</p>',
+              '<p>Best,</p>',
+              '<p>Soshace support</p>'
+          ].join('')
+      };
+
+      supportTransporter.sendMail(autoreplyMailOptions, function(error, mail) {
+          if (error) {
+              console.error(error);
+          } else {
+              console.log('Support message sent:' + mail.response);
+          }
+      });
+
+
   }, function (error) {
     console.error(error);
 
