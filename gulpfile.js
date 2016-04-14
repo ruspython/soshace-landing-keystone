@@ -54,6 +54,7 @@ gulp.task('build-js', function () {
 			'public/js/map.js',
 			'public/js/formvalidation.js',
 			'public/js/parallax.js',
+			'public/js/lang.js',
 			'public/js/senddata.js',
 		])
 		.pipe(concat('scripts.min.js'))
