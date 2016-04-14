@@ -5,6 +5,7 @@
 .map-wrap {
   position: relative;
   background: #f1f1f1 url('../images/bg-map-mobile@1x.jpg') no-repeat 50% 50%;
+  z-index: 6;
 
   &__triangle {
     position: absolute;
