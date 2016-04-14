@@ -33,6 +33,8 @@ keystone.init({
 
 	'host': process.env.HOST,
 
+	'mongo': process.env.MONGO_URI,
+
 	'emails': 'templates/emails',
 
 	'auto update': true,
