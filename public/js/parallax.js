@@ -8,6 +8,10 @@
         ;
     var HEADER_HEIGHT = parseInt(window.getComputedStyle(header).height);
 
+    if ((scrollY + HEADER_HEIGHT) < innerHeight) {
+        logo.style.display = '';
+    }
+
     window.onscroll = function () {
         if ((scrollY + HEADER_HEIGHT) < innerHeight) {
             video.style.transform = 'translate3d(-960px, ' + (-540 + scrollY / 4) + 'px, 0)';

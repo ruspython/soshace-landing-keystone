@@ -31,3 +31,9 @@ select {
     transition: box-shadow .2s,transform .3s;
   }
 }
+
+.hidden {
+  display: none;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
