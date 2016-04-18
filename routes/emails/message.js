@@ -28,19 +28,13 @@ function validateForm(body) {
   var name = body.name,
       email = body.email,
       message = body.message,
-      REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      NAME_REGEX = /.{2,}/,
+      MESSAGE_REGEX = /.{8,}/;
 
-  var isEmailValid = REG_EXP_EMAIL.test(email),
-      isNameValid = false,
-      isMessageValid = false;
-
-  if (name.length > 2) {
-    isNameValid = true;
-  }
-
-  if (message.length > 5) {
-    isMessageValid = true;
-  }
+  var isEmailValid = email && REG_EXP_EMAIL.test(email),
+      isNameValid = name && NAME_REGEX.test(name),
+      isMessageValid = message && MESSAGE_REGEX.test(message);
 
   return (isNameValid && isEmailValid && isMessageValid);
 }
@@ -57,7 +51,7 @@ exports = module.exports = function (req, res) {
     var recieversEmails = recieversList.join(', ');
 
     if (!validateForm(body)) {
-      return res.status(403).json({
+      return res.status(400).json({
         sent: false
       });
     }
