@@ -52,10 +52,9 @@ gulp.task('build-js', function () {
 			'public/js/portfoliomodal.js',
 			'public/js/memberinfo.js',
 			'public/js/map.js',
-			'public/js/formvalidation.js',
 			'public/js/parallax.js',
 			'public/js/lang.js',
-			'public/js/senddata.js',
+			'public/js/contact.js',
 		])
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())

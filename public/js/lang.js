@@ -18,8 +18,9 @@
         }
 
         langSelect.onchange = function () {
-            setLang(langSelect.value);
-            window.location.pathname = '/';
+            var lang = langSelect.value;
+            setLang(lang);
+            window.location.pathname = '/' + lang;
         }
     }
 
