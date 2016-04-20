@@ -219,14 +219,14 @@
     padding: 10px;
     background: green;
     background: rgba(14, 174, 37, 0.6);
-    animation: fadein 3s;
+    animation: fadein 1s;
   }
 
   &__flash-message-fail {
     padding: 10px;
     background: red;
     background: rgba(255, 0, 0, 0.6);
-    animation: fadein 3s;
+    animation: fadein 1s;
   }
 }
 

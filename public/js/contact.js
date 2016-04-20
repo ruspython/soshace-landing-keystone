@@ -33,7 +33,7 @@
             rule = opt.rule,
             successCb = opt.success,
             errorCb = opt.error,
-            isValid = rule.test(field.value),
+            isValid = rule.test(field.value.split('\n').join('')),
             tooltip = document.querySelector('.tooltip-icon[data-for="'+ field.name +'"]');
 
         validators[field.name] = isValid;
@@ -140,13 +140,13 @@
                 if (response.sent) {
                     $(success).show();
                     setTimeout(function () {
-                        $(success).fadeOut('fast');
-                    }, 6000);
+                        $(success).fadeOut(1000);
+                    }, 3000);
                     form.reset();
                 } else {
                     $(fail).show();
                     setTimeout(function () {
-                        $(fail).fadeOut('fast');
+                        $(fail).fadeOut(1000);
                     }, 6000);
 
                 }

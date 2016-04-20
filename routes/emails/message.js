@@ -30,11 +30,11 @@ function validateForm(body) {
       message = body.message,
       REG_EXP_EMAIL = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       NAME_REGEX = /.{2,}/,
-      MESSAGE_REGEX = /(.|\n){8,}/;
+      MESSAGE_REGEX = /(.|\n){9,}/;
 
   var isEmailValid = email && REG_EXP_EMAIL.test(email),
       isNameValid = name && NAME_REGEX.test(name),
-      isMessageValid = message.length >= 8;
+      isMessageValid = message.split('\n').join('').length >= 8;
 
   return (isNameValid && isEmailValid && isMessageValid);
 }
