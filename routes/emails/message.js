@@ -34,7 +34,7 @@ function validateForm(body) {
 
   var isEmailValid = email && REG_EXP_EMAIL.test(email),
       isNameValid = name && NAME_REGEX.test(name),
-      isMessageValid = message && MESSAGE_REGEX.test(message);
+      isMessageValid = message.length >= 8;
 
   return (isNameValid && isEmailValid && isMessageValid);
 }

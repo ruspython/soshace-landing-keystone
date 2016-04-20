@@ -138,10 +138,17 @@
                 response = JSON.parse(response);
 
                 if (response.sent) {
-                    success.classList.remove('invisible');
+                    $(success).show();
+                    setTimeout(function () {
+                        $(success).fadeOut('fast');
+                    }, 6000);
                     form.reset();
                 } else {
-                    fail.classList.remove('invisible');
+                    $(fail).show();
+                    setTimeout(function () {
+                        $(fail).fadeOut('fast');
+                    }, 6000);
+
                 }
             });
         } else {
