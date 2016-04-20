@@ -42,7 +42,7 @@
 
   &__logo-wrap {
     float: left;
-    padding-right: 30px;
+    padding-right: 15px;
     transition: all 0.3s ease;
   }
 
@@ -72,6 +72,14 @@
 
   .language-select {
     float: left;
+
+    @media (max-width: $screen_md) {
+      width: 60px;
+      padding: 0 2px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
   }
 }
 
