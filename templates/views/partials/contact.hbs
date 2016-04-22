@@ -1,34 +1,34 @@
 <section class="contact">
   <div class="contact__inner">
 
-    <h1 class="contact__header" id="contact"><span class="contact__header-addition">Have any </span>questions?</h1>
-    <p class="contact__text">Leave your message <span class="contact__text-addition">and our manager will answer you</span></p>
+    <h1 class="contact__header" id="contact">{{t 'have any questions'}}?</h1>
+    <p class="contact__text">{{ t 'Leave your message and our manager will answer you'}}</p>
 
     <form class="contact__form" action="" method="post" novalidate>
 
         <div class="form-field input">
-            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="name" placeholder="{{t 'name'}}">
             <span class="tooltip-icon" data-for="name"></span>
-            <span class="tooltip-info">Name must contain at least 2 characters</span>
+            <span class="tooltip-info">{{t 'Name must contain at least 2 characters'}}</span>
         </div>
 
         <div class="form-field input">
             <input type="email" name="email" placeholder="E-mail">
             <span class="tooltip-icon" data-for="email"></span>
-            <span class="tooltip-info">Not valid email address</span>
+            <span class="tooltip-info">{{t 'Not valid email address'}}</span>
         </div>
 
         <div class="form-field">
-            <textarea name="message" placeholder="Message"></textarea>
+            <textarea name="message" placeholder="{{t 'message'}}"></textarea>
             <span class="tooltip-icon" data-for="message"></span>
-            <span class="tooltip-info">Message must contain at least 8 characters</span>
+            <span class="tooltip-info">{{t 'Message must contain at least 8 characters'}}</span>
         </div>
 
       <div class="contact__flash-message">
-        <div class="contact__flash-message-success invisible">Message was successfully sent</div>
-        <div  class="contact__flash-message-fail invisible">Some problems with your request. Check your name, email and message for non-standard characters.</div>
+        <div class="contact__flash-message-success invisible">{{t 'Message was successfully sent'}}</div>
+        <div  class="contact__flash-message-fail invisible">{{t 'Some problems with your request. Check your name, email and message for non-standard characters.'}}</div>
       </div>
-      <input type="submit" value="Send request">
+      <input type="submit" value="{{t 'send request'}}">
     </form>
 
     <div class="contact__links">
