@@ -1,6 +1,83 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
+var i18n = require('i18n');
+
+var i18next = require('i18next');
+var i18nMiddleware = require('i18next-express-middleware');
+
+i18next
+    .use(i18nMiddleware.LanguageDetector)
+    .init({
+        lng: 'en',
+        resources: {
+            en: {
+                translation: {
+                    "about": "about",
+                    "skills": "skills",
+                    "portfolio": "portfolio",
+                    "team": "team",
+                    "upwork": "upwork",
+                    "contact": "contact",
+                    'name': 'name',
+                    'message': 'message',
+                    'hire us': 'hire us',
+                    'have any questions': 'have any questions',
+                    'Leave your message and our manager will answer you': 'Leave your message and our manager will answer you',
+                    'send request': 'send request',
+                    'our team': 'our team',
+                    'our hourly rate': 'our hourly rate',
+                    'we are on upwork': 'we are on upwork',
+                    'visible only for logged users': 'visible only for logged users',
+                    'happy client': 'happy client',
+                    'projects': 'projects',
+                    'years': 'years',
+                    'award won': 'award won',
+                    'Name must contain at least 2 characters': 'Name must contain at least 2 characters',
+                    'Not valid email address': 'Not valid email address',
+                    'Message must contain at least 8 characters': 'Message must contain at least 8 characters',
+                    'Message was successfully sent': 'Message was successfully sent',
+                    'Some problems with your request. Check your name, email and message for non-standard characters.': 'Some problems with your request. Check your name, email and message for non-standard characters.'
+
+                }
+            },
+            ru: {
+                translation: {
+                    "about": "о нас",
+                    "skills": "навыки",
+                    "portfolio": "портфолио",
+                    "team": "команда",
+                    "upwork": "upwork",
+                    "contact": "контакты",
+                    'name': 'имя',
+                    'message': 'сообщение',
+                    'hire us': 'связаться',
+                    'have any questions': 'есть вопросы',
+                    'Leave your message and our manager will answer you': 'Оставьте свое сообщение и наш менеджер свяжется с Вами',
+                    'send request': 'Отправить',
+                    'our team': 'наша команда',
+                    'our hourly rate': 'наша часовая ставка',
+                    'we are on upwork': 'мы на upwork',
+                    'visible only for logged users': 'доступно только для зарегестрированных пользователей',
+                    'happy client': 'счастливые клиенты',
+                    'projects': 'проекты',
+                    //'years': 'стаж',
+                    'award won': 'премий',
+                    'Name must contain at least 2 characters': 'Имя должно включать минимум 2 символа',
+                    'Not valid email address': 'Невалидный email',
+                    'Message must contain at least 8 characters': 'Сообщение должно состоять минимум из 8 символов',
+                    'Message was successfully sent': 'Сообщение успешно отправлено',
+                    'Some problems with your request. Check your name, email and message for non-standard characters.': 'Убедитесь, что правильно введены данные.'
+                }
+            }
+        }
+    });
+
+keystone.pre('routes', i18nMiddleware.handle(i18next, {
+    ignoreRoutes: ["/foo"],
+    removeLngFromUrl: false
+}));
+
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -8,25 +85,14 @@ keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./views'),
-	emails: importRoutes('./emails')
+    views: importRoutes('./views'),
+    emails: importRoutes('./emails')
 };
 
 // Setup Route Bindings
-exports = module.exports = function(app) {
+exports = module.exports = function (app) {
+    app.all('/', routes.views.index);
+    app.post('/message', routes.emails.message);
 
-	// Views
-	app.all('/', routes.views.index);
-	// app.get('/post/:post', routes.views.post);
-	// app.get('/blog', routes.views.blog);
-
-	// API
-	app.post('/message', routes.emails.message);
-
-	//app.post('/contact', routes.views.contact);
-	//app.get('/gallery', routes.views.gallery);
-
-	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
-	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
 };

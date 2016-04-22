@@ -1,8 +1,10 @@
 var keystone = require('keystone');
+var i18n = require('i18n');
 // var Enquiry = keystone.list('Enquiry');
 
 exports = module.exports = function(req, res) {
 
+	var MENU_ITEMS = ['about', 'skills', 'portfolio', 'team', 'upwork', 'contact'];
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
@@ -13,7 +15,8 @@ exports = module.exports = function(req, res) {
 		projectCategories: {},
 		projects: {},
 		developers: {},
-		testimonials: {}
+		testimonials: {},
+		menu: {}
 	};
 	locals.indexSection = true;
 
@@ -108,47 +111,31 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Posts
-	// view.on('init', function (next) {
-	// 	keystone.list('Post').model.find().exec(function (error, results) {
-	// 		if (error || !results.length) {
-	// 			return next(error);
-	// 		}
-	// 		if (results.length) {
-	// 			locals.data.posts = results;
-	// 		}
-	// 		next(error);
-	// 	});
-	// });
+	view.on('init', function (next) {
+		//TODO: make middleware for that, move translation in a separate file
+		var lang = req.cookies['lang'],
+			langs = req.languages,
+			currentLang = req.language.slice(0,2);
+		console.log('lang: ')
+		console.log(lang)
+		console.log('langs: ')
+		console.log(langs)
+		console.log('currentLang: ')
+		console.log(currentLang)
+		if (langs.indexOf(lang) >= 0) {
+			req.i18n.changeLanguage('ru');
+		} else {
+			req.i18n.changeLanguage('en');
+		}
 
-	// Contact Form
-	// locals.section = 'contact';
-	// locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
-	// locals.formData = req.body || {};
-	// locals.validationErrors = {};
-	// locals.enquirySubmitted = false;
+		MENU_ITEMS.forEach(function(item) {
+			locals.data.menu[item] = req.t(item);
+		});
 
-	// On POST requests, add the Enquiry item to the database
-	// view.on('post', { action: 'contact' }, function(next) {
-	//
-	// 	var newEnquiry = new Enquiry.model(),
-	// 	updater = newEnquiry.getUpdateHandler(req);
-	// 	console.log(req.body);
-	// 	updater.process(req.body, {
-	// 		flashErrors: true,
-	// 		fields: 'name, email, message',
-	// 		errorMessage: 'There was a problem submitting your enquiry:'
-	// 	}, function(err) {
-	// 		if (err) {
-	// 			locals.validationErrors = err.errors;
-	// 		} else {
-	// 			locals.enquirySubmitted = true;
-	// 		}
-	// 		next();
-	// 	});
-	//
-	// });
+		locals.data.t = req.t;
+		next();
 
+	});
 
 	view.render('index');
 };
