@@ -1,5 +1,4 @@
 var keystone = require('keystone');
-var i18n = require('i18n');
 // var Enquiry = keystone.list('Enquiry');
 
 exports = module.exports = function(req, res) {

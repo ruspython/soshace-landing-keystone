@@ -1,7 +1,6 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
-var i18n = require('i18n');
 
 var i18next = require('i18next');
 var i18nMiddleware = require('i18next-express-middleware');

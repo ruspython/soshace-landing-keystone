@@ -57,7 +57,7 @@ gulp.task('build-js', function () {
 			'public/js/contact.js',
 		])
 		.pipe(concat('scripts.min.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'));
 });
 
@@ -67,7 +67,7 @@ gulp.task('build-css', function () {
 		.pipe(sass())
 		.pipe(cmq())
 		//.pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-		.pipe(minifyCss())
+		//.pipe(minifyCss())
 		.pipe(rename('styles.min.css'))
 		.pipe(gulp.dest('./dist/css'));
 });

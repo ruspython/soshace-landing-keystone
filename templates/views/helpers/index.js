@@ -3,7 +3,6 @@ var _ = require('underscore');
 var hbs = require('handlebars');
 var keystone = require('keystone');
 var cloudinary = require('cloudinary');
-var i18n = require('i18n');
 
 // Declare Constants
 var CLOUDINARY_HOST = 'http://res.cloudinary.com';
@@ -54,14 +53,6 @@ module.exports = function () {
 		//
 		// Options is the formatting and context check this.publishedDate
 		// If it exists then it is formated, otherwise current timestamp returned
-
-	_helpers.__ = function () {
-		return i18n.__.apply(this, arguments);
-	};
-
-	_helpers.__n = function () {
-		return i18n.__n.apply(this, arguments);
-	};
 
 
 	_helpers.date = function (context, options) {

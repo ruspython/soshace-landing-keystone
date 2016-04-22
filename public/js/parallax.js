@@ -12,12 +12,13 @@
         ;
     var HEADER_HEIGHT = parseInt($header.height());
 
-    if ($logo.offset().top < $features.offset().top) {
+    if (scrollY < scrollMax) {
         $logo.show();
     }
 
     $(window).on('scroll', function () {
         scrollY = $(window).scrollTop();
+        scrollMax = $(window).height() - $logo.offset().top;
 
         if (scrollY < scrollMax) {
             $video.css('transform', 'translate3d(-960px, ' + (-540 + scrollY / 4) + 'px, 0)');
