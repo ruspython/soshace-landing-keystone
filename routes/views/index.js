@@ -116,14 +116,8 @@ exports = module.exports = function(req, res) {
 		var lang = req.cookies['lang'],
 			langs = req.languages,
 			currentLang = req.language.slice(0,2);
-		console.log('lang: ')
-		console.log(lang)
-		console.log('langs: ')
-		console.log(langs)
-		console.log('currentLang: ')
-		console.log(currentLang)
 		if (langs.indexOf(lang) >= 0) {
-			req.i18n.changeLanguage('ru');
+			req.i18n.changeLanguage(lang);
 		} else {
 			req.i18n.changeLanguage('en');
 		}
