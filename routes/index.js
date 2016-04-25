@@ -1,6 +1,7 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
+var cookieParser = require('cookie-parser');
 
 var i18next = require('i18next');
 var i18nMiddleware = require('i18next-express-middleware');
@@ -81,6 +82,12 @@ keystone.pre('routes', i18nMiddleware.handle(i18next, {
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
+
+keystone.pre('routes', cookieParser());
+keystone.pre('routes', function (req, res, next) {
+    res.cookie('lang', process.env.LANG);
+    next();
+});
 
 // Import Route Controllers
 var routes = {

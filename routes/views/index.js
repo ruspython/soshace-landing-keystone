@@ -110,25 +110,16 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	view.on('init', function (next) {
-		//TODO: make middleware for that, move translation in a separate file
-		var lang = req.cookies['lang'],
-			langs = req.languages,
-			currentLang = req.language.slice(0,2);
-		if (langs.indexOf(lang) >= 0) {
-			req.i18n.changeLanguage(lang);
-		} else {
-			req.i18n.changeLanguage('en');
-		}
+    view.on('init', function (next) {
+        //TODO: make middleware for that, move translation in a separate file
+        var lang = process.env.LANG;
 
-		MENU_ITEMS.forEach(function(item) {
-			locals.data.menu[item] = req.t(item);
-		});
+        req.i18n.changeLanguage(lang);
 
-		locals.data.t = req.t;
-		next();
+        locals.data.t = req.t;
+        next();
 
-	});
+    });
 
-	view.render('index');
+    view.render('index');
 };
