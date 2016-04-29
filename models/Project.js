@@ -13,12 +13,10 @@ var Project = new keystone.List('Project', {
 
 Project.add({
 	name: {type: String, required: true},
-	title: {type: String},
 	description: {type: Types.Textarea},
 	demoUrl: {type: Types.Url},
 	image: {type: Types.CloudinaryImage},
-	previewImage: {type: Types.CloudinaryImage},
-	categories: { type: Types.Relationship, ref: 'ProjectCategory', many: true, initial: true }
+	previewImage: {type: Types.CloudinaryImage}
 });
 
 Project.register();

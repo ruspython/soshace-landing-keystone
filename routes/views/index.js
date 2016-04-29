@@ -58,19 +58,6 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Project Categories
-	view.on('init', function (next) {
-		keystone.list('ProjectCategory').model.find().exec(function (error, results) {
-			if (error || !results.length) {
-				return next(error);
-			}
-			if (results.length) {
-				locals.data.projectCategories = results;
-			}
-			next(error);
-		});
-	});
-
 	// Projects
 	view.on('init', function (next) {
 		keystone.list('Project').model.find().populate('categories').exec(function (error, results) {

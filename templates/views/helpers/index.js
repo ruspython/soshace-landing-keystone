@@ -94,15 +94,15 @@ module.exports = function () {
 	// input. categories:['tech', 'js']
 	// output. 'Filed Undder <a href="blog/tech">tech</a>, <a href="blog/js">js</a>'
 
-	_helpers.categoryList = function (categories) {
-		return categories.map(function (item) {
-			return 'category-' + item.key
-		}).join(' ');
-	};
+	// _helpers.categoryList = function (categories) {
+	// 	return categories.map(function (item) {
+	// 		return 'category-' + item.key
+	// 	}).join(' ');
+	// };
 
-	_helpers.categorize = function (key) {
-		return 'category-' + key;
-	};
+	// _helpers.categorize = function (key) {
+	// 	return 'category-' + key;
+	// };
 	//_helpers.categoryList = function(categories, options) {
 	//	var autolink = _.isString(options.hash.autolink) && options.hash.autolink === "false" ? false : true,
 	//		separator = _.isString(options.hash.separator) ? options.hash.separator : ', ',
