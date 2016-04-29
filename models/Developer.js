@@ -7,13 +7,12 @@ var Types = keystone.Field.Types;
  */
 
 var Developer = new keystone.List('Developer', {
-	map: { name: 'firstName' },
-	autokey: { path: 'slug', from: 'firstName', unique: true }
+	map: { name: 'name' },
+	autokey: { path: 'slug', from: 'name', unique: true }
 });
 
 Developer.add({
-	firstName: {type: String, required: true},
-	secondName: {type: String},
+	name: {type: String, required: true},
 	photo: {type: Types.CloudinaryImage},
 	position: {type: String},
 	info: {type: Types.Textarea}
