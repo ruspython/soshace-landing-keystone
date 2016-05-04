@@ -82,7 +82,7 @@ gulp.task('copy:images', function () {
 		.src([
 			'public/images/**/*'
 		])
-		.pipe(gulp.dest('dist/images'))
+		.pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('copy:video', function () {
@@ -90,7 +90,7 @@ gulp.task('copy:video', function () {
 		.src([
 			'public/video/**/*'
 		])
-		.pipe(gulp.dest('dist/video'))
+		.pipe(gulp.dest('dist/video'));
 });
 
 gulp.task('copy:js', function () {
@@ -98,7 +98,7 @@ gulp.task('copy:js', function () {
 		.src([
 			'public/js/**/*'
 		])
-		.pipe(gulp.dest('dist/js'))
+		.pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('copy:fonts', function () {
@@ -107,7 +107,7 @@ gulp.task('copy:fonts', function () {
 			'public/fonts/**/*',
 			'public/libs/materialize/font/**/*'
 		])
-		.pipe(gulp.dest('dist/fonts'))
+		.pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('copy:favicon', function () {
@@ -115,7 +115,7 @@ gulp.task('copy:favicon', function () {
 		.src([
 			'public/favicon.*'
 		])
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('copy:libs', function () {
@@ -123,7 +123,7 @@ gulp.task('copy:libs', function () {
 		.src([
 			'public/libs/**/*'
 		])
-		.pipe(gulp.dest('dist/libs'))
+		.pipe(gulp.dest('dist/libs'));
 });
 
 gulp.task('copy:ajaxgif', function () {
@@ -131,7 +131,7 @@ gulp.task('copy:ajaxgif', function () {
 		.src([
 			'node_modules/slick-carousel/slick/ajax-loader.gif'
 		])
-		.pipe(gulp.dest('dist/css'))
+		.pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('copy', ['copy:images', 'copy:favicon', 'copy:ajaxgif', 'copy:video']);
