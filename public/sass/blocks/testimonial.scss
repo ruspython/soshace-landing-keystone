@@ -33,15 +33,6 @@
     transition: font-size 0.3s ease;
   }
 
-  &__header-upwork {
-    color: #2e5fb2;
-    transition: color 0.3s ease;
-  }
-
-  &__header:hover &__header-upwork {
-    color: #5bbc2e;
-  }
-
   &__intro {
     margin: 0;
     margin-bottom: 20px;
