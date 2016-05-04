@@ -5,7 +5,7 @@
 .funfacts {
   position: relative;
   font-size: 0;
-  z-index: 5;
+  z-index: 7;
 
   &::before {
     content: "";
@@ -13,7 +13,7 @@
     top: -1px;
     right: 0;
     left: 0;
-    z-index: 6;
+    z-index: 8;
     height: 50px;
     background-image: url('../images/triangle-white.svg');
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
   &__left-column,
   &__right-column {
     position: relative;
-    z-index: 5;
+    z-index: 7;
 
     padding-top: 140px;
     padding-bottom: 50px;
@@ -35,37 +35,31 @@
     transition: padding 0.3s ease;
   }
 
-  &__left-column::after {
-    content: "";
-    position: absolute;
-    bottom: -49px;
-    right: 0;
-    left: 0;
-    z-index: 6;
-    height: 50px;
-    width: 100%;
-    background-image: url('../images/triangle-green.svg');
-    background-repeat: no-repeat;
-    background-size: 100% 50px;
-  }
-
   &__right-column {
     text-align: left;
     background: #4972cf;
   }
 
+  &__left-column::after,
   &__right-column::after {
     content: "";
     position: absolute;
     bottom: -49px;
     right: 0;
     left: 0;
-    z-index: 6;
+    z-index: 8;
     height: 50px;
     width: 100%;
-    background-image: url('../images/triangle-blue.svg');
     background-repeat: no-repeat;
     background-size: 100% 50px;
+  }
+
+  &__left-column::after {
+    background-image: url('../images/triangle-green.svg');
+  }
+
+  &__right-column::after {
+    background-image: url('../images/triangle-blue.svg');
     }
 
   &__clients,
