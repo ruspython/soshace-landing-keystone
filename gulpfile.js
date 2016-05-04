@@ -74,7 +74,7 @@ gulp.task('build-css', function () {
 
 // gulp watcher for SASS
 gulp.task('build-css:watch', function () {
-	gulp.watch('public/sass//**/*.scss', ['build-css']);
+	gulp.watch('public/sass/**/*.scss', ['build-css']);
 });
 
 gulp.task('copy:images', function () {

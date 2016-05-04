@@ -326,11 +326,12 @@
     }
 
     &__member-position {
-      font-size: $font-size + 2px;
+      font-size: $font-size + 1px;
     }
 
     &__member-resume {
-      font-size: $font-size - 2px;
+      font-size: $font-size + 1px;
+      line-height: $line-height - 2px;
     }
 
     &__description {
@@ -369,6 +370,15 @@
     &__member:hover &__member-more {
       opacity: 0;
       transition: 1s;
+    }
+
+    @media (min-resolution: 1.5dppx) {
+      .team {
+        &__member-resume {
+          font-size: $font-size;
+          line-height: $line-height - 3px;
+        }
+      }
     }
   }
 }
