@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 
 var i18next = require('i18next');
 var i18nMiddleware = require('i18next-express-middleware');
+var COOKIE_NAME = 'locale';
 
 i18next
     .use(i18nMiddleware.LanguageDetector)
