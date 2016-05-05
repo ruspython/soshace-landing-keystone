@@ -11,10 +11,8 @@ exports = module.exports = function(req, res) {
 		company: {},
 		features: {},
 		skills: {},
-		projectCategories: {},
 		projects: {},
 		developers: {},
-		testimonials: {},
 		menu: {}
 	};
 	locals.indexSection = true;
@@ -58,22 +56,9 @@ exports = module.exports = function(req, res) {
 		});
 	});
 
-	// Project Categories
-	view.on('init', function (next) {
-		keystone.list('ProjectCategory').model.find().exec(function (error, results) {
-			if (error || !results.length) {
-				return next(error);
-			}
-			if (results.length) {
-				locals.data.projectCategories = results;
-			}
-			next(error);
-		});
-	});
-
 	// Projects
 	view.on('init', function (next) {
-		keystone.list('Project').model.find().populate('categories').exec(function (error, results) {
+		keystone.list('Project').model.find().exec(function (error, results) {
 			if (error || !results.length) {
 				return next(error);
 			}
@@ -92,19 +77,6 @@ exports = module.exports = function(req, res) {
 			}
 			if (results.length) {
 				locals.data.developers = results;
-			}
-			next(error);
-		});
-	});
-
-	// Testimonial
-	view.on('init', function (next) {
-		keystone.list('Testimonial').model.find().exec(function (error, results) {
-			if (error || !results.length) {
-				return next(error);
-			}
-			if (results.length) {
-				locals.data.testimonials = results;
 			}
 			next(error);
 		});

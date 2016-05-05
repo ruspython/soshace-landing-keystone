@@ -105,7 +105,6 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	'projects': 'projects',
 	'developers': 'developers',
-	'testimonials': 'testimonials',
 	'features': 'features',
 	'skills': 'skills',
 	'companies': 'companies',
