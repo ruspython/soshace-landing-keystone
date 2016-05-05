@@ -84,7 +84,7 @@ exports = module.exports = function(req, res) {
 
     view.on('init', function (next) {
         //TODO: make middleware for that, move translation in a separate file
-        var lang = process.env.LANG;
+        var lang = process.env.LOCALE;
 
         req.i18n.changeLanguage(lang);
 
