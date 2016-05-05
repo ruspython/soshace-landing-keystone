@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 
 var i18next = require('i18next');
 var i18nMiddleware = require('i18next-express-middleware');
+var COOKIE_NAME = 'locale';
 
 i18next
     .use(i18nMiddleware.LanguageDetector)
@@ -85,7 +86,7 @@ keystone.pre('render', middleware.flashMessages);
 
 keystone.pre('routes', cookieParser());
 keystone.pre('routes', function (req, res, next) {
-    res.cookie('lang', process.env.LANG);
+    res.cookie(COOKIE_NAME, process.env.LOCALE);
     next();
 });
 

@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var LANG_COOKIE = 'lang',
+    var COOKIE_NAME = 'locale',
         THREE_YEARS = 365 * 3;
 
     var langSelect = document.getElementById('language-select');
@@ -9,7 +9,7 @@
     checkLang();
 
     function checkLang() {
-        var lang = getCookie(LANG_COOKIE);
+        var lang = getCookie(COOKIE_NAME);
 
         if (lang === 'en' || lang === 'ru') {
             langSelect.value = lang;
@@ -26,7 +26,7 @@
 
     function setLang(lang) {
         langSelect.value = lang;
-        setCookie('lang', lang, THREE_YEARS);
+        setCookie(COOKIE_NAME, lang, THREE_YEARS);
     }
 
     function setCookie(name, value, days) {
