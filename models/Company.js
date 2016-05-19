@@ -22,6 +22,8 @@ Company.add({
 	address: {type: String},
 	upworkUrl: {type: Types.Url},
 	githubUrl: {type: Types.Url},
+	facebookUrl: {type: Types.Url},
+	instagramUrl: {type: Types.Url},
 	skypeLogin: {type: String},
 	happyClients: {type: Number},
 	projectsCompleted: {type: Number},

@@ -142,7 +142,7 @@
 
   &__links a {
     display: inline-block;
-    width: 30%;
+    width: 15%;
     padding: 20px 1.5%;
 
     font-size: $font-size + 3px;
@@ -160,13 +160,20 @@
     text-decoration: underline;
   }
 
-  &__links a:nth-child(2) {
+  &__links a:nth-child(3n + 1) {
+    color: $blue-color;
+  }
+
+  &__links a:nth-child(3n + 2) {
     color: $orange-color;
+  }
+
+  &__links a:nth-child(3n + 3) {
+    color: $green-color;
   }
 
   &__links a:last-child {
     margin-right: 0;
-    color: $green-color;
   }
 
   &__flash-message {
