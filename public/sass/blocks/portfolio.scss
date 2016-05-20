@@ -285,7 +285,7 @@
     }
 
     &__arrow-wrap--right {
-      right: 3%;
+      right: 1%;
     }
 
     &__modal-close {
@@ -341,7 +341,8 @@
     &__slide {
       width: 47%;
       height: 350px;
-      margin-right: 1%;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
       margin-bottom: 2%;
       transition: margin 0.3s ease, height 0.3s ease;
     }
@@ -362,7 +363,7 @@
     }
 
     &__arrow-wrap {
-      bottom: 40%;
+      bottom: 33%;
     }
 
     &__arrow-wrap--left {

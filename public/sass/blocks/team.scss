@@ -239,7 +239,8 @@
 
     &__member {
       width: 46%;
-      margin-right: 1%;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
       //transition: width 0.3s ease, margin 0.3s ease;
     }
 
@@ -316,7 +317,8 @@
 
     &__member {
       width: 23.5%;
-      margin-right: 1%;
+      margin-left: 0.5%;
+      margin-right: 0.5%;
       //transition: width 0.3s ease, margin 0.3s ease;
     }
 
@@ -347,12 +349,17 @@
       transition: padding 0.3s ease, width 0.3s ease, font-size 0.3s ease;
     }
 
+    &__arrow-wrap {
+      position: absolute;
+      bottom: 56%;
+    }
+
     &__arrow-wrap--left {
-      left: 4%;
+      left: 1%;
     }
 
     &__arrow-wrap--right {
-      right: 5%;
+      right: 1%;
     }
 
     &__member:hover &__member-info {
