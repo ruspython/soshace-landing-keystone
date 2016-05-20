@@ -3,14 +3,17 @@
   <p class="main-footer__adress-line-1">Russia, Saint-Petersburg</p>
   <p class="main-footer__adress-line-2">{{{company.address}}}</p>
 
-  <p class="main-footer__skype"><a class="main-footer__skype-link" href="skype:{{{company.skypeLogin}}}">{{{company.skypeLogin}}}</a></p>
-
   <p class="main-footer__links">
-      <a href="{{{company.upworkUrl}}}" target="_blank">Upwork</a>
-      <a href="{{{company.githubUrl}}}" target="_blank">GitHub</a>
+      <a class="main-footer__facebook-link" href="{{{company.facebookUrl}}}">Facebook</a>
+      <a class="main-footer__skype-link" href="skype:{{{company.skypeLogin}}}">{{{company.skypeLogin}}}</a>
+      <a class="main-footer__instagram-link" href="{{{company.instagramUrl}}}">Instagram</a>
       <br/>
       <br/>
-      <a href="mailto:{{{company.supportEmail}}}">{{{company.supportEmail}}}</a>
+      <a class="main-footer__upwork-link" href="{{{company.upworkUrl}}}">Upwork</a>
+      <a class="main-footer__github-link" href="{{{company.githubUrl}}}">Github</a>
+      <br/>
+      <br/>
+      <a class="main-footer__mail-link" href="mailto:{{{company.supportEmail}}}">{{{company.supportEmail}}}</a>
   </p>
 
   <a class="flying-btn flying-btn--hidden scroll" href="#contact">{{t 'hire us'}}</a>

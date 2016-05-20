@@ -29,22 +29,12 @@
     font-weight: $weight-light;
   }
 
-  &__skype {
+  &__links {
     margin: 0;
-    margin-bottom: 5px;
-
-    font-size: $font-size;
-    line-height: $line-height;
-    font-weight: $weight-light;
+    margin-top: 60px;
   }
 
-  &__skype-link {
-    position: relative;
-    color: black;
-    text-decoration: none;
-  }
-
-  &__skype-link::before {
+  &__links a::before {
     content: '';
     position: absolute;
     top: -3px;
@@ -56,20 +46,44 @@
     width: 23px;
     height: 23px;
     background-size: 23px 23px;
-    background-image: url('../images/logo-skype.png'); // img 23x23
-  }
-
-  &__links {
-    margin: 0;
   }
 
   &__links a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+
     display: inline-block;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $weight-light;
     color: black
+  }
+
+  &__skype-link::before {
+    background-image: url('../images/logo-skype.png'); // img 23x23
+  }
+
+  &__upwork-link::before {
+    background-image: url('../images/logo-upwork.png'); // img 23x16
+  }
+
+  &__github-link::before {
+    background-image: url('../images/logo-github.png'); // img 23x23
+  }
+
+  &__facebook-link::before {
+    background-image: url('../images/logo-facebook.png'); // img 23x23
+  }
+
+  &__instagram-link::before {
+    background-image: url('../images/logo-instagram.png'); // img 23x23
+  }
+
+  &__mail-link::before {
+    background-image: url('../images/logo-mail.png'); // img 23x23
   }
 }
 
@@ -87,21 +101,17 @@
 
     &__adress-line-2 {
       margin-bottom: 10px;
-
       font-size: $font-size + 2px;
     }
 
-    &__skype {
-      margin-bottom: 7px;
-
-      font-size: $font-size + 2px;
-    }
-
-    &__skype-link::before {
+    &__links a::before {
       top: -2px;
     }
 
     &__links a {
+      margin-bottom: 7px;
+      margin-left: 20px;
+      margin-right: 20px;
       font-size: $font-size + 2px;
     }
   }
@@ -119,21 +129,17 @@
 
     &__adress-line-2 {
       margin-bottom: 20px;
-
       font-size: $font-size + 8px;
     }
 
-    &__skype {
-      margin-bottom: 20px;
-
-      font-size: $font-size + 8px;
-    }
-
-    &__skype-link::before {
+    &__links a::before {
       top: 1px;
     }
 
     &__links a {
+      margin-bottom: 20px;
+      margin-left: 30px;
+      margin-right: 30px;
       font-size: $font-size + 8px;
     }
   }
