@@ -44,7 +44,8 @@
     height: 100%;
     overflow: hidden;
     text-align: center;
-    cursor: pointer;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
     //transition: width 0.3s ease, margin 0.3s ease;
   }
 
@@ -283,7 +284,7 @@
 
     &__arrow-wrap {
       position: absolute;
-      bottom: 50%;
+      bottom: 55%;
     }
 
     &__arrow-wrap--left {
@@ -295,7 +296,7 @@
     &__arrow-wrap--right {
       float: none;
       padding-right: 0;
-      right: 5%;
+      right: 1%;
     }
   }
 }
