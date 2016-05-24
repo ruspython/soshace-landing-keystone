@@ -34,17 +34,20 @@
             successCb = opt.success,
             errorCb = opt.error,
             isValid = rule.test(field.value.split('\n').join('')),
-            tooltip = document.querySelector('.tooltip-icon[data-for="'+ field.name +'"]');
+            tooltipIcon = document.querySelector('.tooltip-icon[data-for="'+ field.name +'"]'),
+            tooltipInfo = document.querySelector('.tooltip-info[data-for="'+ field.name +'"]');
 
         validators[field.name] = isValid;
 
         if (isValid) {
             field.classList.remove('notvalid');
-            tooltip.style.display = 'none';
+            tooltipIcon.style.display = 'none';
+			tooltipInfo.style.visibility = 'hidden';
             successCb && successCb();
         } else {
             field.classList.add('notvalid');
-            tooltip.style.display = 'inline';
+            tooltipIcon.style.display = 'inline';
+			tooltipInfo.style.visibility = 'visible';
             errorCb && errorCb();
         }
 
