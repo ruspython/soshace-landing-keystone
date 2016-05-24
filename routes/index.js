@@ -67,7 +67,7 @@ i18next
                     'years': 'годы работы',
                     'award won': 'премий',
                     'Name must contain at least 2 characters': 'Имя должно включать минимум 2 символа',
-                    'Not valid email address': 'Невалидный email',
+                    'Not valid email address': 'Неверное имя почтового ящика',
                     'Message must contain at least 8 characters': 'Сообщение должно состоять минимум из 8 символов',
                     'Message was successfully sent': 'Сообщение успешно отправлено',
                     'Some problems with your request. Check your name, email and message for non-standard characters.': 'Убедитесь, что правильно введены данные.'
