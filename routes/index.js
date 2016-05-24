@@ -51,6 +51,7 @@ i18next
                     "upwork": "upwork",
                     "contact": "контакты",
                     'name': 'имя',
+                    'e-mail': 'имя почтового ящика',
                     'message': 'сообщение',
                     'hire us': 'связаться',
                     'have any questions': 'есть вопросы',
