@@ -31,7 +31,6 @@
 
   &__links {
     margin: 0;
-    margin-top: 60px;
   }
 
   &__links a::before {
@@ -54,8 +53,8 @@
     text-decoration: none;
 
     display: inline-block;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 10px 20px;
+    left: 23px;
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $weight-light;
@@ -110,8 +109,6 @@
 
     &__links a {
       margin-bottom: 7px;
-      margin-left: 20px;
-      margin-right: 20px;
       font-size: $font-size + 2px;
     }
   }
