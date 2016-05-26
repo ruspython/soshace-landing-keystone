@@ -55,6 +55,7 @@ gulp.task('build-js', function () {
 			'public/js/parallax.js',
 			'public/js/lang.js',
 			'public/js/contact.js',
+			'public/js/footer.js',
 		])
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify())
