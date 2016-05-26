@@ -44,12 +44,12 @@ cd $_PROJECT_FOLDER
 for repo_folder in $_FOLDERS_TO_PULL; do
 	cd $repo_folder
 
-	eval $_FETH_COMMAND
+	eval $_FETH_COMMAND 2>/dev/null
 
 	echo -e "\n>>>>>>>>>>>>>>\nCurrent revision:\n$(git log -1)\n>>>>>>>>>>>>>>>>>>\n"
 	if ! [[ -z $_REVISION ]]; then
-		eval $_CHECKOUT_LANDING_COMMAND
-		eval $_PULL_LANDING_COMMAND
+		eval $_CHECKOUT_LANDING_COMMAND 2>/dev/null
+		eval $_PULL_LANDING_COMMAND 2>/dev/null
 		echo -e "\n>>>>>>>>>>>>>>\nCurrent revision after checkout:\n$(git log -1)\n>>>>>>>>>>>>>>>>>>\n"
 	fi
 
