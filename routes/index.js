@@ -14,12 +14,12 @@ i18next
         resources: {
             en: {
                 translation: {
-                    "about": "about",
-                    "skills": "skills",
-                    "portfolio": "portfolio",
-                    "team": "team",
-                    "upwork": "upwork",
-                    "contact": "contact",
+                    'about': 'about',
+                    'skills': 'skills',
+                    'portfolio': 'portfolio',
+                    'team': 'team',
+                    'upwork': 'upwork',
+                    'contact': 'contacts',
                     'Name': 'Name',
                     'E-mail': 'E-mail',
                     'Message': 'Message',
@@ -35,6 +35,7 @@ i18next
                     'projects': 'projects',
                     'years': 'years',
                     'award won': 'award won',
+                    'location': 'Russia, Saint-Petersburg',
                     'Name must contain at least 2 characters': 'Name must contain at least 2 characters',
                     'Not valid email address': 'Not valid email address',
                     'Message must contain at least 8 characters': 'Message must contain at least 8 characters',
@@ -45,12 +46,12 @@ i18next
             },
             ru: {
                 translation: {
-                    "about": "о нас",
-                    "skills": "навыки",
-                    "portfolio": "портфолио",
-                    "team": "команда",
-                    "upwork": "upwork",
-                    "contact": "контакты",
+                    'about': 'о нас',
+                    'skills': 'навыки',
+                    'portfolio': 'портфолио',
+                    'team': 'команда',
+                    'upwork': 'upwork',
+                    'contact': 'контакты',
                     'Name': 'Имя',
                     'E-mail': 'Имя почтового ящика',
                     'Message': 'Сообщение',
@@ -61,11 +62,12 @@ i18next
                     'our team': 'наша команда',
                     'our hourly rate': 'наша часовая ставка',
                     'we are on': 'мы на',
-                    'visible only for logged users': 'доступно только для зарегестрированных пользователей',
-                    'happy clients': 'счастливые клиенты',
-                    'projects': 'проекты',
-                    'years': 'годы работы',
-                    'award won': 'премий',
+                    'visible only for logged users': 'доступно только для зарегистрированных пользователей',
+                    'happy clients': 'счастливых клиентов',
+                    'projects': 'проекта',
+                    'years': 'года работы',
+                    'award won': 'премия',
+                    'location': 'Россия, Санкт-Петербург',
                     'Name must contain at least 2 characters': 'Имя должно включать минимум 2 символа',
                     'Not valid email address': 'Неверное имя почтового ящика',
                     'Message must contain at least 8 characters': 'Сообщение должно состоять минимум из 8 символов',
@@ -77,7 +79,7 @@ i18next
     });
 
 keystone.pre('routes', i18nMiddleware.handle(i18next, {
-    ignoreRoutes: ["/foo"],
+    ignoreRoutes: ['/foo'],
     removeLngFromUrl: false
 }));
 
