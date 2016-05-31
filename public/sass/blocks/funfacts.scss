@@ -74,12 +74,12 @@
   }
 
   &__clients {
-    padding-right: 25%;
+    padding-right: 30%;
     margin-bottom: 90px;
   }
 
   &__awards {
-    padding-left: 25%;
+    padding-left: 30%;
     margin-bottom: 90px;
   }
 
@@ -145,6 +145,7 @@
   &__projects-text,
   &__years-text {
     margin-bottom: 5px;
+    height: 42px;
 
     font-size: $font-size;
     line-height: $line-height;
