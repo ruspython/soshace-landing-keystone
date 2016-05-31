@@ -10,6 +10,7 @@
   &::before {
     content: "";
     position: absolute;
+    display: block;
     top: -1px;
     right: 0;
     left: 0;
@@ -31,6 +32,8 @@
     padding-bottom: 50px;
     width: 50%;
     display: inline-block;
+    font-size: 0;
+    vertical-align: middle;
     text-align: right;
     background: #4ebe03;
     transition: padding 0.3s ease;
@@ -160,8 +163,8 @@
     &__right-column {
       padding-top: 160px;
       padding-bottom: 60px;
-      font-size: 0;
-      vertical-align: middle;
+      // font-size: 0;
+      // vertical-align: middle;
       transition: padding 0.3s ease;
     }
 
