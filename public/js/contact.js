@@ -5,7 +5,7 @@
     var name = form.querySelector('[name="name"]'),
         email = form.querySelector('[name="email"]'),
         message = form.querySelector('[name="message"]'),
-        submit = form.querySelector('[type="submit"]'),
+        //submit = form.querySelector('[type="submit"]'),
         success = form.querySelector('.contact__flash-message-success'),
         fail = form.querySelector('.contact__flash-message-fail'),
         validators = {
@@ -34,20 +34,22 @@
             successCb = opt.success,
             errorCb = opt.error,
             isValid = rule.test(field.value.split('\n').join('')),
-            tooltipIcon = document.querySelector('.tooltip-icon[data-for="'+ field.name +'"]'),
-            tooltipInfo = document.querySelector('.tooltip-info[data-for="'+ field.name +'"]');
+            tooltipIcon = document.querySelector('.contact__tooltip-icon[data-for="'+ field.name +'"]'),
+            tooltipInfo = document.querySelector('.contact__tooltip-info[data-for="'+ field.name +'"]');
 
         validators[field.name] = isValid;
 
         if (isValid) {
             field.classList.remove('notvalid');
             tooltipIcon.style.display = 'none';
-			tooltipInfo.style.visibility = 'hidden';
+            //tooltipInfo.style.visibility = 'hidden';
+            tooltipInfo.style.display = 'none';
             successCb && successCb();
         } else {
             field.classList.add('notvalid');
             tooltipIcon.style.display = 'inline';
-			tooltipInfo.style.visibility = 'visible';
+            //tooltipInfo.style.visibility = 'visible';
+            tooltipInfo.style.display = 'block';
             errorCb && errorCb();
         }
 
