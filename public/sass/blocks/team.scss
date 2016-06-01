@@ -31,17 +31,17 @@
     margin: 0 auto;
     margin-bottom: 30px;
     width: 280px;
-    //height: 280px;
+    height: 250px;
     overflow: hidden;
     white-space: nowrap;
     transition: margin 0.3s ease, width 0.3s ease;
   }
 
   &__member {
-    position: relative;
     display: inline-block;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 250px;
     overflow: hidden;
     text-align: center;
     margin-left: 0.5%;
@@ -50,14 +50,13 @@
   }
 
   &__member img {
-    height: auto;
     width: 100%;
     margin: 0 auto;
   }
 
   &__member-info {
     position: absolute;
-    bottom: -60%;
+    top: 150px;
 
     box-sizing: border-box;
     width: 100%;
@@ -198,7 +197,8 @@
 
   &__member-info--open {
     position: absolute;
-    bottom: 0;
+    //bottom: 0;
+    top: 0;
     transition: 0.9s;
     background: rgba(0, 0, 0, 0.7);
   }
@@ -231,18 +231,7 @@
     }
 
     &__members-wrap {
-      margin: 0 auto;
       margin-bottom: 50px;
-      width: 80%;
-      //height: auto;
-      transition: margin 0.3s ease, width 0.3s ease;
-    }
-
-    &__member {
-      width: 46%;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-      //transition: width 0.3s ease, margin 0.3s ease;
     }
 
     &__member-name {
@@ -257,7 +246,7 @@
 
     &__member-resume {
       font-size: $font-size + 1px;
-      line-height: $line-height;
+      //line-height: $line-height;
     }
 
     &__description {
@@ -284,18 +273,67 @@
 
     &__arrow-wrap {
       position: absolute;
-      bottom: 55%;
+      bottom: 56%;
     }
 
     &__arrow-wrap--left {
       float: none;
       padding-left: 0;
-      left: 1%;
+      left: 3%;
     }
 
     &__arrow-wrap--right {
       float: none;
       padding-right: 0;
+      right: 3%;
+    }
+  }
+}
+
+@media (min-width: $screen_md-extra) {
+  .team {
+    &__members-wrap {
+      width: 560px;
+
+      // margin-bottom: 50px; // same as in md
+      // height: 250px; // same as in md
+    }
+
+    &__member {
+      width: 250px;
+      //height: 250px;
+
+      // width: 100%;
+      // height: 250px;
+      // margin-left: 15px;
+      // margin-right: 15px;
+    }
+
+    &__member img {
+      // height: 100%; // ??
+      // width: auto; // ??
+    }
+
+    // &__member-name {
+    //   font-size: $font-size + 2px;
+    //   line-height: $line-height - 6px;
+    // }
+    //
+    // &__member-position {
+    //   font-size: $font-size + 1px;
+    //   line-height: $line-height;
+    // }
+    //
+    // &__member-resume {
+    //   font-size: $font-size + 1px;
+    //   line-height: $line-height;
+    // }
+
+    &__arrow-wrap--left {
+      left: 1%;
+    }
+
+    &__arrow-wrap--right {
       right: 1%;
     }
   }
@@ -311,17 +349,20 @@
       @include container--desktop();
     }
 
-    &__members-wrap {
-      margin-bottom: 60px;
-      transition: margin 0.3s ease, width 0.3s ease;
-    }
+    // &__members-wrap {
+    //   //height: px; // in portfolio
+    //   // width in portfolio
+    //   margin-bottom: 60px;
+    //   transition: margin 0.3s ease, width 0.3s ease;
+    // }
 
-    &__member {
-      width: 23.5%;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-      //transition: width 0.3s ease, margin 0.3s ease;
-    }
+    // &__member {
+    //   width: 23.5%;
+    //   margin-left: 0.5%;
+    //   margin-right: 0.5%;
+    //   //height: px; // in portfolio
+    //   //transition: width 0.3s ease, margin 0.3s ease;
+    // }
 
     &__member-name {
       font-size: $font-size + 2px;
@@ -350,18 +391,18 @@
       transition: padding 0.3s ease, width 0.3s ease, font-size 0.3s ease;
     }
 
-    &__arrow-wrap {
-      position: absolute;
-      bottom: 56%;
-    }
-
-    &__arrow-wrap--left {
-      left: 1%;
-    }
-
-    &__arrow-wrap--right {
-      right: 1%;
-    }
+    // &__arrow-wrap {
+    //   position: absolute;
+    //   bottom: 56%;
+    // }
+    //
+    // &__arrow-wrap--left {
+    //   left: 1%;
+    // }
+    //
+    // &__arrow-wrap--right {
+    //   right: 1%;
+    // }
 
     &__member:hover &__member-info {
       position: absolute;
