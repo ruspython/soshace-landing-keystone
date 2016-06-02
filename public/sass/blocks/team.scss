@@ -410,7 +410,7 @@
     &__member:hover &__member-info {
       position: absolute;
       top: 0;
-      transition: 0.9s;
+      transition: 0.7s;
       background: rgba(0, 0, 0, 0.7);
     }
 
@@ -437,7 +437,7 @@
     }
 
     &__arrow-wrap {
-      bottom: 52%;
+      bottom: 54%;
     }
   }
 }
@@ -453,6 +453,10 @@
       width: 24.4%;
       margin-left: 0.3%;
       margin-right: 0.3%;
+    }
+
+    &__member-info {
+      top: 190px;
     }
   }
 }
