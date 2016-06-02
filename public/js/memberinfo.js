@@ -13,8 +13,16 @@
     }
   }
 
+  function closeInfo() {
+    var info = document.querySelectorAll('.team__member-info');
+
+    for (var i = 0; i < info.length; i++) {
+      info[i].classList.remove('team__member-info--open');
+    }
+  }
+
   /**
-   * Redefine listeners because of changing windows width
+   * Redefine listeners because of changing window width
    */
    function specifyListeners() {
      var slides = document.querySelectorAll('.team__member');
@@ -40,4 +48,9 @@
     specifyListeners();
     window.onresize = specifyListeners;
   });
+
+  var arrowLeft = document.querySelector('.team__arrow-wrap--left'),
+      arrowRight = document.querySelector('.team__arrow-wrap--right');
+  arrowLeft.addEventListener('tap', closeInfo);
+  arrowRight.addEventListener('tap', closeInfo);
 })();
