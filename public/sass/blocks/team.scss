@@ -211,6 +211,8 @@
   &__member &__member-info--open &__member-resume {
     opacity: 1;
     transition: 3s;
+    overflow-y: auto;
+    height: 72%;
   }
 
   &__member &__member-info--open &__member-more {
@@ -417,6 +419,8 @@
     &__member:hover &__member-resume {
       opacity: 1;
       transition: 3s;
+      overflow-y: auto;
+      height: 72%;
     }
 
     &__member:hover &__member-more {
