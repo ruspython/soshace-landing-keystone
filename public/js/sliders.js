@@ -32,13 +32,19 @@ $(document).ready(function() {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 567,
+        breakpoint: 699,
         settings: {
           slidesToShow: 2
         }
       },
       {
-        breakpoint: 959,
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 1499,
         settings: {
           slidesToShow: 4
         }

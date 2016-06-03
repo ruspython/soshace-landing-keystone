@@ -4,10 +4,15 @@
 
 .testimonial {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   background: white;
   position: relative;
   transition: padding 0.3s ease;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 
   &__inner {
     @include container();
