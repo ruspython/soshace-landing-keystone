@@ -220,18 +220,18 @@
     }
 
     &__inner {
-      width: 700px;
-      height: 360px;
-      margin-left: -350px;
-      margin-top: -180px;
-      transition: padding 0.3s ease;
-
-
       position: fixed;
+      left: 50%;
+      top: 49%;
 
       display: block;
-      left: 50%;
-      top: 50%;
+      width: 700px;
+      height: 360px;
+      padding: 0;
+      margin-left: -350px;
+      margin-top: -180px;
+
+      transition: padding 0.3s ease;
     }
 
     &__logo {

@@ -10,6 +10,11 @@
   background: #f7f7f7;
   transition: padding 0.3s ease;
 
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
   &__inner {
     @include container();
   }
@@ -31,15 +36,15 @@
     margin: 0 auto;
     margin-bottom: 30px;
     width: 280px;
-    //height: 280px;
+    height: 246px;
     overflow: hidden;
     white-space: nowrap;
     transition: margin 0.3s ease, width 0.3s ease;
   }
 
   &__member {
-    position: relative;
     display: inline-block;
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -50,14 +55,13 @@
   }
 
   &__member img {
-    height: auto;
     width: 100%;
     margin: 0 auto;
   }
 
   &__member-info {
     position: absolute;
-    bottom: -60%;
+    top: 150px;
 
     box-sizing: border-box;
     width: 100%;
@@ -67,6 +71,7 @@
     padding-right: 5%;
     margin: 0 auto;
     text-align: left;
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.4);
     transition: 0.9s;
   }
@@ -140,7 +145,7 @@
     font-family: $font-stack;
     font-weight: $weight-light;
     color: black;
-    transition: margin 0.3s ease, width 0.3s ease, font-size 0.3s ease
+    transition: margin 0.3s ease, width 0.3s ease, font-size 0.3s ease;
   }
 
   &__rate {
@@ -198,7 +203,7 @@
 
   &__member-info--open {
     position: absolute;
-    bottom: 0;
+    top: 0;
     transition: 0.9s;
     background: rgba(0, 0, 0, 0.7);
   }
@@ -231,18 +236,7 @@
     }
 
     &__members-wrap {
-      margin: 0 auto;
       margin-bottom: 50px;
-      width: 80%;
-      //height: auto;
-      transition: margin 0.3s ease, width 0.3s ease;
-    }
-
-    &__member {
-      width: 46%;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-      //transition: width 0.3s ease, margin 0.3s ease;
     }
 
     &__member-name {
@@ -257,7 +251,6 @@
 
     &__member-resume {
       font-size: $font-size + 1px;
-      line-height: $line-height;
     }
 
     &__description {
@@ -284,18 +277,42 @@
 
     &__arrow-wrap {
       position: absolute;
-      bottom: 55%;
+      bottom: 56%;
     }
 
     &__arrow-wrap--left {
       float: none;
       padding-left: 0;
-      left: 1%;
+      left: 3%;
     }
 
     &__arrow-wrap--right {
       float: none;
       padding-right: 0;
+      right: 3%;
+    }
+  }
+}
+
+@media (min-width: $screen_md-extra) {
+  .team {
+    &__members-wrap {
+      width: 560px;
+    }
+
+    &__header {
+      margin-bottom: 40px;
+    }
+
+    &__member {
+      width: 49%;
+    }
+
+    &__arrow-wrap--left {
+      left: 1%;
+    }
+
+    &__arrow-wrap--right {
       right: 1%;
     }
   }
@@ -311,30 +328,35 @@
       @include container--desktop();
     }
 
-    &__members-wrap {
-      margin-bottom: 60px;
-      transition: margin 0.3s ease, width 0.3s ease;
+    &__header {
+      margin-bottom: 50px;
     }
 
-    &__member {
-      width: 23.5%;
-      margin-left: 0.5%;
-      margin-right: 0.5%;
-      //transition: width 0.3s ease, margin 0.3s ease;
+    &__members-wrap {
+      width: 660px;
+      height: 290px;
+      margin-bottom: 60px;
     }
 
     &__member-name {
-      font-size: $font-size + 2px;
-      line-height: $line-height - 6px;
+      font-size: $font-size + 3px;
     }
 
     &__member-position {
-      font-size: $font-size + 1px;
+      font-size: $font-size + 2px;
     }
 
     &__member-resume {
-      font-size: $font-size + 1px;
-      line-height: $line-height - 2px;
+      font-size: $font-size + 2px;
+      line-height: $line-height;
+    }
+
+    &__member-info {
+      top: 190px;
+    }
+
+    &__member-info--open {
+      top: 0;
     }
 
     &__description {
@@ -350,23 +372,45 @@
       transition: padding 0.3s ease, width 0.3s ease, font-size 0.3s ease;
     }
 
-    &__arrow-wrap {
-      position: absolute;
-      bottom: 56%;
-    }
-
     &__arrow-wrap--left {
-      left: 1%;
+      left: 3%;
     }
 
     &__arrow-wrap--right {
-      right: 1%;
+      right: 3%;
+    }
+
+    // @media (min-resolution: 1.5dppx) {
+    //   .team {
+    //     &__member-resume {
+    //       font-size: $font-size;
+    //       line-height: $line-height - 3px;
+    //     }
+    //   }
+    // }
+  }
+}
+
+@media (min-width: $screen_xl) {
+  .team {
+
+    &__members-wrap {
+      width: 960px;
+      height: 275px;
+    }
+
+    &__member {
+      width: 32%;
+    }
+
+    &__member-info {
+      top: 170px;
     }
 
     &__member:hover &__member-info {
       position: absolute;
-      bottom: 0;
-      transition: 0.9s;
+      top: 0;
+      transition: 0.7s;
       background: rgba(0, 0, 0, 0.7);
     }
 
@@ -380,13 +424,39 @@
       transition: 1s;
     }
 
-    @media (min-resolution: 1.5dppx) {
-      .team {
-        &__member-resume {
-          font-size: $font-size;
-          line-height: $line-height - 3px;
-        }
-      }
+    &__description {
+      width: 940px;
+    }
+
+    &__arrow-wrap--left {
+      left: 50px;
+    }
+
+    &__arrow-wrap--right {
+      right: 4%;
+    }
+
+    &__arrow-wrap {
+      bottom: 54%;
+    }
+  }
+}
+
+@media (min-width: $screen_xl-extra) {
+  .team {
+    &__members-wrap {
+      width: 1350px;
+      height: 300px;
+    }
+
+    &__member {
+      width: 24.4%;
+      margin-left: 0.3%;
+      margin-right: 0.3%;
+    }
+
+    &__member-info {
+      top: 190px;
     }
   }
 }

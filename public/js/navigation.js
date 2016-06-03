@@ -127,10 +127,10 @@
 
   // Looking for click on nav links
   // and close mobile menu
-  for (var i = 0; i < navLinks.length; i++) {
-    navLinks[i].onclick = function(e) {
-      e.preventDefault();
+  [].forEach.call(navLinks, function(link) {
+    link.addEventListener('tap', function(event) {
+      event.preventDefault();
       closeMobileNavigation();
-    };
-  }
+    });
+  });
 })();

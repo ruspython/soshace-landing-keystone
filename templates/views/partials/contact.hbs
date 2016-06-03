@@ -4,24 +4,24 @@
     <h1 class="contact__header" id="contact">{{t 'have any questions'}}?</h1>
     <p class="contact__text">{{ t 'Leave your message and our manager will answer you'}}</p>
 
-    <form class="contact__form" action="" method="post" novalidate>
+    <form class="contact__form" method="post" novalidate>
 
-        <div class="form-field input">
+        <div class="contact__form-field">
             <input type="text" name="name" placeholder="{{t 'Name'}}">
-            <span class="tooltip-icon" data-for="name"></span>
-            <div class="tooltip-info" data-for="name">{{t 'Name must contain at least 2 characters'}}</div>
+            <span class="contact__tooltip-icon" data-for="name"></span>
+            <div class="contact__tooltip-info" data-for="name">{{t 'Name must contain at least 2 characters'}}</div>
         </div>
 
-        <div class="form-field input">
+        <div class="contact__form-field">
             <input type="email" name="email" placeholder="{{t 'E-mail'}}">
-            <span class="tooltip-icon" data-for="email"></span>
-            <div class="tooltip-info" data-for="email">{{t 'Not valid email address'}}</div>
+            <span class="contact__tooltip-icon" data-for="email"></span>
+            <div class="contact__tooltip-info" data-for="email">{{t 'Not valid email address'}}</div>
         </div>
 
-        <div class="form-field">
+        <div class="contact__form-field">
             <textarea name="message" placeholder="{{t 'Message'}}"></textarea>
-            <span class="tooltip-icon" data-for="message"></span>
-            <div class="tooltip-info" data-for="message">{{t 'Message must contain at least 8 characters'}}</div>
+            <span class="contact__tooltip-icon" data-for="message"></span>
+            <div class="contact__tooltip-info" data-for="message">{{t 'Message must contain at least 8 characters'}}</div>
         </div>
 
       <div class="contact__flash-message">
