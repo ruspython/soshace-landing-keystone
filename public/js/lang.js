@@ -17,6 +17,10 @@
             setLang('en');
         }
 
+        if (window.location.pathname.search(/^\/(?!(en|ru))/) === 0) {
+            window.location.pathname = window.location.pathname.replace(/^\//, "/" + lang + "/");
+        }
+
         langSelect.onchange = function () {
             var lang = langSelect.value;
             setLang(lang);
