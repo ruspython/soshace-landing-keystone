@@ -79,15 +79,11 @@
     background: rgba(112, 183, 1, 0.9);
     color: white;
     transition: 0.5s ease-out;
-    transition: width 0.3s ease, padding 0.3s ease, height 0.3s ease;
   }
 
   &__slide:nth-child(2n) &__project-info {
     background: rgba(74, 119, 218, 0.9);
   }
-  // blue rgba(74, 119, 218, 0.8)
-  // orange rgba(254, 186, 0, 0.8)
-  // green rgba(112, 183, 1, 0.8);
 
   &__project-name {
     margin: 0;
@@ -261,7 +257,6 @@
       padding: 13px;
       width: 70%;
       height: 122px;
-      transition: width 0.3s ease, padding 0.3s ease, height 0.3s ease;
     }
 
     &__project-name {
@@ -349,7 +344,6 @@
 
     &__project-info {
       height: 130px;
-      transition: width 0.3s ease, padding 0.3s ease, height 0.3s ease;
       background: rgba(112, 183, 1, 0.8);
     }
 
@@ -375,10 +369,7 @@
     }
 
     &__slide:hover &__project-info {
-      padding-top: 20px;
-      height: 210px;
       background: $green-color;
-      transition: 0.5s ease-out;
     }
 
     &__slide:hover:nth-child(2n) &__project-info {
