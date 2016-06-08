@@ -18,11 +18,17 @@
 
       // Take data from data-attributes
       var titleData = this.dataset.title,
-          infoData = this.dataset.description,
+          infoData = this.dataset.completeDescription,
           urlData = this.dataset.link,
           imgData = this.dataset.image;
 
-      // Insert data in modal
+      // completeDescription might be empty
+      if (!infoData.trim()) {
+        infoData = this.dataset.incompleteDescription;
+      }
+
+
+      // Inserti modal
       title.innerHTML = titleData;
       info.innerHTML = infoData;
       url.setAttribute('href', urlData);
