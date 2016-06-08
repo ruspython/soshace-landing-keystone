@@ -18,7 +18,7 @@
         }
 
         if (window.location.pathname.search(/^\/(?!(en|ru))/) === 0) {
-            window.history.pushState(lang, '', window.location.pathname.replace(/^\//, "/" + lang + "/"));
+            window.history.replaceState(lang, '', window.location.pathname.replace(/^\//, "/" + lang + "/"));
         }
 
         langSelect.onchange = function () {
