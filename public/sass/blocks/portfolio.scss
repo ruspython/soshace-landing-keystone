@@ -68,7 +68,7 @@
 
   &__project-info {
     padding: 10px;
-    width: 80%;
+    width: 100%;
     height: 68px;
     text-align: left;
 
@@ -97,6 +97,7 @@
   }
 
   &__project-description {
+    width: 95%;
     margin: 0;
 
     font-size: $font-size;
@@ -108,7 +109,7 @@
   &__project-more {
     position: absolute;
     top: 7px;
-    right: 5px;
+    right: 34px;
     font-size: $font-size;
     line-height: $line-height - 3px;
     font-family: $font-stack;
