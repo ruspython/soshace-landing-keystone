@@ -21,11 +21,11 @@
       {{#each projects}}
       <div class="portfolio__slide">
 
-        <a href="#" data-title="{{{name}}}" data-description="{{{description}}}" data-link="{{{demoUrl}}}" data-image="{{{image.url}}}">
+          <a href="#" data-title="{{{name}}}" data-complete-description="{{completeDescription}}" data-link="{{{demoUrl}}}" data-image="{{{image.url}}}">
           <img src="{{{image.url}}}" width="280" alt="Project Image">
           <div class="portfolio__project-info">
             <h2 class="portfolio__project-name">{{{name}}}</h2>
-            <p class="portfolio__project-description">{{{description}}}</p>
+            <p class="portfolio__project-description">{{{incompleteDescription}}}</p>
             <span class="portfolio__project-more">Details</span>
           </div>
         </a>

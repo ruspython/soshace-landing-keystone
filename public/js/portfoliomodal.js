@@ -18,7 +18,7 @@
 
       // Take data from data-attributes
       var titleData = this.dataset.title,
-          infoData = this.dataset.description,
+          infoData = this.dataset.complete-description,
           urlData = this.dataset.link,
           imgData = this.dataset.image;
 
