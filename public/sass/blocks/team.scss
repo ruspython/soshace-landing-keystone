@@ -76,6 +76,10 @@
     transition: 0.9s;
   }
 
+  &__member:hover &__member-info {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
   &__member-name {
     margin: 0;
     margin-bottom: 5px;
@@ -423,10 +427,6 @@
       top: 190px;
     }
 
-    &__member-info--open {
-      top: 0;
-    }
-
     &__description {
       width: 640px;
       margin-bottom: 60px;
@@ -448,14 +448,6 @@
       right: 3%;
     }
 
-    // @media (min-resolution: 1.5dppx) {
-    //   .team {
-    //     &__member-resume {
-    //       font-size: $font-size;
-    //       line-height: $line-height - 3px;
-    //     }
-    //   }
-    // }
   }
 }
 
@@ -473,25 +465,6 @@
 
     &__member-info {
       top: 170px;
-    }
-
-    &__member:hover &__member-info {
-      position: absolute;
-      top: 0;
-      transition: 0.7s;
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    &__member:hover &__member-resume {
-      opacity: 1;
-      transition: 3s;
-      overflow-y: auto;
-      height: 72%;
-    }
-
-    &__member:hover &__member-more {
-      opacity: 0;
-      transition: 1s;
     }
 
     &__description {
