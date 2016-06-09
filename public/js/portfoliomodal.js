@@ -27,7 +27,6 @@
         infoData = this.dataset.incompleteDescription;
       }
 
-
       // Inserti modal
       title.innerHTML = titleData;
       info.innerHTML = infoData;
@@ -40,6 +39,21 @@
       modal.classList.remove('invisible');
       // Stops scrolling for body
       body.classList.add('fixed');
+      modal.addEventListener('onkeydown', function(e) {
+        e.preventDefault();
+        if (e.keyCode === 27) {
+          console.log("Press esc on portfolio slide");
+          alert("esc on slide");
+        }
+      });
+    };
+
+    projects[i].onkeydown = function(e) {
+      e.preventDefault();
+      if (e.keyCode === 27) {
+        console.log("Press esc on portfolio slide project");
+        alert("esc on project");
+      }
     };
   }
 
