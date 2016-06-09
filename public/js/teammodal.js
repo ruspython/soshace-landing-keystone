@@ -19,7 +19,7 @@
       // Take data from data-attributes
       var nameData  = this.dataset.name,
           positionData = this.dataset.position,
-          infoData = this.dataset.completeInfo,
+          infoData = this.dataset.info,
           photoData = this.dataset.photo;
 
       // completeInfo might be empty
