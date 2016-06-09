@@ -15,7 +15,9 @@ Developer.add({
 	name: {type: String, required: true},
 	photo: {type: Types.CloudinaryImage},
 	position: {type: String},
-	info: {type: Types.Textarea}
+	info: {type: Types.Textarea},
+	incompleteInfo: {type: Types.Textarea},
+	completeInfo: {type: Types.Textarea}
 });
 
 Developer.register();
