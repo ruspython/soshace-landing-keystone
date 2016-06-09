@@ -221,7 +221,7 @@
     position: fixed;
     z-index: 11;
     top: 15px;
-    right: 15px;
+    right: 11px;
     cursor: pointer;
   }
 
@@ -231,11 +231,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 0 5%;
+    margin: 0 1%;
+  }
+
+  &__modal-text {
+    margin: inherit;
   }
 
   &__modal-name {
-    margin-left: inherit;
     margin-bottom: 10px;
 
     font-size: $h2-size - 15px;
@@ -249,7 +252,6 @@
 
   &__modal-position {
     position: relative;
-    margin-left: inherit;
     margin-bottom: 20px;
 
     font-size: $font-size;
@@ -270,8 +272,7 @@
   }
 
   &__modal-info {
-    margin-left: inherit;
-    margin-right: inherit;
+    width: 90%;
     margin-bottom: 20px;
 
     font-size: $font-size;
@@ -363,6 +364,21 @@
       padding-right: 0;
       right: 3%;
     }
+
+    &__modal-photo {
+      width: 48%;
+      float: left;
+    }
+
+    &__modal-text {
+      width: 48%;
+      float: left;
+      margin: inherit;
+    }
+
+    &__modal-close {
+      right: 22px;
+    }
   }
 }
 
@@ -447,7 +463,6 @@
     &__arrow-wrap--right {
       right: 3%;
     }
-
   }
 }
 
@@ -500,6 +515,10 @@
 
     &__member-info {
       top: 190px;
+    }
+
+    &__modal-text {
+      width: 45%;
     }
   }
 }
