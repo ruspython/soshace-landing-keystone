@@ -201,25 +201,6 @@
     fill: #a7dcf5;
   }
 
-  &__member-info--open {
-    position: absolute;
-    top: 0;
-    transition: 0.9s;
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  &__member &__member-info--open &__member-resume {
-    opacity: 1;
-    transition: 3s;
-    overflow-y: auto;
-    height: 72%;
-  }
-
-  &__member &__member-info--open &__member-more {
-    opacity: 0;
-    transition: 1s;
-  }
-
   &__modal {
     display: block;
     position: fixed;
@@ -246,11 +227,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0 5%;
+    margin: 0 5%;
   }
 
-  &__modal-title {
-    margin: 0;
+  &__modal-name {
+    margin-left: inherit;
     margin-bottom: 10px;
 
     font-size: $h2-size - 15px;
@@ -258,13 +239,36 @@
     font-family: $font-stack;
     font-weight: $weight-medium;
     text-transform: uppercase;
-    color: $orange-color;
+    color: #7bb9dd;
     text-align: left;
   }
 
+  &__modal-position {
+    position: relative;
+    margin-left: inherit;
+    margin-bottom: 20px;
+
+    font-size: $font-size;
+    line-height: $line-height - 7px;
+    font-family: $font-stack;
+    font-weight: $weight-light;
+    color: #eaeaea;
+  }
+
+  &__modal-position::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    width: 40px;
+    height: 1px;
+    background: #7bb9dd;
+  }
+
   &__modal-info {
-    margin: 0;
-    margin-bottom: 10px;
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-bottom: 20px;
 
     font-size: $font-size;
     line-height: $line-height;
@@ -274,9 +278,10 @@
     text-align: left;
   }
 
-  &__modal-img {
+  &__modal-photo {
     width: 90%;
     height: auto;
+    margin: inherit;
     margin-bottom: 10px;
   }
 }
