@@ -313,7 +313,7 @@
 
 @media (min-width: $screen_lg) {
   .portfolio {
-    padding-top: 180px;
+    padding-top: 175px;
     padding-bottom: 80px;
     margin-bottom: 60px;
     transition: padding 0.3s ease, margin 0.3s ease;
@@ -322,6 +322,10 @@
       height: 65px;
       background-size: 100% 65px;
       transition: height 0.3s ease, background-size 0.3s ease;
+    }
+
+    &__header {
+      margin-bottom: 110px;
     }
 
     &__inner {
