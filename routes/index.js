@@ -14,7 +14,7 @@ i18next
         resources: {
             en: {
                 translation: {
-                    'about': 'about',
+                    'services': 'services',
                     'skills': 'skills',
                     'portfolio': 'portfolio',
                     'team': 'team',
@@ -46,7 +46,7 @@ i18next
             },
             ru: {
                 translation: {
-                    'about': 'о нас',
+                    'services': 'Услуги',
                     'skills': 'навыки',
                     'portfolio': 'портфолио',
                     'team': 'команда',

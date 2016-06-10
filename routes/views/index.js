@@ -3,7 +3,7 @@ var keystone = require('keystone');
 
 exports = module.exports = function(req, res) {
 
-	var MENU_ITEMS = ['about', 'skills', 'portfolio', 'team', 'upwork', 'contact'];
+	var MENU_ITEMS = ['services', 'skills', 'portfolio', 'team', 'upwork', 'contact'];
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 
