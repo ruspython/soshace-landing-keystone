@@ -4,7 +4,7 @@
 
 .features {
   position: relative;
-  padding-top: 100px;
+  padding-top: 70px;
   padding-bottom: 50px;
   text-align: center;
   text-transform: uppercase;
@@ -14,6 +14,19 @@
 
   &__inner {
     @include container();
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 65px;
+
+    font-size: $h1-size - 5px;
+    line-height: $h1-line-height;
+    font-family: $font-stack;
+    font-weight: $weight-medium;
+    text-transform: uppercase;
+    color: black;
+    transition: font-size 0.3s ease, margin 0.3s ease;
   }
 
   &__item {
@@ -52,9 +65,13 @@
 
 @media (min-width: $screen_md) {
   .features {
-    padding-top: 120px;
+    padding-top: 90px;
     padding-bottom: 60px;
     transition: padding 0.3s ease, margin 0.3s ease;
+
+  &__header {
+    margin-bottom: 80px;
+  }
 
     &__inner {
       @include container--tablet();
@@ -98,9 +115,13 @@
 
 @media (min-width: $screen_lg) {
   .features {
-    padding-top: 140px;
+    padding-top: 100px;
     padding-bottom: 80px;
     transition: padding 0.3s ease, margin 0.3s ease;
+
+    &__header {
+      margin-bottom: 120px;
+    }
 
     &__inner {
       @include container--desktop();
