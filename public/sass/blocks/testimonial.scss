@@ -124,7 +124,8 @@
       @include container--tablet();
     }
 
-    &__header h2{
+    &__header h2 {
+      margin-bottom: 40px;
       font-size: $h1-size;
       transition: font-size 0.3s ease;
     }
