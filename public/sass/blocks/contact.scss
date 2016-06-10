@@ -53,6 +53,7 @@
     position: relative;
     width: 85%;
     padding: 40px 5%;
+    padding-top: 15px;
     margin: 0 auto;
     margin-bottom: 40px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -72,7 +73,8 @@
     padding: 8px 10px;
     padding-right: 25px;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 6px;
 
     box-sizing: border-box;
     width: 100%;
@@ -246,6 +248,7 @@
       position: relative;
       width: 75%;
       padding: 50px 10%;
+      padding-top: 25px;
       transition: width 0.3s ease, padding 0.3s ease;
     }
 
@@ -254,7 +257,6 @@
     &__form textarea {
       padding: 10px 15px;
       padding-right: 25px;
-      margin-bottom: 15px;
 
       font-size: $font-size + 1px;
       line-height: $line-height + 1px;
@@ -303,6 +305,7 @@
       position: relative;
       width: 65%;
       padding: 5%;
+      padding-top: 25px;
       font-size: 0;
       vertical-align: top;
       transition: width 0.3s ease, padding 0.3s ease;
@@ -315,7 +318,6 @@
       width: 100%;
       padding: 10px 10px 15px 10px;
       padding-right: 25px;
-      margin-bottom: 25px;
 
       font-size: $font-size + 2px;
       line-height: $line-height + 2px;
@@ -337,6 +339,12 @@
       margin-bottom: 30px;
     }
   }
+}
+
+@media (min-width: $screen_lg) {
+    &__form {
+      padding-top: 35px;
+    }
 }
 
 .notvalid {
