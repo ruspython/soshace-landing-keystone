@@ -3,7 +3,7 @@
 // Styles for testimonial block
 
 .testimonial {
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 60px;
   background: white;
   position: relative;
@@ -25,7 +25,7 @@
 
   &__header h2 {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     position: relative;
 
     font-size: $h1-size - 5px;
@@ -40,7 +40,7 @@
 
   &__intro {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     text-align: center;
     font-size: $font-size;
     font-style: italic;
