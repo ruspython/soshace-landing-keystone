@@ -205,15 +205,14 @@
     height: 350px;
 
     &__video {
-      display: block;
       position: fixed;
+      display: block;
       top: 525px;
       left: 50%;
       min-width: 100%;
       min-height: 100%;
       width: auto;
       height: auto;
-      z-index: 4;
       transform: translate3d(-960px, -540px, 0);
       background-image: url('../images/bg-intro-fullsize@1x.jpg'), linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), ;
       background-size: cover;

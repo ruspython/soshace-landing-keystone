@@ -3,6 +3,8 @@
 // Styles for main footer
 
 .main-footer {
+  position: relative;
+  z-index: 6;
   padding: 20px 0;
   background: white;
   color: black;
