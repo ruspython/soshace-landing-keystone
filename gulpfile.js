@@ -53,7 +53,6 @@ gulp.task('build-js', function () {
 			'public/js/teammodal.js',
 			'public/js/memberinfo.js',
 			'public/js/map.js',
-			'public/js/parallax.js',
 			'public/js/lang.js',
 			'public/js/contact.js',
 			'public/js/footer.js',

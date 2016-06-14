@@ -206,8 +206,8 @@
 
     &__video {
       display: block;
-      position: absolute;
-      top: 70%;
+      position: fixed;
+      top: 525px;
       left: 50%;
       min-width: 100%;
       min-height: 100%;
@@ -220,7 +220,6 @@
     }
 
     &__inner {
-      position: fixed;
       left: 50%;
       top: 49%;
 
