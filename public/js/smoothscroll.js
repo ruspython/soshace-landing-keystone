@@ -25,7 +25,7 @@
         var endPos = document.getElementById(/[^#]+$/.exec(this.href)[0]).getBoundingClientRect().top;
         var maxScroll = root.scrollHeight - window.innerHeight;
         var scrollEndValue = startPos + endPos < maxScroll ? endPos : maxScroll - startPos;
-        var duration = 500;
+        var duration = 1500;
         var scroll = function(timestamp) {
           startTime = startTime || timestamp;
           var elapsed = timestamp - startTime;
