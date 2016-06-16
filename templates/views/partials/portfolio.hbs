@@ -18,20 +18,22 @@
 
     <div class="portfolio__slider">
 
-      {{#each projects}}
-      <div class="portfolio__slide">
+      <div class="swiper-wrapper">
+          {{#each projects}}
+          <div class="portfolio__slide swiper-slide">
 
-        <a href="#" data-title="{{{name}}}" data-complete-description="{{completeDescription}}" data-incomplete-description="{{incompleteDescription}}" data-link="{{{demoUrl}}}" data-image="{{{image.url}}}">
-          <img src="{{{image.url}}}" width="280" alt="Project Image">
-          <div class="portfolio__project-info">
-            <h2 class="portfolio__project-name">{{{name}}}</h2>
-            <p class="portfolio__project-description">{{{incompleteDescription}}}</p>
-            <span class="portfolio__project-more">Details</span>
+            <a href="#" data-title="{{{name}}}" data-complete-description="{{completeDescription}}" data-incomplete-description="{{incompleteDescription}}" data-link="{{{demoUrl}}}" data-image="{{{image.url}}}">
+              <img src="{{{image.url}}}" width="280" alt="Project Image">
+              <div class="portfolio__project-info">
+                <h2 class="portfolio__project-name">{{{name}}}</h2>
+                <p class="portfolio__project-description">{{{incompleteDescription}}}</p>
+                <span class="portfolio__project-more">Details</span>
+              </div>
+            </a>
+
           </div>
-        </a>
-
+          {{/each}}
       </div>
-      {{/each}}
 
     </div>
 

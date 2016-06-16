@@ -1,25 +1,23 @@
 'use strict';
 
-// Activate sliders - jQuery slick carousel
 $(document).ready(function() {
 
-  var portfolioSlider = $('.portfolio__slider');
-  portfolioSlider.slick({
-    slidesToShow: 1,
-    prevArrow: $('.portfolio__arrow-wrap--left'),
-    nextArrow: $('.portfolio__arrow-wrap--right'),
-    speed: 100,
-    infinite: true,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 959,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
+  var portfolioSlider = new Swiper('.portfolio__slider', {
+    loop: true,
+    prevButton: $('.portfolio__arrow-wrap--left'),
+    nextButton: $('.portfolio__arrow-wrap--right'),
+    slidesPerView: 2,
+    spaceBetween: "5%",
+    runCallbacksOnInit: true,
+    // add events for all portfolio slides, include created by swiper
+    'onInit': portfolioModal.addOnClickHandlerPortfolioSlides,
+    breakpoints: {
+      // when window width is <= 959px
+      959: {
+        slidesPerView: 1,
+        spaceBetween: 0
       }
-    ]
+    }
   });
 
   var teamSlider = $('.team__members-wrap');
@@ -53,3 +51,4 @@ $(document).ready(function() {
   });
 
 });
+
