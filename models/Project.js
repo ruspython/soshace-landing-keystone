@@ -15,6 +15,7 @@ Project.add({
 	name: {type: String, required: true},
   incompleteDescription: {type: Types.Textarea},
   completeDescription: {type: Types.Textarea},
+  demoUrl: {type: Types.Url},
 	image: {type: Types.CloudinaryImage},
 	previewImage: {type: Types.CloudinaryImage}
 });
