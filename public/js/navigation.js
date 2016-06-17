@@ -127,7 +127,6 @@
   // and close mobile menu
   [].forEach.call(navLinks, function(link) {
     link.addEventListener('tap', function(event) {
-      event.preventDefault();
       closeMobileNavigation();
     });
   });
