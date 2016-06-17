@@ -117,8 +117,6 @@
     }
 
     toggleMobileNavigation();
-
-    window.scrollBy(0, windowPosition);
   });
 
   // Looking for transition from tablet viewport to desktop viewport
