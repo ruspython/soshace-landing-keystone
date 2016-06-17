@@ -124,11 +124,15 @@
     &__item {
       position: relative;
       display: inline-block;
-      margin-right: 25px;
+      margin-right: 14px;
       vertical-align: middle;
 
       font-size: $font-size + 2px;
       line-height: $line-height;
+    }
+
+    &__list {
+        margin: 0;
     }
 
     &__item:last-child {
@@ -186,7 +190,7 @@
 
     &__link {
       display: block;
-      padding: 30px 5px 10px 5px;
+      padding: 30px 0px 10px 5px;
 
       border-bottom: none;
       color: black;
