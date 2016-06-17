@@ -31,8 +31,6 @@
     wrap.classList.toggle('main-header__inner--menu-visible');
     // Show/hide navigation
     nav.classList.toggle('main-nav--visible');
-    //Enable/disable scrolling through document
-    body.classList.toggle('fixed');
     // Hide main because of scroling window to top because of .fixed body class
     main.classList.toggle('soft-invisible');
   }
