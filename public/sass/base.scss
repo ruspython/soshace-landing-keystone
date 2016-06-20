@@ -17,6 +17,15 @@ section {
   z-index: 6;
 }
 
+// for set anchor links target little above header
+h1:before {
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
+}
+
 select {
   cursor: pointer;
   height: 25px;
@@ -37,3 +46,4 @@ select {
   transition: opacity 1s ease-out;
   opacity: 0;
 }
+
