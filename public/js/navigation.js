@@ -33,6 +33,8 @@
     nav.classList.toggle('main-nav--visible');
     // Hide main because of scroling window to top because of .fixed body class
     main.classList.toggle('soft-invisible');
+    // hide hireButton
+    hireButton.classList.add('flying-btn--hidden');
   }
 
   /**
@@ -75,22 +77,23 @@
    }
 
    /**
-    * Hide nav when scrolling down & show 'hire' btn
-    * Show nav when scrolling up & hide 'hire' btn
+    * Hide/show 'hire' btn nav when scrolling up/down
     */
    function scrollChanges() {
      var MIN_POSITION = 600;
 
-     // Last condition check if mobile menu is open (then no hiding navigation)
-     if (window.scrollY > prevPosition && window.scrollY > MIN_POSITION && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
-       // Scrolling down
-       header.classList.add('main-header--hidden');
+     var innerMenuHidden = !wrap.classList.contains('main-header__inner--menu-visible');
+     var scrollDown = window.scrollY > prevPosition && window.scrollY > MIN_POSITION;
+     var scrollUp = window.scrollY < prevPosition;
+
+     if (scrollDown && innerMenuHidden) {
+       // show button
        hireButton.classList.remove('flying-btn--hidden');
-     } else if (window.scrollY < prevPosition && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
-       // Scrolling up
-       header.classList.remove('main-header--hidden');
+     } else if (scrollUp) {
+       // hide button
        hireButton.classList.add('flying-btn--hidden');
      }
+
      prevPosition = window.scrollY;
    }
 
