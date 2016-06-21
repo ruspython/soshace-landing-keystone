@@ -9,7 +9,22 @@
       body = document.querySelector('body'),
       windowPosition = 0;
 
-  var openPortfolioModel = function(e) {
+  close.addEventListener('tap', function(e) {
+    e.preventDefault();
+    modal.classList.add('invisible');
+    body.classList.remove('fixed');
+    window.scrollBy(0, windowPosition);
+  });
+
+  function addOnClickHandlerPortfolioSlides(swiper) {
+    var projects = document.querySelectorAll('.portfolio__slide a');
+
+    for (var i = 0; i < projects.length; i++) {
+      projects[i].addEventListener('click', openPortfolioModel);
+    }
+  }
+
+  function openPortfolioModel(e) {
     e.preventDefault();
 
     // Take data from data-attributes
@@ -37,25 +52,9 @@
     body.classList.add('fixed');
   }
 
-  var addOnClickHandlerPortfolioSlides = function(swiper) {
-    var projects = document.querySelectorAll('.portfolio__slide a');
-    console.log("On init inside new Swiper");
-    console.log("swiper: " + swiper);
-
-    for (var i = 0; i < projects.length; i++) {
-      projects[i].addEventListener('click', openPortfolioModel);
-    }
-  }
-
-  close.addEventListener('tap', function(e) {
-    e.preventDefault();
-    modal.classList.add('invisible');
-    body.classList.remove('fixed');
-    window.scrollBy(0, windowPosition);
-  });
-
   // for using in sliders
   window.portfolioModal = {
     addOnClickHandlerPortfolioSlides: addOnClickHandlerPortfolioSlides
   };
+
 }());
