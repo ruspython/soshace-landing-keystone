@@ -110,7 +110,7 @@
   }, 250);
 
   // Click on link open/close mobile navigation
-  burger.addEventListener('tap', function(event) {
+  burger.addEventListener('click', function(event) {
     event.preventDefault();
 
     if (!body.classList.contains('fixed')) {
@@ -127,7 +127,7 @@
   // Looking for click on nav links
   // and close mobile menu
   [].forEach.call(navLinks, function(link) {
-    link.addEventListener('tap', function(event) {
+    link.addEventListener('click', function(event) {
       closeMobileNavigation();
     });
   });

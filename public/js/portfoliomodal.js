@@ -43,7 +43,7 @@
     };
   }
 
-  close.addEventListener('tap', function(e) {
+  close.addEventListener('click', function(e) {
     e.preventDefault();
     modal.classList.add('invisible');
     body.classList.remove('fixed');
