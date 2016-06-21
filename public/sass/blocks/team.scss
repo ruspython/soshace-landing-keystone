@@ -39,7 +39,6 @@
     height: 246px;
     overflow: hidden;
     white-space: nowrap;
-    transition: margin 0.3s ease, width 0.3s ease;
   }
 
   &__member {
@@ -49,14 +48,11 @@
     height: 100%;
     overflow: hidden;
     text-align: center;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    //transition: width 0.3s ease, margin 0.3s ease;
   }
 
   &__member img {
     width: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 
   &__member-info {
@@ -350,7 +346,7 @@
 
     &__arrow-wrap {
       position: absolute;
-      bottom: 56%;
+      bottom: 51%;
     }
 
     &__arrow-wrap--left {
@@ -483,7 +479,7 @@
     }
 
     &__arrow-wrap--left {
-      left: 50px;
+      left: 4%;
     }
 
     &__arrow-wrap--right {
@@ -491,7 +487,7 @@
     }
 
     &__arrow-wrap {
-      bottom: 54%;
+      bottom: 49%;
     }
   }
 }
@@ -505,8 +501,6 @@
 
     &__member {
       width: 24.4%;
-      margin-left: 0.3%;
-      margin-right: 0.3%;
     }
 
     &__member-info {

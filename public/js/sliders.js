@@ -9,8 +9,6 @@ $(document).ready(function() {
     slidesPerView: 2,
     spaceBetween: "5%",
     runCallbacksOnInit: true,
-    // add events for all portfolio slides, include created by swiper
-    'onInit': portfolioModal.addOnClickHandlerPortfolioSlides,
     breakpoints: {
       // when window width is <= 959px
       959: {
@@ -20,35 +18,28 @@ $(document).ready(function() {
     }
   });
 
-  var teamSlider = $('.team__members-wrap');
-  teamSlider.slick({
-    slidesToShow: 1,
-    prevArrow: $('.team__arrow-wrap--left'),
-    nextArrow: $('.team__arrow-wrap--right'),
-    speed: 100,
-    //infinite: true,
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 699,
-        settings: {
-          slidesToShow: 2
-        }
+  portfolioSlider.on('tap', portfolioModal.openModal);
+
+  var teamSlider = new Swiper('.team__members-wrap', {
+    loop: true,
+    prevButton: $('.team__arrow-wrap--left'),
+    nextButton: $('.team__arrow-wrap--right'),
+    slidesPerView: 3,
+    spaceBetween: 20,
+    breakpoints: {
+      // when window width is <= 1199px
+      1199: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 3
-        }
-      },
-      {
-        breakpoint: 1499,
-        settings: {
-          slidesToShow: 4
-        }
+      699: {
+        slidesPerView: 1,
+        spaceBetween: 0,
       }
-    ]
+    }
   });
+
+  teamSlider.on('tap', teamModal.openModal);
 
 });
 

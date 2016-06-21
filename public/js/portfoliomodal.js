@@ -9,33 +9,28 @@
       body = document.querySelector('body'),
       windowPosition = 0;
 
-  close.addEventListener('tap', function(e) {
-    e.preventDefault();
+  close.addEventListener('tap', function(event) {
+    event.preventDefault();
     modal.classList.add('invisible');
     body.classList.remove('fixed');
     window.scrollBy(0, windowPosition);
   });
 
-  function addOnClickHandlerPortfolioSlides(swiper) {
-    var projects = document.querySelectorAll('.portfolio__slide a');
+  function openModal(swiper, event) {
+    event.preventDefault();
 
-    for (var i = 0; i < projects.length; i++) {
-      projects[i].addEventListener('click', openPortfolioModel);
-    }
-  }
-
-  function openPortfolioModel(e) {
-    e.preventDefault();
+    var slideLink = swiper.clickedSlide.querySelector('a');
+    if (!slideLink) return;
 
     // Take data from data-attributes
-    var titleData = this.dataset.title,
-      infoData = this.dataset.completeDescription,
-      urlData = this.dataset.link,
-      imgData = this.dataset.image;
+    var titleData = slideLink.dataset.title,
+      infoData = slideLink.dataset.completeDescription,
+      urlData = slideLink.dataset.link,
+      imgData = slideLink.dataset.image;
 
     // completeDescription might be empty
     if (!infoData.trim()) {
-      infoData = this.dataset.incompleteDescription;
+      infoData = slideLink.dataset.incompleteDescription;
     }
 
     // Inserti modal
@@ -54,7 +49,7 @@
 
   // for using in sliders
   window.portfolioModal = {
-    addOnClickHandlerPortfolioSlides: addOnClickHandlerPortfolioSlides
+    openModal: openModal
   };
 
 }());
