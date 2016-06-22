@@ -31,10 +31,10 @@
     wrap.classList.toggle('main-header__inner--menu-visible');
     // Show/hide navigation
     nav.classList.toggle('main-nav--visible');
-    //Enable/disable scrolling through document
-    body.classList.toggle('fixed');
     // Hide main because of scroling window to top because of .fixed body class
     main.classList.toggle('soft-invisible');
+    // hide hireButton
+    hireButton.classList.add('flying-btn--hidden');
   }
 
   /**
@@ -77,22 +77,23 @@
    }
 
    /**
-    * Hide nav when scrolling down & show 'hire' btn
-    * Show nav when scrolling up & hide 'hire' btn
+    * Hide/show 'hire' btn nav when scrolling up/down
     */
    function scrollChanges() {
      var MIN_POSITION = 600;
 
-     // Last condition check if mobile menu is open (then no hiding navigation)
-     if (window.scrollY > prevPosition && window.scrollY > MIN_POSITION && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
-       // Scrolling down
-       header.classList.add('main-header--hidden');
+     var innerMenuHidden = !wrap.classList.contains('main-header__inner--menu-visible');
+     var scrollDown = window.scrollY > prevPosition && window.scrollY > MIN_POSITION;
+     var scrollUp = window.scrollY < prevPosition;
+
+     if (scrollDown && innerMenuHidden) {
+       // show button
        hireButton.classList.remove('flying-btn--hidden');
-     } else if (window.scrollY < prevPosition && !(wrap.classList.contains('main-header__inner--menu-visible'))) {
-       // Scrolling up
-       header.classList.remove('main-header--hidden');
+     } else if (scrollUp) {
+       // hide button
        hireButton.classList.add('flying-btn--hidden');
      }
+
      prevPosition = window.scrollY;
    }
 
@@ -109,7 +110,7 @@
   }, 250);
 
   // Click on link open/close mobile navigation
-  burger.addEventListener('tap', function(event) {
+  burger.addEventListener('click', function(event) {
     event.preventDefault();
 
     if (!body.classList.contains('fixed')) {
@@ -117,8 +118,6 @@
     }
 
     toggleMobileNavigation();
-
-    window.scrollBy(0, windowPosition);
   });
 
   // Looking for transition from tablet viewport to desktop viewport
@@ -128,8 +127,7 @@
   // Looking for click on nav links
   // and close mobile menu
   [].forEach.call(navLinks, function(link) {
-    link.addEventListener('tap', function(event) {
-      event.preventDefault();
+    link.addEventListener('click', function(event) {
       closeMobileNavigation();
     });
   });

@@ -72,10 +72,6 @@
     transition: 0.9s;
   }
 
-  &__member:hover &__member-info {
-    background: rgba(0, 0, 0, 0.8);
-  }
-
   &__member-name {
     margin: 0;
     margin-bottom: 5px;
@@ -201,92 +197,25 @@
     fill: #a7dcf5;
   }
 
-  &__modal {
-    display: block;
-    position: fixed;
+  &__member-info--open {
+    position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.9);
+    transition: 0.9s;
+    background: rgba(0, 0, 0, 0.7);
   }
 
-  &__modal-close {
-    position: fixed;
-    z-index: 11;
-    top: 15px;
-    right: 11px;
-    cursor: pointer;
+  &__member &__member-info--open &__member-resume {
+    opacity: 1;
+    transition: 3s;
+    overflow-y: auto;
+    height: 72%;
   }
 
-  &__modal-content {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 1%;
-  }
-
-  &__modal-text {
-    margin: inherit;
-  }
-
-  &__modal-name {
-    margin-bottom: 10px;
-
-    font-size: $h2-size - 15px;
-    line-height: $h1-line-height - 28;
-    font-family: $font-stack;
-    font-weight: $weight-medium;
-    text-transform: uppercase;
-    color: #7bb9dd;
-    text-align: left;
-  }
-
-  &__modal-position {
-    position: relative;
-    margin-bottom: 20px;
-
-    font-size: $font-size;
-    line-height: $line-height - 7px;
-    font-family: $font-stack;
-    font-weight: $weight-light;
-    color: #eaeaea;
-  }
-
-  &__modal-position::after {
-    content: '';
-    position: absolute;
-    left: 0px;
-    bottom: -5px;
-    width: 40px;
-    height: 1px;
-    background: #7bb9dd;
-  }
-
-  &__modal-info {
-    width: 90%;
-    margin-bottom: 20px;
-
-    font-size: $font-size;
-    line-height: $line-height;
-    font-family: $font-stack;
-    font-weight: $weight-light;
-    color: white;
-    text-align: left;
-  }
-
-  &__modal-photo {
-    width: 90%;
-    height: auto;
-    margin: inherit;
-    margin-bottom: 10px;
+  &__member &__member-info--open &__member-more {
+    opacity: 0;
+    transition: 1s;
   }
 }
-
 
 @media (min-width: $screen_md) {
   .team {
@@ -360,21 +289,6 @@
       padding-right: 0;
       right: 3%;
     }
-
-    &__modal-photo {
-      width: 48%;
-      float: left;
-    }
-
-    &__modal-text {
-      width: 48%;
-      float: left;
-      margin: inherit;
-    }
-
-    &__modal-close {
-      right: 22px;
-    }
   }
 }
 
@@ -435,6 +349,10 @@
       top: 190px;
     }
 
+    &__member-info--open {
+      top: 0;
+    }
+
     &__description {
       width: 640px;
       margin-bottom: 60px;
@@ -455,6 +373,15 @@
     &__arrow-wrap--right {
       right: 3%;
     }
+
+    // @media (min-resolution: 1.5dppx) {
+    //   .team {
+    //     &__member-resume {
+    //       font-size: $font-size;
+    //       line-height: $line-height - 3px;
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -472,6 +399,25 @@
 
     &__member-info {
       top: 170px;
+    }
+
+    &__member:hover &__member-info {
+      position: absolute;
+      top: 0;
+      transition: 0.7s;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    &__member:hover &__member-resume {
+      opacity: 1;
+      transition: 3s;
+      overflow-y: auto;
+      height: 72%;
+    }
+
+    &__member:hover &__member-more {
+      opacity: 0;
+      transition: 1s;
     }
 
     &__description {
@@ -505,10 +451,6 @@
 
     &__member-info {
       top: 190px;
-    }
-
-    &__modal-text {
-      width: 45%;
     }
   }
 }

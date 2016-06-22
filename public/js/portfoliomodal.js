@@ -1,6 +1,7 @@
 'use strict';
 ;(function() {
-  var modal = document.querySelector('.portfolio__modal'),
+  var projects = document.querySelectorAll('.portfolio__slide a'),
+      modal = document.querySelector('.portfolio__modal'),
       title = document.querySelector('.portfolio__modal-title'),
       info = document.querySelector('.portfolio__modal-description'),
       url = document.querySelector('.portfolio__modal-link'),
@@ -9,7 +10,13 @@
       body = document.querySelector('body'),
       windowPosition = 0;
 
-  close.addEventListener('tap', function(event) {
+  for (var i = 0; i < projects.length; i++) {
+    projects[i].onclick = function(e) {
+      e.preventDefault();
+    }
+  }
+
+  close.addEventListener('click', function(event) {
     event.preventDefault();
     modal.classList.add('invisible');
     body.classList.remove('fixed');

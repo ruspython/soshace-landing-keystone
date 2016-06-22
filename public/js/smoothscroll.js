@@ -1,41 +1,43 @@
 /**
-* anchor-scroll
-* @author Benjamin De Cock
-* @repo https://github.com/bendc/anchor-scroll
+* Smooth Scrolling
+* @author CHRIS COYIER
+* example from https://css-tricks.com/snippets/jquery/smooth-scrolling/
 */
-
 'use strict';
-
 (function() {
+
+  var SMALL_DISPLAYS_WIDTH_BORDER = 699;
 
   document.addEventListener('DOMContentLoaded', function() {
 
     var links = document.querySelectorAll('.scroll');
-    var i = links.length;
-    var root = /firefox|trident/i.test(navigator.userAgent) ? document.documentElement : document.body;
-    var easeInOutCubic = function(t, b, c, d) {
-      if ((t/=d/2) < 1) return c/2*t*t*t + b;
-      return c/2*((t-=2)*t*t + 2) + b;
-    };
 
-    while (i--)
-      links.item(i).addEventListener('tap', function(e) {
-        var startTime;
-        var startPos = root.scrollTop;
-        var endPos = document.getElementById(/[^#]+$/.exec(this.href)[0]).getBoundingClientRect().top;
-        var maxScroll = root.scrollHeight - window.innerHeight;
-        var scrollEndValue = startPos + endPos < maxScroll ? endPos : maxScroll - startPos;
-        var duration = 1500;
-        var scroll = function(timestamp) {
-          startTime = startTime || timestamp;
-          var elapsed = timestamp - startTime;
-          var progress = easeInOutCubic(elapsed, startPos, scrollEndValue, duration);
-          root.scrollTop = progress;
-          elapsed < duration && requestAnimationFrame(scroll);
-        };
-        requestAnimationFrame(scroll);
-        e.preventDefault();
-      });
+    for (var i = 0; i < links.length; i++) {
+      links.item(i).addEventListener('click', smoothScrolling);
+    }
+
   });
 
+  function smoothScrolling(event) {
+
+    event.preventDefault();
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+
+        if (window.innerWidth < SMALL_DISPLAYS_WIDTH_BORDER) {
+          // just jump
+          window.scrollTo(0, target.offset().top);
+        } else {
+          // smooth scroll
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1500);
+        }
+
+        return false;
+      }
+    }
+  }
 })();
