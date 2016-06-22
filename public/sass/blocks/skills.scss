@@ -149,6 +149,7 @@
       width: 20%;
       margin-right: 6%;
       margin-bottom: 180px;
+      padding-top: 60px;
     }
 
     &__item:nth-child(2n) {
@@ -165,13 +166,6 @@
     &__item:last-child {
       margin-bottom: 40px;
       padding-bottom: 40px;
-    }
-
-    &__item:nth-child(2),
-    &__item:nth-child(3),
-    &__item:nth-child(6),
-    &__item:nth-child(7) {
-      padding-top: 60px;
     }
 
     &__title {
