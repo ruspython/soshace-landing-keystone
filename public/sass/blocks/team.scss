@@ -144,22 +144,6 @@
     transition: margin 0.3s ease, width 0.3s ease, font-size 0.3s ease;
   }
 
-  &__rate {
-    display: block;
-    width: 60%;
-    padding: 5px 15px;
-    margin: 0 auto;
-
-    font-size: $font-size;
-    line-height: $line-height;
-    font-family: $font-stack;
-    font-weight: $weight-medium;
-    text-transform: uppercase;
-
-    border: 1px solid #557fc4;
-    color: #557fc4;
-  }
-
   &__arrows {
     @include clearfix();
     margin-bottom: 10px
@@ -261,14 +245,6 @@
       transition: margin 0.3s ease, width 0.3s ease, font-size 0.3s ease;
     }
 
-    &__rate {
-      padding: 10px 15px;
-
-      font-size: $font-size + 10px;
-      line-height: $line-height;
-      transition: padding 0.3s ease, font-size 0.3s ease;
-    }
-
     &__arrows {
       margin-bottom: 0;
     }
@@ -358,14 +334,6 @@
       margin-bottom: 60px;
     }
 
-    &__rate {
-      width: 40%;
-      padding: 15px 0;
-
-      font-size: $font-size + 15px;
-      transition: padding 0.3s ease, width 0.3s ease, font-size 0.3s ease;
-    }
-
     &__arrow-wrap--left {
       left: 3%;
     }
@@ -374,14 +342,6 @@
       right: 3%;
     }
 
-    // @media (min-resolution: 1.5dppx) {
-    //   .team {
-    //     &__member-resume {
-    //       font-size: $font-size;
-    //       line-height: $line-height - 3px;
-    //     }
-    //   }
-    // }
   }
 }
 
