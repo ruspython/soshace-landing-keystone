@@ -202,7 +202,7 @@
     position: fixed;
     z-index: 11;
     top: 15px;
-    right: 11px;
+    right: 5%;
     cursor: pointer;
   }
 
@@ -265,7 +265,7 @@
   }
 
   &__modal-photo {
-    width: 90%;
+    width: 70%;
     height: auto;
     margin: inherit;
     margin-bottom: 10px;
@@ -414,6 +414,10 @@
     &__description {
       width: 640px;
       margin-bottom: 60px;
+    }
+
+    &__modal-photo {
+      width: 36%;
     }
 
     &__arrow-wrap--left {
