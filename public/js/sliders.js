@@ -18,7 +18,7 @@ $(document).ready(function() {
     }
   });
 
-  portfolioSlider.on('click', portfolioModal.openModal);
+  portfolioSlider.on('tap', portfolioModal.openModal);
 
   var teamSlider = new Swiper('.team__members-wrap', {
     loop: true,
@@ -39,7 +39,7 @@ $(document).ready(function() {
     }
   });
 
-  teamSlider.on('click', teamModal.openModal);
+  teamSlider.on('tap', teamModal.openModal);
 
 });
 
