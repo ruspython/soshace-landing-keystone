@@ -50,7 +50,7 @@ gulp.task('build-js', function () {
 			'public/js/portfoliomodal.js',
 			'public/js/teammodal.js',
 			'public/js/sliders.js',
-      'public/js/swiper.jquery.js',
+      'public/js/swiper.min.js',
 			'public/js/memberinfo.js',
 			'public/js/map.js',
 			'public/js/lang.js',
