@@ -44,7 +44,6 @@ gulp.task('build-js', function () {
 	return gulp
 		.src([
 			'node_modules/gmaps/gmaps.js',
-			'node_modules/slick-carousel/slick/slick.js',
 			'public/js/navigation.js',
 			'public/js/smoothscroll.js',
 			'public/js/portfoliomodal.js',
