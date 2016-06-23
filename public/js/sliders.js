@@ -6,8 +6,8 @@
   function initSliders() {
     var portfolioSlider = new Swiper('.portfolio__slider', {
       loop: true,
-      prevButton: $('.portfolio__arrow-wrap--left'),
-      nextButton: $('.portfolio__arrow-wrap--right'),
+      prevButton: document.querySelector('.portfolio__arrow-wrap--left'),
+      nextButton: document.querySelector('.portfolio__arrow-wrap--right'),
       slidesPerView: 2,
       spaceBetween: "5%",
       runCallbacksOnInit: true,
@@ -24,8 +24,8 @@
 
     var teamSlider = new Swiper('.team__members-wrap', {
       loop: true,
-      prevButton: $('.team__arrow-wrap--left'),
-      nextButton: $('.team__arrow-wrap--right'),
+      prevButton: document.querySelector('.team__arrow-wrap--left'),
+      nextButton: document.querySelector('.team__arrow-wrap--right'),
       slidesPerView: 3,
       spaceBetween: 20,
       breakpoints: {
