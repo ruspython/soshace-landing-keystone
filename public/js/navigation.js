@@ -35,6 +35,11 @@
     main.classList.toggle('soft-invisible');
     // hide hireButton
     hireButton.classList.add('flying-btn--hidden');
+
+    body.classList.toggle('fixed');
+    if (!main.classList.contains('fixed')) {
+      scrollToLastPosition();
+    }
   }
 
   /**
@@ -59,6 +64,7 @@
 
     if (body.classList.contains('fixed')) {
       body.classList.remove('fixed');
+      scrollToLastPosition();
     }
 
     if (main.classList.contains('soft-invisible')) {
@@ -75,6 +81,13 @@
        closeMobileNavigation();
      }
    }
+
+  /**
+   * Used for return to previously window position before fixed property set to body
+   */
+  function scrollToLastPosition() {
+      window.scrollTo(0, windowPosition);
+  }
 
    /**
     * Hide/show 'hire' btn nav when scrolling up/down
