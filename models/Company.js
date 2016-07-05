@@ -24,6 +24,7 @@ Company.add({
 	githubUrl: {type: Types.Url},
 	facebookUrl: {type: Types.Url},
 	instagramUrl: {type: Types.Url},
+	linkedinUrl: {type: Types.Url},
 	skypeLogin: {type: String},
 	happyClients: {type: Number},
 	projectsCompleted: {type: Number},

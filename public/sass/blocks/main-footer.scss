@@ -83,6 +83,10 @@
   &__mail-link::before {
     background-image: url('../images/logo-mail.svg');
   }
+
+  &__linkedin-link::before {
+    background-image: url('../images/logo-linkedin.svg');
+  }
 }
 
 a.main-footer__upwork-link::before {
