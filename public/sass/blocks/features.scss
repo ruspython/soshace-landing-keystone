@@ -89,11 +89,6 @@
       margin-right: 0;
     }
 
-    // &__item:nth-last-child(2),
-    // &__item:last-child {
-    //   margin-bottom: 40px;
-    // }
-
     &__item:last-child {
       margin-left: 25%;
       margin-right: 0;
@@ -106,6 +101,8 @@
     }
 
     &__text {
+      margin-left: 10px;
+      margin-right: 10px;
       font-size: $font-size + 2px;
       line-height: $line-height + 3px;
       transition: font-size 0.3s ease;
