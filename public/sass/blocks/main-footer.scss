@@ -87,6 +87,10 @@
   &__linkedin-link::before {
     background-image: url('../images/logo-linkedin.svg');
   }
+
+  &__presentation-link::before {
+    background-image: url('../images/logo-pdf.svg');
+  }
 }
 
 a.main-footer__upwork-link::before {

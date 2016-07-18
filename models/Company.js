@@ -29,7 +29,15 @@ Company.add({
 	happyClients: {type: Number},
 	projectsCompleted: {type: Number},
 	awardWon: {type: Number},
-	years: {type: Number}
+  years: {type: Number},
+  presentation: {
+    type: Types.LocalFile,
+    dest: './data/files',
+    prefix: '/files/',
+    filename: function(item, file) {
+      return file.originalname;
+    },
+  }
 });
 
 Company.register();

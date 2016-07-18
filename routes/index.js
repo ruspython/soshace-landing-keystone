@@ -22,6 +22,7 @@ i18next
                     'contact': 'contacts',
                     'Name': 'Name',
                     'E-mail': 'E-mail',
+                    'presentation': 'presentation',
                     'Message': 'Message',
                     'get in touch': 'get in touch',
                     'have any questions': 'have any questions',
@@ -54,6 +55,7 @@ i18next
                     'contact': 'контакты',
                     'Name': 'Имя',
                     'E-mail': 'Имя почтового ящика',
+                    'presentation': 'презентация',
                     'Message': 'Сообщение',
                     'get in touch': 'связаться',
                     'have any questions': 'есть вопросы',
@@ -104,6 +106,30 @@ var routes = {
 exports = module.exports = function (app) {
     app.all('/', routes.views.index);
     app.post('/message', routes.emails.message);
+
+    app.get('/data/files/:name', function (req, res, next) {
+
+      var options = {
+        root: __dirname + '/../data/files',
+        dotfiles: 'deny',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true
+        }
+      };
+
+      var fileName = req.params.name;
+      res.sendFile(fileName, options, function (err) {
+        if (err) {
+          console.log(err);
+          res.status(err.status).end();
+        }
+        else {
+          console.log('Sent:', fileName);
+        }
+      });
+
+    });
 
 
 };
