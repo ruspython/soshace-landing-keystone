@@ -42,7 +42,7 @@ keystone.init({
 	'auth': true,
   'user model': 'User',
 
-  'file limit': '8mb'
+  'file limit': '8000000'
 
 });
 
