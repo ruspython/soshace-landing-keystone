@@ -22,6 +22,7 @@ i18next
                     'contact': 'contacts',
                     'Name': 'Name',
                     'E-mail': 'E-mail',
+                    'presentation': 'presentation',
                     'Message': 'Message',
                     'get in touch': 'get in touch',
                     'have any questions': 'have any questions',
@@ -54,6 +55,7 @@ i18next
                     'contact': 'контакты',
                     'Name': 'Имя',
                     'E-mail': 'Имя почтового ящика',
+                    'presentation': 'презентация',
                     'Message': 'Сообщение',
                     'get in touch': 'связаться',
                     'have any questions': 'есть вопросы',
@@ -97,7 +99,8 @@ keystone.pre('routes', function (req, res, next) {
 // Import Route Controllers
 var routes = {
     views: importRoutes('./views'),
-    emails: importRoutes('./emails')
+    emails: importRoutes('./emails'),
+    files: importRoutes('./files')
 };
 
 // Setup Route Bindings
@@ -105,5 +108,5 @@ exports = module.exports = function (app) {
     app.all('/', routes.views.index);
     app.post('/message', routes.emails.message);
 
-
+    app.get('/data/files/:name', routes.files.send);
 };
