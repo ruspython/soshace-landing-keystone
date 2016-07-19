@@ -99,7 +99,8 @@ keystone.pre('routes', function (req, res, next) {
 // Import Route Controllers
 var routes = {
     views: importRoutes('./views'),
-    emails: importRoutes('./emails')
+    emails: importRoutes('./emails'),
+    files: importRoutes('./files')
 };
 
 // Setup Route Bindings
@@ -107,29 +108,5 @@ exports = module.exports = function (app) {
     app.all('/', routes.views.index);
     app.post('/message', routes.emails.message);
 
-    app.get('/data/files/:name', function (req, res, next) {
-
-      var options = {
-        root: __dirname + '/../data/files',
-        dotfiles: 'deny',
-        headers: {
-            'x-timestamp': Date.now(),
-            'x-sent': true
-        }
-      };
-
-      var fileName = req.params.name;
-      res.sendFile(fileName, options, function (err) {
-        if (err) {
-          console.log(err);
-          res.status(err.status).end();
-        }
-        else {
-          console.log('Sent:', fileName);
-        }
-      });
-
-    });
-
-
+    app.get('/data/files/:name', routes.files.send);
 };
