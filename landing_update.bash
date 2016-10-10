@@ -12,7 +12,6 @@
 #
 # Use only on landing server. not for local use.
 # Project on server must consist of:
-# ~projects/proxy-landing
 # ~projects/soshace
 # ~projects/soshace-ru
 # And script must be in ~/ directory
@@ -26,8 +25,7 @@ fi
 
 _PROJECT_FOLDER="projects"
 _ROOT_PROJECT_FOLDER="$(pwd)/$_PROJECT_FOLDER"
-_PROXY_FOLDER="proxy-landing"
-_FOLDERS_TO_PULL="soshace soshace-ru"
+_FOLDERS_TO_PULL="soshace"
 
 _REPO="git@github.com:soshace/soshace-landing-keystone"
 
@@ -35,7 +33,6 @@ _FETH_COMMAND="git fetch --all"
 _PULL_LANDING_COMMAND="git pull"
 _CHECKOUT_LANDING_COMMAND="git checkout $_REVISION"
 _GULP_COMMAND="./node_modules/.bin/gulp prod"
-_FOREVER_PROXY_COMMAND="forever start app.js"
 _FOREVER_KEYSTONE_COMMAND="forever start keystone.js"
 
 cd $_PROJECT_FOLDER
@@ -58,11 +55,6 @@ for repo_folder in $_FOLDERS_TO_PULL; do
 done
 
 forever stopall
-
-# start proxy
-cd $_PROXY_FOLDER
-# sudo -k $_FOREVER_PROXY_COMMAND
-eval $_FOREVER_PROXY_COMMAND
 
 cd $_ROOT_PROJECT_FOLDER
 

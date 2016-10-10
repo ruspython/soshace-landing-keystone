@@ -69,18 +69,6 @@
     width: 100%;
     padding: 30px 5px 10px 20px;
   }
-
-  .language-select {
-    float: left;
-
-    @media (max-width: $screen_md) {
-      width: 60px;
-      padding: 0 2px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-  }
 }
 
 @media (min-width: $screen_md) {

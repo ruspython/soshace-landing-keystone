@@ -52,7 +52,6 @@ gulp.task('build-js', function () {
       'public/js/swiper.min.js',
 			'public/js/memberinfo.js',
 			'public/js/map.js',
-			'public/js/lang.js',
 			'public/js/contact.js',
 			'public/js/footer.js',
 		])
