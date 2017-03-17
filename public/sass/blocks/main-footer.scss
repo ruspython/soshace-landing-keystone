@@ -91,6 +91,9 @@
   &__presentation-link::before {
     background-image: url('../images/logo-pdf.svg');
   }
+  &__telefone-link {
+    left: 0;
+  }
 }
 
 a.main-footer__upwork-link::before {
@@ -155,6 +158,9 @@ a.main-footer__upwork-link::before {
       margin-left: 30px;
       margin-right: 30px;
       font-size: $font-size + 8px;
+    }
+    &__telefone-link {
+      left: 0;
     }
   }
   a.main-footer__upwork-link::before {
