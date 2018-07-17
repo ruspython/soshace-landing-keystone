@@ -14,3 +14,5 @@
 * `MAIL_NO_REPLY=value` - логин/адрес почты с которого будет производится отправка
 * `MAIL_NO_REPLY_PASSWORD=value` - пароль
 2. Список получателей редактируется в поле `Emails`(несколько адресов перечисляются через пробел) через интерфейс администратора в модели `Company`.
+
+ We are looking forward to meeting you on our website *https://soshace.com*
